@@ -1,0 +1,928 @@
+{
+  "generatedAt": "2026-08-30T09:50:42.543Z",
+  "count": 21,
+  "templates": [
+    {
+      "id": "github:PanJiaChen/vue-element-admin",
+      "slug": "panjiachen-vue-element-admin",
+      "name": "vue-element-admin",
+      "title": "Vue Element Admin",
+      "description": "A production-ready Vue admin template built on Element UI, with i18n, permissions, rich text editing and a large catalogue of example screens.",
+      "source": "github",
+      "sourceUrl": "https://github.com/PanJiaChen/vue-element-admin",
+      "demoUrl": "https://panjiachen.github.io/vue-element-admin",
+      "imageUrl": "https://opengraph.githubassets.com/1/PanJiaChen/vue-element-admin",
+      "repo": {
+        "owner": "PanJiaChen",
+        "name": "vue-element-admin",
+        "defaultBranch": "master",
+        "stars": 90199,
+        "forks": 30334,
+        "pushedAt": "2026-08-29T18:44:58Z",
+        "cloneUrl": "https://github.com/PanJiaChen/vue-element-admin.git",
+        "tarballUrl": "https://api.github.com/repos/PanJiaChen/vue-element-admin/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "Vue"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "admin-template",
+        "vue",
+        "element-ui",
+        "i18n"
+      ],
+      "stars": 90199,
+      "updatedAt": "2026-08-29T18:44:58Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:ColorlibHQ/AdminLTE",
+      "slug": "colorlibhq-adminlte",
+      "name": "AdminLTE",
+      "title": "AdminLTE",
+      "description": "AdminLTE — a free admin dashboard template based on Bootstrap 5.",
+      "source": "github",
+      "sourceUrl": "https://github.com/ColorlibHQ/AdminLTE",
+      "demoUrl": "https://adminlte.io",
+      "imageUrl": "https://opengraph.githubassets.com/1/ColorlibHQ/AdminLTE",
+      "repo": {
+        "owner": "ColorlibHQ",
+        "name": "AdminLTE",
+        "defaultBranch": "master",
+        "stars": 45563,
+        "forks": 18168,
+        "pushedAt": "2026-08-30T00:47:58Z",
+        "cloneUrl": "https://github.com/ColorlibHQ/AdminLTE.git",
+        "tarballUrl": "https://api.github.com/repos/ColorlibHQ/AdminLTE/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [],
+      "tags": [
+        "admin-dashboard",
+        "admin-template",
+        "bootstrap5",
+        "dashboard-template",
+        "html"
+      ],
+      "stars": 45563,
+      "updatedAt": "2026-08-30T00:47:58Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:tabler/tabler",
+      "slug": "tabler-tabler",
+      "name": "tabler",
+      "title": "Tabler",
+      "description": "Tabler is a free and open-source dashboard UI kit built on Bootstrap, with a large set of responsive admin components and ready-made pages.",
+      "source": "github",
+      "sourceUrl": "https://github.com/tabler/tabler",
+      "demoUrl": "https://tabler.io",
+      "imageUrl": "https://opengraph.githubassets.com/1/tabler/tabler",
+      "repo": {
+        "owner": "tabler",
+        "name": "tabler",
+        "defaultBranch": "dev",
+        "stars": 41587,
+        "forks": 4421,
+        "pushedAt": "2026-08-30T09:38:31Z",
+        "cloneUrl": "https://github.com/tabler/tabler.git",
+        "tarballUrl": "https://api.github.com/repos/tabler/tabler/tarball/dev"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [],
+      "tags": [
+        "admin-dashboard",
+        "dashboard-templates",
+        "bootstrap",
+        "ui-kit",
+        "html"
+      ],
+      "stars": 41587,
+      "updatedAt": "2026-08-30T09:38:31Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:marmelab/react-admin",
+      "slug": "marmelab-react-admin",
+      "name": "react-admin",
+      "title": "React Admin",
+      "description": "A frontend framework for building admin single-page applications on top of REST or GraphQL APIs, using TypeScript, React and Material Design.",
+      "source": "github",
+      "sourceUrl": "https://github.com/marmelab/react-admin",
+      "demoUrl": "https://marmelab.com/react-admin",
+      "imageUrl": "https://opengraph.githubassets.com/1/marmelab/react-admin",
+      "repo": {
+        "owner": "marmelab",
+        "name": "react-admin",
+        "defaultBranch": "master",
+        "stars": 26915,
+        "forks": 5467,
+        "pushedAt": "2026-08-29T17:16:44Z",
+        "cloneUrl": "https://github.com/marmelab/react-admin.git",
+        "tarballUrl": "https://api.github.com/repos/marmelab/react-admin/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "React",
+        "TypeScript"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "react",
+        "typescript",
+        "graphql",
+        "material-ui"
+      ],
+      "stars": 26915,
+      "updatedAt": "2026-08-29T17:16:44Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:akveo/ngx-admin",
+      "slug": "akveo-ngx-admin",
+      "name": "ngx-admin",
+      "title": "Ngx Admin",
+      "description": "A customisable admin dashboard template based on Angular 10+ and Nebular.",
+      "source": "github",
+      "sourceUrl": "https://github.com/akveo/ngx-admin",
+      "demoUrl": "https://akveo.github.io/ngx-admin",
+      "imageUrl": "https://opengraph.githubassets.com/1/akveo/ngx-admin",
+      "repo": {
+        "owner": "akveo",
+        "name": "ngx-admin",
+        "defaultBranch": "master",
+        "stars": 25694,
+        "forks": 7894,
+        "pushedAt": "2026-08-30T06:07:58Z",
+        "cloneUrl": "https://github.com/akveo/ngx-admin.git",
+        "tarballUrl": "https://api.github.com/repos/akveo/ngx-admin/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "TypeScript"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "admin-template",
+        "typescript",
+        "bootstrap4",
+        "dashboard"
+      ],
+      "stars": 25694,
+      "updatedAt": "2026-08-30T06:07:58Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:ColorlibHQ/gentelella",
+      "slug": "colorlibhq-gentelella",
+      "name": "gentelella",
+      "title": "Gentelella",
+      "description": "A free admin dashboard template built with vanilla JavaScript, SCSS and Vite — no Bootstrap and no jQuery.",
+      "source": "github",
+      "sourceUrl": "https://github.com/ColorlibHQ/gentelella",
+      "demoUrl": "https://colorlibhq.github.io/gentelella",
+      "imageUrl": "https://opengraph.githubassets.com/1/ColorlibHQ/gentelella",
+      "repo": {
+        "owner": "ColorlibHQ",
+        "name": "gentelella",
+        "defaultBranch": "master",
+        "stars": 21503,
+        "forks": 6828,
+        "pushedAt": "2026-08-30T06:08:24Z",
+        "cloneUrl": "https://github.com/ColorlibHQ/gentelella.git",
+        "tarballUrl": "https://api.github.com/repos/ColorlibHQ/gentelella/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "Vite"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "dashboard-template",
+        "scss",
+        "vite",
+        "vanilla-javascript"
+      ],
+      "stars": 21503,
+      "updatedAt": "2026-08-30T06:08:24Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:wasp-lang/open-saas",
+      "slug": "wasp-lang-open-saas",
+      "name": "open-saas",
+      "title": "Open Saas",
+      "description": "A free, full-featured SaaS boilerplate with auth, email sending, background jobs, payments (Stripe, Polar), S3 uploads and a landing page. React, Node and Prisma on the Wasp framework.",
+      "source": "github",
+      "sourceUrl": "https://github.com/wasp-lang/open-saas",
+      "demoUrl": "https://opensaas.sh",
+      "imageUrl": "https://opengraph.githubassets.com/1/wasp-lang/open-saas",
+      "repo": {
+        "owner": "wasp-lang",
+        "name": "open-saas",
+        "defaultBranch": "main",
+        "stars": 15671,
+        "forks": 1872,
+        "pushedAt": "2026-08-30T08:20:29Z",
+        "cloneUrl": "https://github.com/wasp-lang/open-saas.git",
+        "tarballUrl": "https://api.github.com/repos/wasp-lang/open-saas/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "SaaS",
+      "frameworks": [
+        "React",
+        "Prisma",
+        "TypeScript",
+        "Stripe"
+      ],
+      "tags": [
+        "saas-boilerplate",
+        "saas-starter",
+        "react",
+        "prisma",
+        "typescript",
+        "stripe"
+      ],
+      "stars": 15671,
+      "updatedAt": "2026-08-30T08:20:29Z",
+      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "featured": true
+    },
+    {
+      "id": "github:ixartz/Next-js-Boilerplate",
+      "slug": "ixartz-next-js-boilerplate",
+      "name": "Next-js-Boilerplate",
+      "title": "Next Js Boilerplate",
+      "description": "Next.js boilerplate and starter with App Router support, Tailwind CSS 4 and TypeScript. Ships ESLint, Prettier, Drizzle ORM, Vitest, Playwright, Storybook and Sentry out of the box.",
+      "source": "github",
+      "sourceUrl": "https://github.com/ixartz/Next-js-Boilerplate",
+      "demoUrl": "https://nextjs-boilerplate.com",
+      "imageUrl": "https://opengraph.githubassets.com/1/ixartz/Next-js-Boilerplate",
+      "repo": {
+        "owner": "ixartz",
+        "name": "Next-js-Boilerplate",
+        "defaultBranch": "main",
+        "stars": 13057,
+        "forks": 2409,
+        "pushedAt": "2026-08-20T19:51:14Z",
+        "cloneUrl": "https://github.com/ixartz/Next-js-Boilerplate.git",
+        "tarballUrl": "https://api.github.com/repos/ixartz/Next-js-Boilerplate/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "SaaS",
+      "frameworks": [
+        "Next.js",
+        "React",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "tags": [
+        "nextjs",
+        "nextjs-template",
+        "react",
+        "tailwindcss",
+        "typescript",
+        "starter-kit"
+      ],
+      "stars": 13057,
+      "updatedAt": "2026-08-20T19:51:14Z",
+      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "featured": true
+    },
+    {
+      "id": "github:arthelokyo/astrowind",
+      "slug": "arthelokyo-astrowind",
+      "name": "astrowind",
+      "title": "Astrowind",
+      "description": "AstroWind — a free template built on Astro and Tailwind CSS, tuned for marketing sites, blogs and landing pages with near-perfect Lighthouse scores.",
+      "source": "github",
+      "sourceUrl": "https://github.com/arthelokyo/astrowind",
+      "demoUrl": "https://astrowind.vercel.app",
+      "imageUrl": "https://opengraph.githubassets.com/1/arthelokyo/astrowind",
+      "repo": {
+        "owner": "arthelokyo",
+        "name": "astrowind",
+        "defaultBranch": "main",
+        "stars": 5922,
+        "forks": 1665,
+        "pushedAt": "2026-08-30T07:42:50Z",
+        "cloneUrl": "https://github.com/arthelokyo/astrowind.git",
+        "tarballUrl": "https://api.github.com/repos/arthelokyo/astrowind/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Blog",
+      "frameworks": [
+        "Astro",
+        "Tailwind"
+      ],
+      "tags": [
+        "astro",
+        "astro-template",
+        "tailwindcss",
+        "landing-page",
+        "blog"
+      ],
+      "stars": 5922,
+      "updatedAt": "2026-08-30T07:42:50Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": true
+    },
+    {
+      "id": "github:steven-tey/precedent",
+      "slug": "steven-tey-precedent",
+      "name": "precedent",
+      "title": "Precedent",
+      "description": "An opinionated collection of components, hooks and utilities for a Next.js project — auth, Prisma, Radix UI and Framer Motion already wired together.",
+      "source": "github",
+      "sourceUrl": "https://github.com/steven-tey/precedent",
+      "demoUrl": "https://precedent.dev",
+      "imageUrl": "https://opengraph.githubassets.com/1/steven-tey/precedent",
+      "repo": {
+        "owner": "steven-tey",
+        "name": "precedent",
+        "defaultBranch": "main",
+        "stars": 5113,
+        "forks": 493,
+        "pushedAt": "2024-10-02T20:28:59Z",
+        "cloneUrl": "https://github.com/steven-tey/precedent.git",
+        "tarballUrl": "https://api.github.com/repos/steven-tey/precedent/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "UI kit",
+      "frameworks": [
+        "Next.js",
+        "Prisma",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "tags": [
+        "nextjs",
+        "nextjs-template",
+        "prisma",
+        "radix-ui",
+        "tailwindcss",
+        "typescript"
+      ],
+      "stars": 5113,
+      "updatedAt": "2024-10-02T20:28:59Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": false
+    },
+    {
+      "id": "github:HugoBlox/hugo-theme-academic-cv",
+      "slug": "hugoblox-hugo-theme-academic-cv",
+      "name": "hugo-theme-academic-cv",
+      "title": "Hugo Theme Academic Cv",
+      "description": "An academic portfolio and CV theme with BibTeX import, Jupyter and LaTeX support, and a visual block editor. Content stays plain Markdown.",
+      "source": "github",
+      "sourceUrl": "https://github.com/HugoBlox/hugo-theme-academic-cv",
+      "demoUrl": "https://hugoblox.com",
+      "imageUrl": "https://opengraph.githubassets.com/1/HugoBlox/hugo-theme-academic-cv",
+      "repo": {
+        "owner": "HugoBlox",
+        "name": "hugo-theme-academic-cv",
+        "defaultBranch": "main",
+        "stars": 5049,
+        "forks": 6446,
+        "pushedAt": "2026-08-30T02:18:19Z",
+        "cloneUrl": "https://github.com/HugoBlox/hugo-theme-academic-cv.git",
+        "tarballUrl": "https://api.github.com/repos/HugoBlox/hugo-theme-academic-cv/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Portfolio",
+      "frameworks": [],
+      "tags": [
+        "portfolio-template",
+        "resume-template",
+        "hugo",
+        "personal-website",
+        "blog-engine"
+      ],
+      "stars": 5049,
+      "updatedAt": "2026-08-30T02:18:19Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:RyanFitzgerald/devportfolio",
+      "slug": "ryanfitzgerald-devportfolio",
+      "name": "devportfolio",
+      "title": "Devportfolio",
+      "description": "A modern, minimalist portfolio template built with Astro and Tailwind CSS, for showing off skills, experience and projects.",
+      "source": "github",
+      "sourceUrl": "https://github.com/RyanFitzgerald/devportfolio",
+      "demoUrl": null,
+      "imageUrl": "https://opengraph.githubassets.com/1/RyanFitzgerald/devportfolio",
+      "repo": {
+        "owner": "RyanFitzgerald",
+        "name": "devportfolio",
+        "defaultBranch": "master",
+        "stars": 4959,
+        "forks": 4163,
+        "pushedAt": "2026-08-29T17:40:58Z",
+        "cloneUrl": "https://github.com/RyanFitzgerald/devportfolio.git",
+        "tarballUrl": "https://api.github.com/repos/RyanFitzgerald/devportfolio/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Portfolio",
+      "frameworks": [
+        "Astro",
+        "Tailwind"
+      ],
+      "tags": [
+        "portfolio-template",
+        "portfolio-website",
+        "astro",
+        "template"
+      ],
+      "stars": 4959,
+      "updatedAt": "2026-08-29T17:40:58Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:ashutosh1919/masterPortfolio",
+      "slug": "ashutosh1919-masterportfolio",
+      "name": "masterPortfolio",
+      "title": "MasterPortfolio",
+      "description": "A fully customisable software developer portfolio template that showcases your work and background from a single config file.",
+      "source": "github",
+      "sourceUrl": "https://github.com/ashutosh1919/masterPortfolio",
+      "demoUrl": "https://ashutoshhathidara.com",
+      "imageUrl": "https://opengraph.githubassets.com/1/ashutosh1919/masterPortfolio",
+      "repo": {
+        "owner": "ashutosh1919",
+        "name": "masterPortfolio",
+        "defaultBranch": "master",
+        "stars": 4223,
+        "forks": 1715,
+        "pushedAt": "2026-08-29T22:36:20Z",
+        "cloneUrl": "https://github.com/ashutosh1919/masterPortfolio.git",
+        "tarballUrl": "https://api.github.com/repos/ashutosh1919/masterPortfolio/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Portfolio",
+      "frameworks": [
+        "React"
+      ],
+      "tags": [
+        "portfolio-template",
+        "developer-portfolio",
+        "react",
+        "reactjs-template"
+      ],
+      "stars": 4223,
+      "updatedAt": "2026-08-29T22:36:20Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:arhamkhnz/next-shadcn-admin-dashboard",
+      "slug": "arhamkhnz-next-shadcn-admin-dashboard",
+      "name": "next-shadcn-admin-dashboard",
+      "title": "Next Shadcn Admin Dashboard",
+      "description": "A modern admin dashboard template built with shadcn/ui and Next.js 16.",
+      "source": "github",
+      "sourceUrl": "https://github.com/arhamkhnz/next-shadcn-admin-dashboard",
+      "demoUrl": "https://next-shadcn-admin-dashboard.vercel.app",
+      "imageUrl": "https://opengraph.githubassets.com/1/arhamkhnz/next-shadcn-admin-dashboard",
+      "repo": {
+        "owner": "arhamkhnz",
+        "name": "next-shadcn-admin-dashboard",
+        "defaultBranch": "main",
+        "stars": 2952,
+        "forks": 596,
+        "pushedAt": "2026-08-30T05:52:40Z",
+        "cloneUrl": "https://github.com/arhamkhnz/next-shadcn-admin-dashboard.git",
+        "tarballUrl": "https://api.github.com/repos/arhamkhnz/next-shadcn-admin-dashboard/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "shadcn/ui",
+        "Next.js",
+        "TypeScript"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "nextjs-template",
+        "shadcn-ui",
+        "nextjs",
+        "typescript"
+      ],
+      "stars": 2952,
+      "updatedAt": "2026-08-30T05:52:40Z",
+      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "featured": true
+    },
+    {
+      "id": "github:TailAdmin/free-nextjs-admin-dashboard",
+      "slug": "tailadmin-free-nextjs-admin-dashboard",
+      "name": "free-nextjs-admin-dashboard",
+      "title": "Free Nextjs Admin Dashboard",
+      "description": "TailAdmin is a free, open-source Next.js and Tailwind CSS admin dashboard template with the components and pages needed for a full back-office.",
+      "source": "github",
+      "sourceUrl": "https://github.com/TailAdmin/free-nextjs-admin-dashboard",
+      "demoUrl": "https://nextjs-demo.tailadmin.com",
+      "imageUrl": "https://opengraph.githubassets.com/1/TailAdmin/free-nextjs-admin-dashboard",
+      "repo": {
+        "owner": "TailAdmin",
+        "name": "free-nextjs-admin-dashboard",
+        "defaultBranch": "main",
+        "stars": 2537,
+        "forks": 850,
+        "pushedAt": "2026-04-28T10:22:20Z",
+        "cloneUrl": "https://github.com/TailAdmin/free-nextjs-admin-dashboard.git",
+        "tarballUrl": "https://api.github.com/repos/TailAdmin/free-nextjs-admin-dashboard/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "Next.js",
+        "Tailwind",
+        "React"
+      ],
+      "tags": [
+        "admin-dashboard",
+        "dashboard-templates",
+        "nextjs",
+        "tailwindcss",
+        "react"
+      ],
+      "stars": 2537,
+      "updatedAt": "2026-04-28T10:22:20Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": false
+    },
+    {
+      "id": "github:arifszn/gitprofile",
+      "slug": "arifszn-gitprofile",
+      "name": "gitprofile",
+      "title": "Gitprofile",
+      "description": "Create and publish a GitHub-synced portfolio by providing nothing more than your GitHub username.",
+      "source": "github",
+      "sourceUrl": "https://github.com/arifszn/gitprofile",
+      "demoUrl": "https://arifszn.github.io/gitprofile",
+      "imageUrl": "https://opengraph.githubassets.com/1/arifszn/gitprofile",
+      "repo": {
+        "owner": "arifszn",
+        "name": "gitprofile",
+        "defaultBranch": "main",
+        "stars": 2300,
+        "forks": 2158,
+        "pushedAt": "2026-08-29T15:25:28Z",
+        "cloneUrl": "https://github.com/arifszn/gitprofile.git",
+        "tarballUrl": "https://api.github.com/repos/arifszn/gitprofile/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Portfolio",
+      "frameworks": [
+        "React",
+        "TypeScript"
+      ],
+      "tags": [
+        "portfolio-template",
+        "developer-portfolio",
+        "react",
+        "github-pages",
+        "typescript"
+      ],
+      "stars": 2300,
+      "updatedAt": "2026-08-29T15:25:28Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:ixartz/Next-JS-Landing-Page-Starter-Template",
+      "slug": "ixartz-next-js-landing-page-starter-template",
+      "name": "Next-JS-Landing-Page-Starter-Template",
+      "title": "Next JS Landing Page Starter Template",
+      "description": "A free Next.js landing page template written in Tailwind CSS and TypeScript, set up for a fast marketing site.",
+      "source": "github",
+      "sourceUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template",
+      "demoUrl": "https://creativedesignsguru.com",
+      "imageUrl": "https://opengraph.githubassets.com/1/ixartz/Next-JS-Landing-Page-Starter-Template",
+      "repo": {
+        "owner": "ixartz",
+        "name": "Next-JS-Landing-Page-Starter-Template",
+        "defaultBranch": "master",
+        "stars": 2138,
+        "forks": 722,
+        "pushedAt": "2026-01-18T21:31:34Z",
+        "cloneUrl": "https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template.git",
+        "tarballUrl": "https://api.github.com/repos/ixartz/Next-JS-Landing-Page-Starter-Template/tarball/master"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Marketing",
+      "frameworks": [
+        "Next.js",
+        "Tailwind",
+        "TypeScript"
+      ],
+      "tags": [
+        "landing-page",
+        "nextjs",
+        "nextjs-template",
+        "tailwindcss",
+        "typescript"
+      ],
+      "stars": 2138,
+      "updatedAt": "2026-01-18T21:31:34Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": false
+    },
+    {
+      "id": "github:chrismwilliams/astro-theme-cactus",
+      "slug": "chrismwilliams-astro-theme-cactus",
+      "name": "astro-theme-cactus",
+      "title": "Astro Theme Cactus",
+      "description": "A simple, fast Astro theme for a personal blog or website, with Tailwind CSS, MDX content collections and a built-in search.",
+      "source": "github",
+      "sourceUrl": "https://github.com/chrismwilliams/astro-theme-cactus",
+      "demoUrl": "https://astro-cactus.chriswilliams.dev",
+      "imageUrl": "https://opengraph.githubassets.com/1/chrismwilliams/astro-theme-cactus",
+      "repo": {
+        "owner": "chrismwilliams",
+        "name": "astro-theme-cactus",
+        "defaultBranch": "main",
+        "stars": 1725,
+        "forks": 276,
+        "pushedAt": "2026-08-28T23:43:05Z",
+        "cloneUrl": "https://github.com/chrismwilliams/astro-theme-cactus.git",
+        "tarballUrl": "https://api.github.com/repos/chrismwilliams/astro-theme-cactus/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Blog",
+      "frameworks": [
+        "Astro",
+        "Tailwind"
+      ],
+      "tags": [
+        "astro",
+        "astro-template",
+        "blog",
+        "tailwindcss",
+        "static-site"
+      ],
+      "stars": 1725,
+      "updatedAt": "2026-08-28T23:43:05Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": false
+    },
+    {
+      "id": "github:manuelernestog/astrofy",
+      "slug": "manuelernestog-astrofy",
+      "name": "astrofy",
+      "title": "Astrofy",
+      "description": "A free personal portfolio template built with Astro and Tailwind CSS, including blog, CV, project section, store and RSS feed.",
+      "source": "github",
+      "sourceUrl": "https://github.com/manuelernestog/astrofy",
+      "demoUrl": "https://astrofy-template.netlify.app",
+      "imageUrl": "https://opengraph.githubassets.com/1/manuelernestog/astrofy",
+      "repo": {
+        "owner": "manuelernestog",
+        "name": "astrofy",
+        "defaultBranch": "main",
+        "stars": 1434,
+        "forks": 463,
+        "pushedAt": "2026-08-28T18:59:33Z",
+        "cloneUrl": "https://github.com/manuelernestog/astrofy.git",
+        "tarballUrl": "https://api.github.com/repos/manuelernestog/astrofy/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "E-commerce",
+      "frameworks": [
+        "Astro",
+        "Tailwind"
+      ],
+      "tags": [
+        "astro",
+        "astro-template",
+        "portfolio-template",
+        "blog",
+        "tailwindcss"
+      ],
+      "stars": 1434,
+      "updatedAt": "2026-08-28T18:59:33Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": false
+    },
+    {
+      "id": "github:mearashadowfax/ScrewFast",
+      "slug": "mearashadowfax-screwfast",
+      "name": "ScrewFast",
+      "title": "ScrewFast",
+      "description": "An open-source Astro website template with sleek, customisable Tailwind CSS components — a full marketing site with blog and docs.",
+      "source": "github",
+      "sourceUrl": "https://github.com/mearashadowfax/ScrewFast",
+      "demoUrl": "https://screwfast.uk",
+      "imageUrl": "https://opengraph.githubassets.com/1/mearashadowfax/ScrewFast",
+      "repo": {
+        "owner": "mearashadowfax",
+        "name": "ScrewFast",
+        "defaultBranch": "main",
+        "stars": 1406,
+        "forks": 382,
+        "pushedAt": "2026-08-30T06:45:38Z",
+        "cloneUrl": "https://github.com/mearashadowfax/ScrewFast.git",
+        "tarballUrl": "https://api.github.com/repos/mearashadowfax/ScrewFast/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Blog",
+      "frameworks": [
+        "Astro",
+        "Tailwind"
+      ],
+      "tags": [
+        "astro",
+        "astro-template",
+        "tailwindcss",
+        "landing-page",
+        "blog"
+      ],
+      "stars": 1406,
+      "updatedAt": "2026-08-30T06:45:38Z",
+      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "featured": false
+    },
+    {
+      "id": "github:GreatStackDev/gocart",
+      "slug": "greatstackdev-gocart",
+      "name": "gocart",
+      "title": "Gocart",
+      "description": "GoCart is a free multi-vendor e-commerce template built with Next.js and Tailwind CSS, with a modern responsive storefront and the pages a marketplace needs.",
+      "source": "github",
+      "sourceUrl": "https://github.com/GreatStackDev/gocart",
+      "demoUrl": null,
+      "imageUrl": "https://opengraph.githubassets.com/1/GreatStackDev/gocart",
+      "repo": {
+        "owner": "GreatStackDev",
+        "name": "gocart",
+        "defaultBranch": "main",
+        "stars": 947,
+        "forks": 335,
+        "pushedAt": "2026-08-30T09:27:43Z",
+        "cloneUrl": "https://github.com/GreatStackDev/gocart.git",
+        "tarballUrl": "https://api.github.com/repos/GreatStackDev/gocart/tarball/main"
+      },
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License",
+        "url": "https://api.github.com/licenses/mit",
+        "permissive": true
+      },
+      "usage": "copy",
+      "category": "Dashboard",
+      "frameworks": [
+        "Next.js",
+        "React",
+        "Tailwind"
+      ],
+      "tags": [
+        "ecommerce-template",
+        "nextjs",
+        "react",
+        "admin-dashboard",
+        "multi-vendor"
+      ],
+      "stars": 947,
+      "updatedAt": "2026-08-30T09:27:43Z",
+      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "featured": true
+    }
+  ]
+}

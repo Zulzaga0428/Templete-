@@ -1,0 +1,46 @@
+name: Refresh templates
+
+on:
+  schedule:
+    # Mondays at 03:00 UTC.
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Crawl GitHub for templates
+        env:
+          # The default token is enough — the ingest only reads public data,
+          # but being authenticated triples the search rate limit.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run ingest -- --min-stars=200 --limit=40
+
+      - name: Check the site still builds with the new data
+        run: npm run build
+
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/refresh-templates
+          title: "chore: refresh template index"
+          commit-message: "chore: refresh template index"
+          body: |
+            Automated `npm run ingest` run. Skim the diff before merging — this is
+            the one place a low-quality or mislicensed repository could reach the
+            gallery.
+          add-paths: data/templates.json
