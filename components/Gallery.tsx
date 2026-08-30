@@ -8,6 +8,9 @@ interface Props {
   templates: Template[];
   categories: { name: string; count: number }[];
   frameworks: { name: string; count: number }[];
+  /** Seeded from ?q= and ?category= so links from the landing page land pre-filtered. */
+  initialQuery?: string;
+  initialCategory?: string;
 }
 
 const ALL = "All";
@@ -38,9 +41,17 @@ function Pill({
   );
 }
 
-export function Gallery({ templates, categories, frameworks }: Props) {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState(ALL);
+export function Gallery({
+  templates,
+  categories,
+  frameworks,
+  initialQuery = "",
+  initialCategory,
+}: Props) {
+  const [query, setQuery] = useState(initialQuery);
+  const [category, setCategory] = useState(
+    initialCategory && categories.some((c) => c.name === initialCategory) ? initialCategory : ALL,
+  );
   const [framework, setFramework] = useState(ALL);
   const [copyableOnly, setCopyableOnly] = useState(false);
 

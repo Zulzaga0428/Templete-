@@ -4,7 +4,9 @@ A gallery of free, open-source web templates that open straight into
 [Kodu](https://kodu.live). Instead of facing an empty prompt box, a visitor picks a template that
 already runs, opens it in a Kodu workspace, and asks the agent for changes.
 
-- **Gallery** — search, filter by category and stack, statically rendered for SEO.
+- **Landing** (`/`) — the pitch, a showcase row, and the category entry points.
+- **Gallery** (`/templates`) — search, filter by category and stack, seeded from `?q=` and
+  `?category=` so links arrive pre-filtered.
 - **Ingest** — a re-runnable job that collects templates from GitHub, licence-filtered.
 - **Handoff** — one endpoint that hands a template to Kodu, by URL today or through the Kodu API
   once that is wired up.
@@ -138,7 +140,8 @@ merging — it is the one place a bad repository could reach the gallery.
 
 ```
 app/
-  page.tsx              gallery
+  page.tsx              landing page
+  templates/page.tsx    gallery, reads ?q= and ?category=
   t/[slug]/page.tsx     template detail, prerendered per template
   about/page.tsx        how it works + licensing policy
   api/kodu/open/        handoff to Kodu

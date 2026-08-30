@@ -91,7 +91,7 @@ export default function AboutPage() {
       </Section>
 
       <div className="border-t border-line pt-8">
-        <Link href="/" className="text-[15px] text-accent underline-offset-4 hover:underline">
+        <Link href="/templates" className="text-[15px] text-accent underline-offset-4 hover:underline">
           ← Back to the gallery
         </Link>
       </div>

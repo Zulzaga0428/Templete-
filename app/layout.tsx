@@ -35,6 +35,12 @@ function Header() {
         </Link>
         <nav className="ml-auto flex items-center gap-1 text-sm">
           <Link
+            href="/templates"
+            className="rounded-md px-3 py-1.5 text-muted transition-colors hover:bg-hover hover:text-fg"
+          >
+            Templates
+          </Link>
+          <Link
             href="/about"
             className="rounded-md px-3 py-1.5 text-muted transition-colors hover:bg-hover hover:text-fg"
           >

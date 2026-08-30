@@ -53,13 +53,18 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-20 sm:px-6">
       <nav className="py-6 text-[13px] text-subtle">
-        <Link href="/" className="underline-offset-4 hover:text-fg hover:underline">
+        <Link href="/templates" className="underline-offset-4 hover:text-fg hover:underline">
           Templates
         </Link>
         <span className="mx-2" aria-hidden>
           /
         </span>
-        <span className="text-muted">{template.category}</span>
+        <Link
+          href={`/templates?category=${encodeURIComponent(template.category)}`}
+          className="underline-offset-4 hover:text-fg hover:underline"
+        >
+          {template.category}
+        </Link>
       </nav>
 
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
