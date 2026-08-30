@@ -127,8 +127,22 @@ Any Node host works; the site is static apart from `/api/kodu/open`.
 npm run build && npm run start
 ```
 
-Set `NEXT_PUBLIC_SITE_URL` so `sitemap.xml`, canonical URLs, and Open Graph tags point at the real
-domain. Point `templete.kodu.live` at the deployment.
+`next start` binds to `$PORT`, so nothing needs configuring on a platform that sets it.
+
+Set these on the deployment:
+
+| Variable | Why |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | `sitemap.xml`, canonical URLs and Open Graph tags. Without it they point at `templete.kodu.live` regardless of where the app actually runs. |
+| `NEXT_PUBLIC_KODU_APP_URL` | Where **Open in Kodu** sends people. Defaults to `https://kodu.live`. |
+
+### Railway
+
+The repository builds as-is — Railway detects Next.js, runs `npm ci && npm run build`, and starts
+it with `npm run start`. `engines.node` pins the runtime to Node 20+, which Next 16 requires.
+
+Set `NEXT_PUBLIC_SITE_URL` to the domain you attach **before** the first build: it is inlined at
+build time, so changing it later needs a redeploy, not just a restart.
 
 ### Keeping the gallery fresh
 

@@ -2,6 +2,9 @@
   "name": "templete-kodu",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "description": "templete.kodu.live — free template gallery that opens straight into Kodu",
   "scripts": {
     "dev": "next dev",
