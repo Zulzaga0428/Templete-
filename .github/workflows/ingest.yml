@@ -30,6 +30,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run ingest -- --min-stars=200 --limit=40
 
+      # New templates arrive with no README summary or stack, which is most of
+      # what makes their page worth reading. Fetch it in the same run.
+      - name: Fetch template details
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run details
+
       - name: Check the site still builds with the new data
         run: npm run build
 
@@ -48,7 +55,9 @@ jobs:
             Automated `npm run ingest` run. Skim the diff before merging — this is
             the one place a low-quality or mislicensed repository could reach the
             gallery.
-          add-paths: data/templates.json
+          add-paths: |
+            data/templates.json
+            data/details.json
 
       - name: Say where the work landed
         run: |

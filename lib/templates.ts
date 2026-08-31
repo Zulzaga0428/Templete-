@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import type { DetailsIndex, TemplateDetails } from "./details";
 import type { ScreenshotIndex, Template, TemplateIndex } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
@@ -28,6 +29,17 @@ function readScreenshots(): Record<string, { path: string; embeddable?: boolean 
   }
 }
 
+function readDetails(): Record<string, TemplateDetails> {
+  const full = path.join(DATA_DIR, "details.json");
+  if (!fs.existsSync(full)) return {};
+  try {
+    const parsed = JSON.parse(fs.readFileSync(full, "utf8")) as DetailsIndex;
+    return parsed.details ?? {};
+  } catch (error) {
+    throw new Error(`Could not parse data/details.json: ${(error as Error).message}`);
+  }
+}
+
 let cache: Template[] | null = null;
 
 export function getAllTemplates(): Template[] {
@@ -45,12 +57,15 @@ export function getAllTemplates(): Template[] {
   // Screenshots are keyed by template id and overlaid last, so capturing one
   // survives the next ingest run.
   const shots = readScreenshots();
+  const details = readDetails();
   for (const template of byId.values()) {
     const shot = shots[template.id];
     if (shot) {
       template.screenshotUrl = shot.path;
       template.embeddable = shot.embeddable;
     }
+    const detail = details[template.id];
+    if (detail) template.details = detail;
   }
 
   cache = [...byId.values()].sort((a, b) => {

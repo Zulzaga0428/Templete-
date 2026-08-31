@@ -86,6 +86,8 @@ export interface Template {
   derivedFrom?: Derivation | null;
   /** True when the live demo can be shown in an iframe. See ScreenshotRecord. */
   embeddable?: boolean;
+  /** README summary, feature list and stack. See lib/details.ts. */
+  details?: import("./details").TemplateDetails;
 }
 
 export interface TemplateIndex {

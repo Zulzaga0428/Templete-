@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { LicenseBadge } from "@/components/LicenseBadge";
 import { OpenInKodu } from "@/components/OpenInKodu";
 import { TemplateCard } from "@/components/TemplateCard";
+import { TemplateDetails } from "@/components/TemplateDetails";
 import { LivePreview } from "@/components/LivePreview";
 import { categoryName } from "@/lib/categories";
 import { format, getDictionary, isLocale, LOCALES } from "@/lib/i18n";
@@ -118,7 +119,17 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
             </div>
           ) : null}
 
-          <section className="mt-10 rounded-xl border border-line bg-raised p-5">
+          {template.details ? (
+            <TemplateDetails
+              details={template.details}
+              sourceUrl={template.sourceUrl}
+              t={t.detail}
+            />
+          ) : null}
+
+          <section
+            className={`${template.details ? "mt-4" : "mt-10"} rounded-xl border border-line bg-raised p-5`}
+          >
             <h2 className="text-sm font-semibold">{t.detail.licenceHeading}</h2>
             <p className="mt-2 text-[13px] leading-relaxed text-muted">
               {usageExplanation(template.license, t.licence)}
