@@ -223,6 +223,21 @@ data/
 public/shots/           captured screenshots
 ```
 
+## Gallery at scale
+
+The gallery renders 24 cards, then loads another 24 when the reader nears the end (an
+IntersectionObserver, plus a real button for anyone who never triggers it). A full ingest run puts
+several hundred templates behind those filters; rendering them all would mean a large prerendered
+document and thousands of DOM nodes for rows nobody scrolls to.
+
+Filtering resets the list to the first page and pulls the toolbar back into view — without that,
+searching while scrolled deep leaves the reader at the bottom of results they have not seen the
+start of.
+
+Sorting and filtering both run client-side over the whole array. That stays comfortable into the
+low thousands. Past that, the fix is to filter on the server and paginate properly, which means
+the data has to move out of a JSON file first.
+
 ## Notes for later
 
 The JSON file is deliberate: it costs nothing, prerenders every page, and handles a few thousand

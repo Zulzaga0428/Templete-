@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Template } from "@/lib/types";
 import { TemplateCard } from "./TemplateCard";
 
@@ -16,6 +16,32 @@ interface Props {
 }
 
 const ALL = "All";
+
+/**
+ * How many cards are rendered before the reader asks for more. A full ingest
+ * run puts several hundred templates on this page; rendering them all costs a
+ * large prerendered document and thousands of DOM nodes for rows nobody
+ * scrolls to.
+ */
+const PAGE_SIZE = 24;
+
+/** Height of the fixed site header, so scroll targets clear it. */
+const HEADER_HEIGHT = 56;
+
+const SORTS = {
+  featured: { label: "Featured", compare: null },
+  stars: { label: "Most stars", compare: (a: Template, b: Template) => b.stars - a.stars },
+  updated: {
+    label: "Recently updated",
+    compare: (a: Template, b: Template) => b.updatedAt.localeCompare(a.updatedAt),
+  },
+  name: {
+    label: "Name (A–Z)",
+    compare: (a: Template, b: Template) => a.title.localeCompare(b.title),
+  },
+} as const;
+
+type SortKey = keyof typeof SORTS;
 
 function Pill({
   active,
@@ -57,11 +83,13 @@ export function Gallery({
   );
   const [framework, setFramework] = useState(ALL);
   const [copyableOnly, setCopyableOnly] = useState(false);
+  const [sort, setSort] = useState<SortKey>("featured");
+  const [visible, setVisible] = useState(PAGE_SIZE);
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase();
 
-    return templates.filter((t) => {
+    const filtered = templates.filter((t) => {
       if (category !== ALL && t.category !== category) return false;
       if (framework !== ALL && !t.frameworks.includes(framework)) return false;
       if (copyableOnly && t.usage !== "copy") return false;
@@ -74,13 +102,61 @@ export function Gallery({
       // than widens the result set.
       return needle.split(/\s+/).every((word) => haystack.includes(word));
     });
-  }, [templates, query, category, framework, copyableOnly]);
+
+    const compare = SORTS[sort].compare;
+    // "Featured" is the order the server sent, so leave it alone.
+    return compare ? [...filtered].sort(compare) : filtered;
+  }, [templates, query, category, framework, copyableOnly, sort]);
+
+  // Any change to what is being shown starts the list over from the top.
+  // Adjusted during render rather than in an effect, so the first paint after
+  // a filter change already shows the right number of cards.
+  const signature = `${query}|${category}|${framework}|${copyableOnly}|${sort}`;
+  const [lastSignature, setLastSignature] = useState(signature);
+  if (signature !== lastSignature) {
+    setLastSignature(signature);
+    setVisible(PAGE_SIZE);
+  }
+
+  // Filtering while scrolled deep into the list leaves the reader stranded at
+  // the bottom of a set of results they have not seen the start of. Pull the
+  // toolbar back into view when that happens, and only then.
+  const top = useRef<HTMLDivElement>(null);
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    const node = top.current;
+    if (!node) return;
+    const offset = node.getBoundingClientRect().top - HEADER_HEIGHT;
+    if (offset < 0) window.scrollTo({ top: window.scrollY + offset, behavior: "smooth" });
+  }, [signature]);
+
+  const sentinel = useRef<HTMLDivElement>(null);
+  const hasMore = visible < results.length;
+
+  useEffect(() => {
+    const node = sentinel.current;
+    if (!node || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) setVisible((v) => v + PAGE_SIZE);
+      },
+      // Start loading a screen early so the grid rarely appears to stop.
+      { rootMargin: "600px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [hasMore, results.length]);
 
   const clearable =
     query !== "" || (!hideCategoryFilter && category !== ALL) || framework !== ALL || copyableOnly;
 
   return (
-    <>
+    <div ref={top}>
       <div className="sticky top-14 z-20 -mx-4 mb-8 border-b border-line bg-bg/90 px-4 py-4 backdrop-blur-md sm:-mx-6 sm:px-6">
         <div className="flex flex-col gap-3">
           <div className="relative">
@@ -118,7 +194,7 @@ export function Gallery({
             </div>
           )}
 
-          <div className="flex flex-wrap items-center gap-3 text-[13px]">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px]">
             <label className="flex items-center gap-2 text-muted">
               Stack
               <select
@@ -130,6 +206,21 @@ export function Gallery({
                 {frameworks.map((f) => (
                   <option key={f.name} value={f.name}>
                     {f.name} ({f.count})
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="flex items-center gap-2 text-muted">
+              Sort
+              <select
+                value={sort}
+                onChange={(e) => setSort(e.target.value as SortKey)}
+                className="rounded-md border border-line bg-raised px-2 py-1 text-fg"
+              >
+                {Object.entries(SORTS).map(([key, { label }]) => (
+                  <option key={key} value={key}>
+                    {label}
                   </option>
                 ))}
               </select>
@@ -175,12 +266,32 @@ export function Gallery({
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {results.map((template) => (
-            <TemplateCard key={template.id} template={template} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {results.slice(0, visible).map((template) => (
+              <TemplateCard key={template.id} template={template} />
+            ))}
+          </div>
+
+          {hasMore ? (
+            <>
+              <div ref={sentinel} aria-hidden className="h-px" />
+              {/* Also a real button: the observer needs JS, and a reader who
+                  jumps to the end with keyboard or screen reader never
+                  triggers it. */}
+              <div className="mt-8 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setVisible((v) => v + PAGE_SIZE)}
+                  className="rounded-lg border border-line bg-raised px-5 py-2.5 text-sm text-muted transition-colors hover:border-line-strong hover:text-fg"
+                >
+                  Show {Math.min(PAGE_SIZE, results.length - visible)} more
+                </button>
+              </div>
+            </>
+          ) : null}
+        </>
       )}
-    </>
+    </div>
   );
 }
