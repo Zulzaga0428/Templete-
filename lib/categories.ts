@@ -1,18 +1,20 @@
+import type { Locale } from "./i18n";
+
 /**
- * Hand-written copy for the category landing pages.
+ * Hand-written copy for the category landing pages, per locale.
  *
- * Category names come from the ingest, so anything without an entry here still
- * gets a page — it just falls back to a generic sentence. Write one when a
- * category earns enough templates to be worth ranking for.
+ * Category names come from the ingest, so a category with no entry here still
+ * gets a page — it just falls back to a generic sentence. Write proper copy
+ * when a category earns enough templates to be worth ranking for.
  */
-interface CategoryCopy {
+export interface CategoryCopy {
   headline: string;
   intro: string;
   /** Used as the meta description; keep it under ~155 characters. */
   meta: string;
 }
 
-const COPY: Record<string, CategoryCopy> = {
+const EN: Record<string, CategoryCopy> = {
   Dashboard: {
     headline: "Admin dashboard templates",
     intro:
@@ -69,12 +71,103 @@ const COPY: Record<string, CategoryCopy> = {
   },
 };
 
-export function categoryCopy(category: string, count: number): CategoryCopy {
-  return (
-    COPY[category] ?? {
-      headline: `${category} templates`,
-      intro: `${count} open-source ${category.toLowerCase()} templates, each checked for a licence that lets you use it.`,
-      meta: `Free open-source ${category.toLowerCase()} templates, licence-checked and ready to open in Kodu.`,
-    }
-  );
+const MN: Record<string, CategoryCopy> = {
+  Dashboard: {
+    headline: "Админ дашбоардын template-ууд",
+    intro:
+      "Хэн ч барихыг дурладаггүй хэсгүүд нь бэлэн байгаа back-office интерфейсүүд: хүснэгт, шүүлтүүр, график, цэс, нэвтрэх дэлгэц. Kodu дээр нээгээд өөрийн өгөгдлөө оруул.",
+    meta: "Үнэгүй, нээлттэй эхийн админ дашбоардын template-ууд — хүснэгт, график, нэвтрэлт, цэс бэлэн. Kodu дээр нээгээд AI агентаар зас.",
+  },
+  SaaS: {
+    headline: "SaaS эхлэлийн template-ууд",
+    intro:
+      "Бүртгэл, төлбөр, олон түрээслэгчийн бүтцийг аль хэдийн зохицуулсан full-stack эхлэлүүд — бүтээгдэхүүн болгонд адилхан харагддаг атлаа хэдэн долоо хоног иддэг тэр ажил.",
+    meta: "Нэвтрэлт, төлбөр, multi-tenancy бэлэн суусан үнэгүй SaaS boilerplate-ууд. Kodu дээр нээгээд үнэхээр чинийх байх хэсгээс нь эхэл.",
+  },
+  Marketing: {
+    headline: "Landing хуудасны template-ууд",
+    intro:
+      "Хурд, хөрвүүлэлтэд зориулж хийсэн маркетингийн сайтууд — hero, боломжууд, үнэ, FAQ, холбогдох маягт бүгд загварчлагдсан, дэлгэцэд зохицсон.",
+    meta: "Үнэгүй, нээлттэй эхийн landing хуудас болон маркетингийн сайтын template-ууд. Хурдан, дэлгэцэд зохицсон, Kodu дээр prompt-оор засагдана.",
+  },
+  Portfolio: {
+    headline: "Портфолио template-ууд",
+    intro:
+      "Ажлаа харуулах хувийн сайтууд — төслүүд, бичвэрүүд, намтар, холбоо барих. Ихэнх нь нэг тохиргооны файл засахад чинийх болно.",
+    meta: "Хөгжүүлэгч, дизайнеруудад зориулсан үнэгүй портфолио болон хувийн сайтын template-ууд. Kodu дээр нээгээд өөрийнхөө болго.",
+  },
+  Blog: {
+    headline: "Блог, баримт бичгийн template-ууд",
+    intro:
+      "Markdown буюу MDX нь аль хэдийн холбогдсон контентын сайтууд, дээр нь мартагддаг зүйлс: RSS, шошго, хайлт, унших хугацаа.",
+    meta: "Markdown, RSS, хайлт бэлэн суусан үнэгүй блог болон баримт бичгийн template-ууд. Kodu дээр нээгээд нийтэлж эхэл.",
+  },
+  "E-commerce": {
+    headline: "Цахим худалдааны template-ууд",
+    intro:
+      "Бүтээгдэхүүний жагсаалт, сагс, төлбөрийн урсгал нь байрандаа орсон дэлгүүрүүд — дэлгүүрийн бүтэц бэлэн, чи зөвхөн барааныхаа мэдээллийг нэмнэ.",
+    meta: "Бүтээгдэхүүний хуудас, сагс, төлбөртэй үнэгүй цахим худалдааны template-ууд. Kodu дээр нээгээд бараагаа нэм.",
+  },
+  "UI kit": {
+    headline: "UI кит, компонентын сангууд",
+    intro:
+      "Дуусгасан апп биш, дээр нь барих компонентын цуглуулга, дизайн системүүд. Бэлэн төлөвлөгөө биш, эд ангиуд хэрэгтэй үед тохиромжтой.",
+    meta: "Үнэгүй, нээлттэй эхийн UI кит, компонентын сан, дизайн системүүд. Kodu дээр нээгээд ажилладаг эд ангиудаас интерфейсээ бүтээ.",
+  },
+  Starter: {
+    headline: "Төслийн эхлэлүүд",
+    intro:
+      "Санаа нь тодорхой хоосон суурь — lint, тест, форматлалт, CI тохируулагдсан. Ингэснээр эхний commit чинь тохиргоо биш, боломж болно.",
+    meta: "Хэрэгсэл, тест, CI нь бэлэн тохируулагдсан үнэгүй төслийн эхлэл, boilerplate-ууд. Kodu дээр нээгээд шууд барьж эхэл.",
+  },
+  AI: {
+    headline: "AI аппын template-ууд",
+    intro:
+      "Чат интерфейс, RAG урсгал, агентын суурь — streaming болон мессежийн төлөвийг дахин бичихгүйгээр AI бүтээгдэхүүний бүтцийг шууд авна.",
+    meta: "Үнэгүй AI аппын template-ууд — чат интерфейс, RAG урсгал, агентын суурь. Kodu дээр нээгээд өөрийн загвар руугаа чиглүүл.",
+  },
+};
+
+const BY_LOCALE: Record<Locale, Record<string, CategoryCopy>> = { en: EN, mn: MN };
+
+export function categoryCopy(category: string, count: number, locale: Locale): CategoryCopy {
+  const known = BY_LOCALE[locale][category];
+  if (known) return known;
+
+  const lower = category.toLowerCase();
+  return locale === "mn"
+    ? {
+        headline: `${category} template-ууд`,
+        intro: `Ашиглахыг чинь зөвшөөрдөг лицензтэй эсэхийг нь шалгасан ${count} нээлттэй эхийн ${lower} template.`,
+        meta: `Лицензээр шалгасан, Kodu дээр шууд нээгддэг үнэгүй ${lower} template-ууд.`,
+      }
+    : {
+        headline: `${category} templates`,
+        intro: `${count} open-source ${lower} templates, each checked for a licence that lets you use it.`,
+        meta: `Free open-source ${lower} templates, licence-checked and ready to open in Kodu.`,
+      };
+}
+
+/**
+ * Display names. Category keys come from the ingest and stay in English —
+ * they are data, and slugs are built from them — so only the label shown to
+ * the reader is translated.
+ */
+const NAMES: Record<Locale, Record<string, string>> = {
+  en: {},
+  mn: {
+    Dashboard: "Дашбоард",
+    SaaS: "SaaS",
+    Marketing: "Маркетинг",
+    Portfolio: "Портфолио",
+    Blog: "Блог",
+    "E-commerce": "Цахим худалдаа",
+    "UI kit": "UI кит",
+    Starter: "Эхлэл",
+    AI: "AI",
+  },
+};
+
+export function categoryName(category: string, locale: Locale): string {
+  return NAMES[locale][category] ?? category;
 }

@@ -1,13 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { format, type Dictionary, type Locale } from "@/lib/i18n";
+import type { LicenceStrings } from "@/lib/licenses";
 import type { Template } from "@/lib/types";
 import { TemplateCard } from "./TemplateCard";
 
 interface Props {
   templates: Template[];
-  categories: { name: string; count: number }[];
+  categories: { name: string; label: string; count: number }[];
   frameworks: { name: string; count: number }[];
+  lang: Locale;
+  t: Dictionary["gallery"];
+  licenceT: LicenceStrings;
   /** Seeded from ?q= and ?category= so links from the landing page land pre-filtered. */
   initialQuery?: string;
   initialCategory?: string;
@@ -29,16 +34,10 @@ const PAGE_SIZE = 24;
 const HEADER_HEIGHT = 56;
 
 const SORTS = {
-  featured: { label: "Featured", compare: null },
-  stars: { label: "Most stars", compare: (a: Template, b: Template) => b.stars - a.stars },
-  updated: {
-    label: "Recently updated",
-    compare: (a: Template, b: Template) => b.updatedAt.localeCompare(a.updatedAt),
-  },
-  name: {
-    label: "Name (A–Z)",
-    compare: (a: Template, b: Template) => a.title.localeCompare(b.title),
-  },
+  featured: null,
+  stars: (a: Template, b: Template) => b.stars - a.stars,
+  updated: (a: Template, b: Template) => b.updatedAt.localeCompare(a.updatedAt),
+  name: (a: Template, b: Template) => a.title.localeCompare(b.title),
 } as const;
 
 type SortKey = keyof typeof SORTS;
@@ -73,6 +72,9 @@ export function Gallery({
   templates,
   categories,
   frameworks,
+  lang,
+  t,
+  licenceT,
   initialQuery = "",
   initialCategory,
   hideCategoryFilter = false,
@@ -103,7 +105,7 @@ export function Gallery({
       return needle.split(/\s+/).every((word) => haystack.includes(word));
     });
 
-    const compare = SORTS[sort].compare;
+    const compare = SORTS[sort];
     // "Featured" is the order the server sent, so leave it alone.
     return compare ? [...filtered].sort(compare) : filtered;
   }, [templates, query, category, framework, copyableOnly, sort]);
@@ -170,8 +172,8 @@ export function Gallery({
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search templates — dashboard, saas, astro, stripe…"
-              aria-label="Search templates"
+              placeholder={t.searchPlaceholder}
+              aria-label={t.searchLabel}
               className="w-full rounded-lg border border-line bg-raised py-2.5 pl-9 pr-3 text-sm text-fg placeholder:text-subtle focus:border-line-strong"
             />
           </div>
@@ -179,7 +181,7 @@ export function Gallery({
           {hideCategoryFilter ? null : (
             <div className="flex gap-2 overflow-x-auto pb-1">
               <Pill active={category === ALL} onClick={() => setCategory(ALL)}>
-                All
+                {t.all}
               </Pill>
               {categories.map((c) => (
                 <Pill
@@ -187,7 +189,7 @@ export function Gallery({
                   active={category === c.name}
                   onClick={() => setCategory(c.name)}
                 >
-                  {c.name}
+                  {c.label}
                   <span className="ml-1.5 opacity-60">{c.count}</span>
                 </Pill>
               ))}
@@ -196,13 +198,13 @@ export function Gallery({
 
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[13px]">
             <label className="flex items-center gap-2 text-muted">
-              Stack
+              {t.stack}
               <select
                 value={framework}
                 onChange={(e) => setFramework(e.target.value)}
                 className="rounded-md border border-line bg-raised px-2 py-1 text-fg"
               >
-                <option value={ALL}>Any</option>
+                <option value={ALL}>{t.anyStack}</option>
                 {frameworks.map((f) => (
                   <option key={f.name} value={f.name}>
                     {f.name} ({f.count})
@@ -212,17 +214,16 @@ export function Gallery({
             </label>
 
             <label className="flex items-center gap-2 text-muted">
-              Sort
+              {t.sort}
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value as SortKey)}
                 className="rounded-md border border-line bg-raised px-2 py-1 text-fg"
               >
-                {Object.entries(SORTS).map(([key, { label }]) => (
-                  <option key={key} value={key}>
-                    {label}
-                  </option>
-                ))}
+                <option value="featured">{t.sortFeatured}</option>
+                <option value="stars">{t.sortStars}</option>
+                <option value="updated">{t.sortUpdated}</option>
+                <option value="name">{t.sortName}</option>
               </select>
             </label>
 
@@ -233,11 +234,11 @@ export function Gallery({
                 onChange={(e) => setCopyableOnly(e.target.checked)}
                 className="accent-[var(--accent)]"
               />
-              Only templates I can copy
+              {t.copyableOnly}
             </label>
 
             <span className="ml-auto text-subtle">
-              {results.length} of {templates.length}
+              {format(t.resultCount, { shown: results.length, total: templates.length })}
             </span>
 
             {clearable ? (
@@ -251,7 +252,7 @@ export function Gallery({
                 }}
                 className="text-muted underline-offset-4 hover:text-fg hover:underline"
               >
-                Clear
+                {t.clear}
               </button>
             ) : null}
           </div>
@@ -260,16 +261,14 @@ export function Gallery({
 
       {results.length === 0 ? (
         <div className="rounded-xl border border-dashed border-line py-20 text-center">
-          <p className="text-sm text-muted">Nothing matches that yet.</p>
-          <p className="mt-1 text-[13px] text-subtle">
-            Try a broader search, or clear the filters.
-          </p>
+          <p className="text-sm text-muted">{t.emptyTitle}</p>
+          <p className="mt-1 text-[13px] text-subtle">{t.emptyHint}</p>
         </div>
       ) : (
         <>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {results.slice(0, visible).map((template) => (
-              <TemplateCard key={template.id} template={template} />
+              <TemplateCard key={template.id} template={template} lang={lang} t={licenceT} />
             ))}
           </div>
 
@@ -285,7 +284,7 @@ export function Gallery({
                   onClick={() => setVisible((v) => v + PAGE_SIZE)}
                   className="rounded-lg border border-line bg-raised px-5 py-2.5 text-sm text-muted transition-colors hover:border-line-strong hover:text-fg"
                 >
-                  Show {Math.min(PAGE_SIZE, results.length - visible)} more
+                  {format(t.showMore, { count: Math.min(PAGE_SIZE, results.length - visible) })}
                 </button>
               </div>
             </>

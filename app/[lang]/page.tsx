@@ -1,10 +1,18 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { TemplateCard } from "@/components/TemplateCard";
+import { getDictionary, isLocale, LOCALES } from "@/lib/i18n";
+import { categoryName } from "@/lib/categories";
 import { categorySlug, getAllTemplates, getCategories, getFrameworks } from "@/lib/templates";
 
-export const metadata = {
-  alternates: { canonical: "/" },
-};
+export function generateStaticParams() {
+  return LOCALES.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  return { alternates: { canonical: `/${lang}` } };
+}
 
 function SectionHeading({
   eyebrow,
@@ -54,66 +62,68 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
   );
 }
 
-export default function LandingPage() {
+export default async function LandingPage({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+
+  const t = getDictionary(lang);
   const templates = getAllTemplates();
   const categories = getCategories();
   const frameworks = getFrameworks();
-  const copyable = templates.filter((t) => t.usage === "copy").length;
+  const copyable = templates.filter((x) => x.usage === "copy").length;
 
   // Featured first, then whatever has the most stars, to fill the row.
   const showcase = [
-    ...templates.filter((t) => t.featured),
-    ...templates.filter((t) => !t.featured),
+    ...templates.filter((x) => x.featured),
+    ...templates.filter((x) => !x.featured),
   ].slice(0, 6);
 
   return (
     <main className="flex-1">
-      {/* Hero */}
       <section className="relative overflow-hidden border-b border-line">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 -top-40 h-[420px] opacity-[0.18]"
           style={{
-            background:
-              "radial-gradient(60% 60% at 50% 50%, var(--accent) 0%, transparent 70%)",
+            background: "radial-gradient(60% 60% at 50% 50%, var(--accent) 0%, transparent 70%)",
           }}
         />
         <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-raised px-3 py-1 text-[13px] text-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-            {copyable} licence-checked templates
+            {t.landing.badge(copyable)}
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
-            Start from something
-            <br />
-            that already works.
+          <h1 className="max-w-3xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-6xl">
+            {t.landing.title}
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            A blank prompt box is the hardest place to start. Pick a real open-source template,
-            open it in Kodu, and tell the agent what to change.
+            {t.landing.lede}
           </p>
 
-          <form action="/templates" method="get" className="mt-9 flex max-w-xl gap-2">
+          <form action={`/${lang}/templates`} method="get" className="mt-9 flex max-w-xl gap-2">
             <input
               type="search"
               name="q"
-              placeholder="dashboard, saas, portfolio, astro…"
-              aria-label="Search templates"
+              placeholder={t.landing.searchPlaceholder}
+              aria-label={t.gallery.searchLabel}
               className="min-w-0 flex-1 rounded-lg border border-line bg-raised px-4 py-3 text-sm text-fg placeholder:text-subtle focus:border-line-strong"
             />
             <button
               type="submit"
               className="shrink-0 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-contrast transition-opacity hover:opacity-90"
             >
-              Search
+              {t.landing.searchAction}
             </button>
           </form>
 
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-subtle">
-            <Link href="/templates" className="text-muted underline-offset-4 hover:underline">
-              Browse all {templates.length} →
+            <Link
+              href={`/${lang}/templates`}
+              className="text-muted underline-offset-4 hover:underline"
+            >
+              {t.landing.browseAll(templates.length)}
             </Link>
             <span aria-hidden className="hidden sm:inline">
               ·
@@ -128,61 +138,54 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Showcase */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <SectionHeading
-          eyebrow="Popular right now"
-          title="Templates people actually ship with"
-          href="/templates"
-          linkLabel="See all"
+          eyebrow={t.landing.showcaseEyebrow}
+          title={t.landing.showcaseTitle}
+          href={`/${lang}/templates`}
+          linkLabel={t.landing.seeAll}
         >
-          Every one of these is open source, actively maintained, and free to copy into your own
-          workspace.
+          {t.landing.showcaseLede}
         </SectionHeading>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {showcase.map((template) => (
-            <TemplateCard key={template.id} template={template} />
+            <TemplateCard key={template.id} template={template} lang={lang} t={t.licence} />
           ))}
         </div>
       </section>
 
-      {/* How it works */}
       <section className="border-y border-line bg-raised/40">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <SectionHeading eyebrow="How it works" title="Three steps, no setup">
-            No cloning, no dependency install, no “works on my machine”. The sandbox does it.
+          <SectionHeading eyebrow={t.landing.stepsEyebrow} title={t.landing.stepsTitle}>
+            {t.landing.stepsLede}
           </SectionHeading>
 
           <ol className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            <Step n={1} title="Pick a template">
-              Filter by what you are building and what stack you want. Check the live demo before
-              you commit to anything.
+            <Step n={1} title={t.landing.step1Title}>
+              {t.landing.step1Body}
             </Step>
-            <Step n={2} title="Open it in Kodu">
-              Kodu clones the repository into a sandbox and starts the dev server. You get a
-              running app, not a zip file.
+            <Step n={2} title={t.landing.step2Title}>
+              {t.landing.step2Body}
             </Step>
-            <Step n={3} title="Tell the agent what to change">
-              Describe the change in plain language. The agent edits real code you can read, keep,
-              and deploy.
+            <Step n={3} title={t.landing.step3Title}>
+              {t.landing.step3Body}
             </Step>
           </ol>
         </div>
       </section>
 
-      {/* Categories */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <SectionHeading eyebrow="Browse by category" title="What are you building?" />
+        <SectionHeading eyebrow={t.landing.categoriesEyebrow} title={t.landing.categoriesTitle} />
 
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {categories.map((category) => (
             <Link
               key={category.name}
-              href={`/templates/${categorySlug(category.name)}`}
+              href={`/${lang}/templates/${categorySlug(category.name)}`}
               className="group flex items-center justify-between rounded-xl border border-line bg-raised px-4 py-4 transition-colors hover:border-line-strong hover:bg-hover"
             >
-              <span className="text-sm font-medium">{category.name}</span>
+              <span className="text-sm font-medium">{categoryName(category.name, lang)}</span>
               <span className="text-[13px] text-subtle transition-colors group-hover:text-muted">
                 {category.count}
               </span>
@@ -191,68 +194,51 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Licensing trust */}
       <section className="border-t border-line">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1fr_1fr]">
           <div>
-            <SectionHeading eyebrow="Licensing" title="Free means free here">
-              Plenty of galleries list whatever they can scrape. We check the licence before a
-              template is ever offered for copying.
+            <SectionHeading eyebrow={t.landing.licensingEyebrow} title={t.landing.licensingTitle}>
+              {t.landing.licensingLede}
             </SectionHeading>
             <Link
-              href="/about"
+              href={`/${lang}/about`}
               className="text-[15px] text-accent underline-offset-4 hover:underline"
             >
-              Read the licensing policy →
+              {t.landing.licensingLink}
             </Link>
           </div>
 
           <ul className="space-y-4 text-[15px] leading-relaxed text-muted">
-            <li className="flex gap-3">
-              <span aria-hidden className="mt-1 text-accent">
-                ✓
-              </span>
-              <span>
-                <strong className="font-medium text-fg">GitHub verifies the licence</strong>, not
-                us. Every search asks for MIT, Apache-2.0, BSD, ISC, MPL-2.0, Unlicense or CC0.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span aria-hidden className="mt-1 text-accent">
-                ✓
-              </span>
-              <span>
-                <strong className="font-medium text-fg">The licence travels with the code.</strong>{" "}
-                Copying a template into Kodu keeps the original LICENSE and copyright notice.
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span aria-hidden className="mt-1 text-accent">
-                ✓
-              </span>
-              <span>
-                <strong className="font-medium text-fg">No licence means no copy.</strong> A
-                repository without one is all-rights-reserved by default, so we link to it instead.
-              </span>
-            </li>
+            {[
+              [t.landing.licensingPoint1Strong, t.landing.licensingPoint1],
+              [t.landing.licensingPoint2Strong, t.landing.licensingPoint2],
+              [t.landing.licensingPoint3Strong, t.landing.licensingPoint3],
+            ].map(([strong, rest]) => (
+              <li key={strong} className="flex gap-3">
+                <span aria-hidden className="mt-1 text-accent">
+                  ✓
+                </span>
+                <span>
+                  <strong className="font-medium text-fg">{strong}</strong>
+                  {rest}
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
 
-      {/* Closing CTA */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-24">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Your next project already exists.
-          </h2>
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{t.landing.ctaTitle}</h2>
           <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed text-muted">
-            Find the closest starting point and change it into what you meant.
+            {t.landing.ctaLede}
           </p>
           <Link
-            href="/templates"
+            href={`/${lang}/templates`}
             className="mt-8 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-contrast transition-opacity hover:opacity-90"
           >
-            Browse templates
+            {t.landing.ctaAction}
             <span aria-hidden>→</span>
           </Link>
         </div>

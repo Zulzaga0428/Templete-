@@ -1,11 +1,11 @@
+import { licenseLabel, type LicenceStrings } from "@/lib/licenses";
 import type { Template } from "@/lib/types";
-import { licenseLabel } from "@/lib/licenses";
 
-export function LicenseBadge({ template }: { template: Template }) {
+export function LicenseBadge({ template, t }: { template: Template; t: LicenceStrings }) {
   const copyable = template.usage === "copy";
   return (
     <span
-      title={copyable ? "Free to copy into your workspace" : "Linked to the source, not copied"}
+      title={copyable ? t.copyable : t.linkOnly}
       className={[
         "inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium",
         copyable
@@ -13,7 +13,7 @@ export function LicenseBadge({ template }: { template: Template }) {
           : "border-line-strong bg-hover text-muted",
       ].join(" ")}
     >
-      {licenseLabel(template.license)}
+      {licenseLabel(template.license, t.none)}
     </span>
   );
 }

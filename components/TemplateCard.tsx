@@ -1,4 +1,6 @@
 import Link from "next/link";
+import type { Locale } from "@/lib/i18n";
+import type { LicenceStrings } from "@/lib/licenses";
 import type { Template } from "@/lib/types";
 import { LicenseBadge } from "./LicenseBadge";
 import { Thumbnail } from "./Thumbnail";
@@ -8,10 +10,18 @@ function formatStars(stars: number): string {
   return String(stars);
 }
 
-export function TemplateCard({ template }: { template: Template }) {
+export function TemplateCard({
+  template,
+  lang,
+  t,
+}: {
+  template: Template;
+  lang: Locale;
+  t: LicenceStrings;
+}) {
   return (
     <Link
-      href={`/t/${template.slug}`}
+      href={`/${lang}/t/${template.slug}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-line bg-raised transition-colors hover:border-line-strong"
     >
       <div className="relative aspect-[1200/630] overflow-hidden bg-hover">
@@ -36,7 +46,7 @@ export function TemplateCard({ template }: { template: Template }) {
         </p>
 
         <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-2">
-          <LicenseBadge template={template} />
+          <LicenseBadge template={template} t={t} />
           {template.frameworks.slice(0, 2).map((framework) => (
             <span
               key={framework}

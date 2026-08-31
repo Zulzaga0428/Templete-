@@ -5,27 +5,29 @@ import { LicenseBadge } from "@/components/LicenseBadge";
 import { OpenInKodu } from "@/components/OpenInKodu";
 import { TemplateCard } from "@/components/TemplateCard";
 import { Thumbnail } from "@/components/Thumbnail";
+import { categoryName } from "@/lib/categories";
+import { getDictionary, isLocale, LOCALES } from "@/lib/i18n";
 import { usageExplanation } from "@/lib/licenses";
 import { categorySlug, getAllTemplates, getRelated, getTemplateBySlug } from "@/lib/templates";
 
 export function generateStaticParams() {
-  return getAllTemplates().map((t) => ({ slug: t.slug }));
+  return LOCALES.flatMap((lang) => getAllTemplates().map((t) => ({ lang, slug: t.slug })));
 }
 
-export async function generateMetadata({ params }: PageProps<"/t/[slug]">): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/t/[slug]">): Promise<Metadata> {
+  const { lang, slug } = await params;
   const template = getTemplateBySlug(slug);
-  if (!template) return { title: "Template not found" };
+  if (!isLocale(lang)) return {};
+  if (!template) return { title: getDictionary(lang).detail.notFound };
 
   return {
     title: template.title,
     description: template.description,
-    alternates: { canonical: `/t/${template.slug}` },
-    // No `images` here: app/t/[slug]/opengraph-image.tsx generates the card.
-    openGraph: {
-      title: `${template.title} — Templete`,
-      description: template.description,
-    },
+    alternates: { canonical: `/${lang}/t/${template.slug}` },
+    // No `images` here: opengraph-image.tsx generates the card.
+    openGraph: { title: `${template.title} — Templete`, description: template.description },
   };
 }
 
@@ -38,32 +40,35 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
-  const { slug } = await params;
+export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slug]">) {
+  const { lang, slug } = await params;
   const template = getTemplateBySlug(slug);
-  if (!template) notFound();
+  if (!isLocale(lang) || !template) notFound();
 
+  const t = getDictionary(lang);
   const related = getRelated(template);
-  const updated = new Date(template.updatedAt).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+  const updated = new Date(template.updatedAt).toLocaleDateString(
+    lang === "mn" ? "mn-MN" : "en-GB",
+    { day: "numeric", month: "short", year: "numeric" },
+  );
 
   return (
     <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-20 sm:px-6">
       <nav className="py-6 text-[13px] text-subtle">
-        <Link href="/templates" className="underline-offset-4 hover:text-fg hover:underline">
-          Templates
+        <Link
+          href={`/${lang}/templates`}
+          className="underline-offset-4 hover:text-fg hover:underline"
+        >
+          {t.nav.templates}
         </Link>
         <span className="mx-2" aria-hidden>
           /
         </span>
         <Link
-          href={`/templates/${categorySlug(template.category)}`}
+          href={`/${lang}/templates/${categorySlug(template.category)}`}
           className="underline-offset-4 hover:text-fg hover:underline"
         >
-          {template.category}
+          {categoryName(template.category, lang)}
         </Link>
       </nav>
 
@@ -100,9 +105,9 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
           ) : null}
 
           <section className="mt-10 rounded-xl border border-line bg-raised p-5">
-            <h2 className="text-sm font-semibold">Licence</h2>
+            <h2 className="text-sm font-semibold">{t.detail.licenceHeading}</h2>
             <p className="mt-2 text-[13px] leading-relaxed text-muted">
-              {usageExplanation(template.license)}
+              {usageExplanation(template.license, t.licence)}
             </p>
             {template.license.url ? (
               <a
@@ -111,7 +116,7 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
                 rel="noreferrer noopener"
                 className="mt-3 inline-block text-[13px] text-accent underline-offset-4 hover:underline"
               >
-                Read the licence on GitHub
+                {t.detail.readLicence}
               </a>
             ) : null}
           </section>
@@ -119,7 +124,7 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-xl border border-line bg-raised p-5">
-            <OpenInKodu template={template} />
+            <OpenInKodu template={template} t={t.detail} />
 
             <div className="mt-3 flex gap-2">
               {template.demoUrl ? (
@@ -129,7 +134,7 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
                   rel="noreferrer noopener"
                   className="flex-1 rounded-lg border border-line px-3 py-2 text-center text-[13px] text-muted transition-colors hover:bg-hover hover:text-fg"
                 >
-                  Live demo
+                  {t.detail.liveDemo}
                 </a>
               ) : null}
               <a
@@ -138,19 +143,22 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
                 rel="noreferrer noopener"
                 className="flex-1 rounded-lg border border-line px-3 py-2 text-center text-[13px] text-muted transition-colors hover:bg-hover hover:text-fg"
               >
-                Source
+                {t.detail.source}
               </a>
             </div>
 
             <dl className="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5">
-              <Stat label="Stars" value={template.stars.toLocaleString("en-GB")} />
-              <Stat label="Forks" value={(template.repo?.forks ?? 0).toLocaleString("en-GB")} />
-              <Stat label="Updated" value={updated} />
-              <Stat label="Category" value={template.category} />
+              <Stat label={t.detail.stars} value={template.stars.toLocaleString("en-GB")} />
+              <Stat
+                label={t.detail.forks}
+                value={(template.repo?.forks ?? 0).toLocaleString("en-GB")}
+              />
+              <Stat label={t.detail.updated} value={updated} />
+              <Stat label={t.detail.category} value={categoryName(template.category, lang)} />
             </dl>
 
             <div className="mt-5 flex flex-wrap items-center gap-1.5 border-t border-line pt-5">
-              <LicenseBadge template={template} />
+              <LicenseBadge template={template} t={t.licence} />
               {template.frameworks.map((framework) => (
                 <span
                   key={framework}
@@ -163,17 +171,15 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
 
             {template.repo ? (
               <p className="mt-5 border-t border-line pt-5 text-[11px] leading-relaxed text-subtle">
-                By{" "}
                 <a
                   href={`https://github.com/${template.repo.owner}`}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="text-muted underline-offset-4 hover:underline"
                 >
-                  {template.repo.owner}
+                  {t.detail.byAuthor(template.repo.owner)}
                 </a>
-                . Opening it in Kodu copies the repository along with its licence and copyright
-                notice.
+                {t.detail.copyNote}
               </p>
             ) : null}
           </div>
@@ -182,10 +188,10 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
 
       {related.length > 0 ? (
         <section className="mt-16">
-          <h2 className="mb-4 text-sm font-semibold text-muted">Similar templates</h2>
+          <h2 className="mb-4 text-sm font-semibold text-muted">{t.detail.similar}</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {related.map((t) => (
-              <TemplateCard key={t.id} template={t} />
+            {related.map((item) => (
+              <TemplateCard key={item.id} template={item} lang={lang} t={t.licence} />
             ))}
           </div>
         </section>

@@ -1,3 +1,4 @@
+import { format, type Dictionary } from "./i18n";
 import type { LicenseInfo } from "./types";
 
 /**
@@ -18,6 +19,13 @@ const PERMISSIVE_SPDX = new Set([
   "MPL-2.0",
 ]);
 
+/**
+ * The strings a licence needs to describe itself. Plain strings with {label}
+ * placeholders rather than functions, because this object is handed to Client
+ * Components and functions cannot cross that boundary.
+ */
+export type LicenceStrings = Dictionary["licence"];
+
 export function isPermissive(spdx: string | null | undefined): boolean {
   if (!spdx) return false;
   return PERMISSIVE_SPDX.has(spdx);
@@ -37,19 +45,15 @@ export function normalizeLicense(
   };
 }
 
-export function licenseLabel(license: LicenseInfo): string {
-  if (license.spdx) return license.spdx;
-  if (license.name) return license.name;
-  return "No licence";
+/** SPDX id where there is one, the licence's own name otherwise. */
+export function licenseLabel(license: LicenseInfo, noneLabel = "No licence"): string {
+  return license.spdx ?? license.name ?? noneLabel;
 }
 
 /** Short, human explanation of why a template is copy- or link-only. */
-export function usageExplanation(license: LicenseInfo): string {
-  if (license.permissive) {
-    return `${licenseLabel(license)} — free to copy and modify. The original licence and copyright notice are kept with the code.`;
-  }
-  if (license.spdx) {
-    return `${licenseLabel(license)} — this licence has terms we cannot accept on your behalf, so we link to the source instead of copying it.`;
-  }
-  return "This project ships no licence, which means all rights are reserved by default. We link to it rather than copying the code.";
+export function usageExplanation(license: LicenseInfo, t: LicenceStrings): string {
+  const label = licenseLabel(license, t.none);
+  if (license.permissive) return format(t.permissive, { label });
+  if (license.spdx) return format(t.restricted, { label });
+  return t.missing;
 }

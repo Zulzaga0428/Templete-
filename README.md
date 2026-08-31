@@ -4,10 +4,11 @@ A gallery of free, open-source web templates that open straight into
 [Kodu](https://kodu.live). Instead of facing an empty prompt box, a visitor picks a template that
 already runs, opens it in a Kodu workspace, and asks the agent for changes.
 
-- **Landing** (`/`) — the pitch, a showcase row, and the category entry points.
-- **Gallery** (`/templates`) — search, filter by category and stack, seeded from `?q=` and
+- **Two languages** — every page exists at `/en/…` and `/mn/…`, cross-linked with `hreflang`.
+- **Landing** (`/en`, `/mn`) — the pitch, a showcase row, and the category entry points.
+- **Gallery** (`/:lang/templates`) — search, filter by category and stack, seeded from `?q=` and
   `?category=` so links arrive pre-filtered.
-- **Category pages** (`/templates/dashboard`, …) — one prerendered page per category with its own
+- **Category pages** (`/:lang/templates/dashboard`, …) — one prerendered page per category with its own
   headline, intro and meta description.
 - **Ingest** — a re-runnable job that collects templates from GitHub, licence-filtered.
 - **Handoff** — one endpoint that hands a template to Kodu, by URL today or through the Kodu API
@@ -31,7 +32,7 @@ else to set up — no database, no API keys.
 | `npm run dev` | Development server on http://localhost:3000 |
 | `npm run build` | Production build; every template page is prerendered |
 | `npm run lint` | ESLint |
-| `npm run typecheck` | Generates Next's route types, then runs `tsc --noEmit` |
+| `npm run typecheck` | Generates Next's route types, then runs `tsc --noEmit` (also catches missing translations) |
 | `npm run seed` | Rewrites `data/templates.json` from the hand-checked list in `scripts/seed.ts` |
 | `npm run ingest` | Rewrites `data/templates.json` by crawling GitHub |
 | `npm run screenshots` | Captures a screenshot of each template's live demo |
@@ -82,6 +83,29 @@ detail page promises the visitor.
 - pin something to the top of the gallery with `"featured": true`.
 
 Curated entries are never overwritten by an ingest run.
+
+## Languages
+
+Every route lives under `/:lang`, where `lang` is `en` or `mn`. `/` redirects to `/en`, and the
+pre-i18n paths (`/templates`, `/t/:slug`, `/about`) redirect permanently into `/en/…` so nothing
+already linked starts 404ing.
+
+`lib/i18n.ts` holds both dictionaries. `mn` is typed as `Dictionary`, which is derived from `en`,
+so a missing or misspelled key fails the build rather than leaking an English string into the
+Mongolian site.
+
+Two rules worth knowing before adding strings:
+
+- **Anything the client interpolates is a plain string with `{placeholders}`**, filled by
+  `format()`. Functions cannot cross into a Client Component, and the gallery dictionary does.
+- **Category keys stay English.** They come from the ingest and slugs are built from them, so only
+  the label shown to the reader is translated, in `categoryName()`.
+
+Template titles and descriptions stay in the language their authors wrote them — they come from
+GitHub, and machine-translating someone's project description would be worse than leaving it.
+
+Category page copy is written by hand per locale in `lib/categories.ts`. A category with no entry
+falls back to a generated sentence in the right language.
 
 ## Screenshots
 
@@ -195,19 +219,20 @@ merging — it is the one place a bad repository could reach the gallery.
 
 ```
 app/
-  page.tsx                        landing page
-  templates/page.tsx              gallery, reads ?q= and ?category=
-  templates/[category]/page.tsx   one prerendered page per category
-  t/[slug]/page.tsx               template detail, prerendered per template
-  about/page.tsx                  how it works + licensing policy
-  api/kodu/open/                  handoff to Kodu
-  **/opengraph-image.tsx          generated social cards
+  [lang]/page.tsx                       landing page
+  [lang]/templates/page.tsx             gallery, reads ?q= and ?category=
+  [lang]/templates/[category]/page.tsx  one prerendered page per category
+  [lang]/t/[slug]/page.tsx              template detail, prerendered per template
+  [lang]/about/page.tsx                 how it works + licensing policy
+  api/kodu/open/                        handoff to Kodu
+  **/opengraph-image.tsx                generated social cards
 components/                       Gallery (client), TemplateCard, Thumbnail, OpenInKodu
 lib/
   types.ts              Template shape
+  i18n.ts               locales, dictionaries, format()
   licenses.ts           which licences may be copied
   templates.ts          reads and queries the data files
-  categories.ts         hand-written copy for the category pages
+  categories.ts         per-locale copy and names for the category pages
   kodu.ts               handoff URL + payload
   og.tsx                shared Open Graph card layout
 scripts/
