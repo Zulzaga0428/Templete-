@@ -125,10 +125,18 @@ async function ingestOrg(org: string): Promise<Template[]> {
     console.log(`${repos.length} repos`);
     if (repos.length === 0) break;
 
+    let missingTopics = 0;
     for (const repo of repos) {
       const topics = repo.topics ?? [];
+      // No topics at all on any repo means the API stopped returning them —
+      // every repo would be silently skipped, which is worth saying out loud.
+      if (repo.topics === undefined) missingTopics++;
       if (!topics.includes("kodu-template")) continue;
-      if (repo.archived || repo.disabled || !repo.description) continue;
+      if (repo.archived || repo.disabled) continue;
+      if (!repo.description) {
+        console.warn(`  skipped ${repo.full_name}: no GitHub description`);
+        continue;
+      }
 
       const template = toTemplate(repo, { fallbackCategory: "Starter", featured: true });
       template.source = "kodu";
@@ -141,6 +149,12 @@ async function ingestOrg(org: string): Promise<Template[]> {
       if (derivedTopic) template.derivedFrom = derivationFromTopic(derivedTopic);
 
       templates.push(template);
+    }
+
+    if (missingTopics === repos.length && repos.length > 0) {
+      console.warn(
+        `  no repo in ${org} reported topics — nothing can match kodu-template`,
+      );
     }
 
     if (repos.length < 100) break;

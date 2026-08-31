@@ -28,6 +28,10 @@ jobs:
           # The default token is enough — the ingest only reads public data,
           # but being authenticated triples the search rate limit.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Set this under Settings > Secrets and variables > Actions >
+          # Variables to have the run also pull Kodu's own templates. Empty is
+          # fine: the org pass is simply skipped.
+          KODU_TEMPLATES_ORG: ${{ vars.KODU_TEMPLATES_ORG }}
         run: npm run ingest -- --min-stars=200 --limit=40
 
       # New templates arrive with no README summary or stack, which is most of

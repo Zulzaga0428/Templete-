@@ -432,6 +432,12 @@ Sorting and filtering both run client-side over the whole array. That stays comf
 low thousands. Past that, the fix is to filter on the server and paginate properly, which means
 the data has to move out of a JSON file first.
 
+## Publishing your own templates
+
+`docs/PUBLISHING.md` is the checklist for turning a gallery template into a Kodu one — what the
+licences allow, the GitHub topics that make a repo visible to the ingest, and the two things that
+most often stop a template appearing (no description, no homepage URL).
+
 ## Roadmap and decisions
 
 `docs/ROADMAP.md` records what is built, what is blocked on whom, and the reasoning behind the
