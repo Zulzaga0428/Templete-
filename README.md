@@ -165,6 +165,11 @@ running is the biggest visual difference between this gallery and a list of link
 installs Chromium, captures whatever is missing, checks the site still builds, and opens a pull
 request with the images. This is the easy path.
 
+Opening that pull request needs **Allow GitHub Actions to create and approve pull requests** under
+Settings → Actions → General. Without it the branch is still pushed and the images are safe — the
+run just prints a link to open the pull request by hand instead of failing over it. The weekly
+ingest works the same way.
+
 **Locally**, if you want to watch it work:
 
 ```bash
