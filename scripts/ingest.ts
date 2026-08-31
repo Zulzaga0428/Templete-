@@ -3,6 +3,7 @@
  *
  * Run with:  npm run ingest
  *            npm run ingest -- --min-stars=500 --limit=20
+ *            npm run ingest -- --org=kodu-live   (also pull Kodu's own templates)
  *            npm run ingest -- --out=data/templates.json
  *
  * Set GITHUB_TOKEN to lift the search rate limit from 10 to 30 requests/min.
@@ -18,7 +19,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { COPYABLE_LICENSE_QUALIFIERS, GITHUB_QUERIES } from "./sources";
 import { isRejected, toTemplate, type RepoLike } from "./transform";
-import type { Template, TemplateIndex } from "../lib/types";
+import type { Derivation, Template, TemplateIndex } from "../lib/types";
 
 const args = new Map(
   process.argv
@@ -99,9 +100,95 @@ async function ingestGithub(): Promise<Template[]> {
   return [...collected.values()];
 }
 
+/**
+ * Templates published by Kodu itself — localised forks, and starters written
+ * from scratch.
+ *
+ * A repo declares what it is through its own GitHub topics, so nothing has to
+ * be configured here when one is added:
+ *
+ *   kodu-template          required; without it the repo is ignored
+ *   lang-mn                content language (lang-xx for any other)
+ *   derived-from-OWNER-REPO  the template it was forked from
+ *
+ * Together with the LICENSE the fork keeps, that topic is what lets the
+ * gallery credit the original author.
+ */
+async function ingestOrg(org: string): Promise<Template[]> {
+  const templates: Template[] = [];
+  let page = 1;
+
+  for (;;) {
+    const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=public`;
+    process.stdout.write(`→ ${org} (page ${page}) … `);
+    const repos = await gh<RepoLike[]>(url);
+    console.log(`${repos.length} repos`);
+    if (repos.length === 0) break;
+
+    for (const repo of repos) {
+      const topics = repo.topics ?? [];
+      if (!topics.includes("kodu-template")) continue;
+      if (repo.archived || repo.disabled || !repo.description) continue;
+
+      const template = toTemplate(repo, { fallbackCategory: "Starter", featured: true });
+      template.source = "kodu";
+      template.id = `kodu:${repo.full_name}`;
+
+      const langTopic = topics.find((t) => /^lang-[a-z]{2}$/.test(t));
+      if (langTopic) template.contentLanguage = langTopic.slice(5);
+
+      const derivedTopic = topics.find((t) => t.startsWith("derived-from-"));
+      if (derivedTopic) template.derivedFrom = derivationFromTopic(derivedTopic);
+
+      templates.push(template);
+    }
+
+    if (repos.length < 100) break;
+    page++;
+    await sleep(token ? 1000 : 6500);
+  }
+
+  return templates;
+}
+
+/**
+ * `derived-from-arthelokyo-astrowind` -> the AstroWind repo.
+ *
+ * GitHub topics cannot hold a slash, so the owner and repo are joined with a
+ * dash and split back on the first one. That breaks for an owner containing a
+ * dash, which is why the resolved URL is checked against the ingested set
+ * before it is trusted for the reverse link.
+ */
+function derivationFromTopic(topic: string): Derivation {
+  const rest = topic.slice("derived-from-".length);
+  const [owner, ...nameParts] = rest.split("-");
+  const name = nameParts.join("-");
+
+  return {
+    id: `github:${owner}/${name}`,
+    name,
+    url: `https://github.com/${owner}/${name}`,
+    author: owner,
+    license: null,
+    note: "",
+  };
+}
+
 async function main() {
   const templates = await ingestGithub();
-  templates.sort((a, b) => b.stars - a.stars);
+
+  const org = args.get("org") ?? process.env.KODU_TEMPLATES_ORG;
+  if (org) {
+    const own = await ingestOrg(org);
+    // Kodu's own templates win on id collision and sort to the front.
+    templates.unshift(...own);
+    console.log(`\n  ${own.length} from ${org}`);
+  }
+  // Featured (Kodu's own) first, then by stars.
+  templates.sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    return b.stars - a.stars;
+  });
 
   const copyable = templates.filter((t) => t.usage === "copy").length;
   const index: TemplateIndex = {

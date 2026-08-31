@@ -85,19 +85,28 @@ export function Gallery({
   );
   const [framework, setFramework] = useState(ALL);
   const [copyableOnly, setCopyableOnly] = useState(false);
+  const [mongolianOnly, setMongolianOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("featured");
   const [visible, setVisible] = useState(PAGE_SIZE);
+
+  // The filter is pointless until Kodu has published localised versions, so
+  // it stays hidden until at least one exists.
+  const mongolianCount = useMemo(
+    () => templates.filter((x) => x.contentLanguage === "mn").length,
+    [templates],
+  );
 
   const results = useMemo(() => {
     const needle = query.trim().toLowerCase();
 
-    const filtered = templates.filter((t) => {
-      if (category !== ALL && t.category !== category) return false;
-      if (framework !== ALL && !t.frameworks.includes(framework)) return false;
-      if (copyableOnly && t.usage !== "copy") return false;
+    const filtered = templates.filter((x) => {
+      if (category !== ALL && x.category !== category) return false;
+      if (framework !== ALL && !x.frameworks.includes(framework)) return false;
+      if (copyableOnly && x.usage !== "copy") return false;
+      if (mongolianOnly && x.contentLanguage !== "mn") return false;
       if (!needle) return true;
 
-      const haystack = [t.title, t.description, t.category, ...t.frameworks, ...t.tags]
+      const haystack = [x.title, x.description, x.category, ...x.frameworks, ...x.tags]
         .join(" ")
         .toLowerCase();
       // Every word must appear somewhere, so "next dashboard" narrows rather
@@ -108,12 +117,12 @@ export function Gallery({
     const compare = SORTS[sort];
     // "Featured" is the order the server sent, so leave it alone.
     return compare ? [...filtered].sort(compare) : filtered;
-  }, [templates, query, category, framework, copyableOnly, sort]);
+  }, [templates, query, category, framework, copyableOnly, mongolianOnly, sort]);
 
   // Any change to what is being shown starts the list over from the top.
   // Adjusted during render rather than in an effect, so the first paint after
   // a filter change already shows the right number of cards.
-  const signature = `${query}|${category}|${framework}|${copyableOnly}|${sort}`;
+  const signature = `${query}|${category}|${framework}|${copyableOnly}|${mongolianOnly}|${sort}`;
   const [lastSignature, setLastSignature] = useState(signature);
   if (signature !== lastSignature) {
     setLastSignature(signature);
@@ -155,7 +164,11 @@ export function Gallery({
   }, [hasMore, results.length]);
 
   const clearable =
-    query !== "" || (!hideCategoryFilter && category !== ALL) || framework !== ALL || copyableOnly;
+    query !== "" ||
+    (!hideCategoryFilter && category !== ALL) ||
+    framework !== ALL ||
+    copyableOnly ||
+    mongolianOnly;
 
   return (
     <div ref={top}>
@@ -237,6 +250,19 @@ export function Gallery({
               {t.copyableOnly}
             </label>
 
+            {mongolianCount > 0 ? (
+              <label className="flex cursor-pointer items-center gap-2 text-muted">
+                <input
+                  type="checkbox"
+                  checked={mongolianOnly}
+                  onChange={(e) => setMongolianOnly(e.target.checked)}
+                  className="accent-[var(--accent)]"
+                />
+                {t.mongolianOnly}
+                <span className="text-subtle">{mongolianCount}</span>
+              </label>
+            ) : null}
+
             <span className="ml-auto text-subtle">
               {format(t.resultCount, { shown: results.length, total: templates.length })}
             </span>
@@ -249,6 +275,7 @@ export function Gallery({
                   if (!hideCategoryFilter) setCategory(ALL);
                   setFramework(ALL);
                   setCopyableOnly(false);
+                  setMongolianOnly(false);
                 }}
                 className="text-muted underline-offset-4 hover:text-fg hover:underline"
               >
@@ -268,7 +295,13 @@ export function Gallery({
         <>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {results.slice(0, visible).map((template) => (
-              <TemplateCard key={template.id} template={template} lang={lang} t={licenceT} />
+              <TemplateCard
+                key={template.id}
+                template={template}
+                lang={lang}
+                t={licenceT}
+                mongolianLabel={t.mongolianBadge}
+              />
             ))}
           </div>
 

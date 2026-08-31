@@ -14,10 +14,13 @@ export function TemplateCard({
   template,
   lang,
   t,
+  mongolianLabel,
 }: {
   template: Template;
   lang: Locale;
   t: LicenceStrings;
+  /** Shown when the template's own copy is in Mongolian. */
+  mongolianLabel?: string;
 }) {
   return (
     <Link
@@ -47,6 +50,11 @@ export function TemplateCard({
 
         <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-2">
           <LicenseBadge template={template} t={t} />
+          {template.contentLanguage === "mn" && mongolianLabel ? (
+            <span className="rounded-full border border-accent/30 bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent">
+              {mongolianLabel}
+            </span>
+          ) : null}
           {template.frameworks.slice(0, 2).map((framework) => (
             <span
               key={framework}

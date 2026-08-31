@@ -35,6 +35,7 @@ else to set up — no database, no API keys.
 | `npm run typecheck` | Generates Next's route types, then runs `tsc --noEmit` (also catches missing translations) |
 | `npm run seed` | Rewrites `data/templates.json` from the hand-checked list in `scripts/seed.ts` |
 | `npm run ingest` | Rewrites `data/templates.json` by crawling GitHub |
+| `npm run ingest -- --org=NAME` | Also pulls Kodu's own templates from that GitHub organisation |
 | `npm run screenshots` | Captures a screenshot of each template's live demo |
 
 ## How templates get in
@@ -106,6 +107,54 @@ GitHub, and machine-translating someone's project description would be worse tha
 
 Category page copy is written by hand per locale in `lib/categories.ts`. A category with no entry
 falls back to a generated sentence in the right language.
+
+## Kodu's own templates
+
+The gallery is not only a list of other people's work. A template can be opened in Kodu,
+localised or reworked there, pushed to a repo Kodu owns, and picked up by the next ingest run as a
+template in its own right.
+
+### The loop
+
+```
+templete → open in Kodu → edit → push to the Kodu org → next ingest picks it up
+```
+
+Set `KODU_TEMPLATES_ORG` (or pass `--org=`) and the ingest also walks that organisation's public
+repos. A repo declares what it is through its own GitHub **topics**, so nothing has to be
+configured in this project when a new one appears:
+
+| Topic | Meaning |
+| --- | --- |
+| `kodu-template` | Required. Without it the repo is ignored. |
+| `lang-mn` | The template's own copy is in Mongolian (`lang-xx` for any other language). |
+| `derived-from-OWNER-REPO` | It was built from that template. |
+
+Repos from the org are marked `featured`, so they sort above the crawled ones.
+
+Templates with `lang-mn` get a **Монгол** badge on their card and a filter in the gallery — the
+filter stays hidden until at least one exists, so it never appears as an empty control.
+
+### Derivative work and attribution
+
+This is the part to get right. Permissive licences allow derivative work, but **only** if the
+original licence and copyright notice travel with the code. Forking AstroWind into a Mongolian
+version is fine; stripping its LICENSE is not.
+
+So:
+
+- **Keep the original `LICENSE` file** in the fork, unmodified. Add your own copyright line
+  alongside the original's — never in place of it.
+- **Say what it came from.** The `derived-from-` topic drives an attribution block on the template
+  page naming the original, its author and its licence, and a reverse link on the original page
+  listing what was built from it.
+- **A repo with no licence cannot be forked at all.** It is all-rights-reserved by default, which
+  is why those are only ever linked, never copied.
+
+Note that a topic cannot contain a slash, so `derived-from-` joins owner and repo with a dash and
+splits on the first one. An owner whose name contains a dash will resolve wrong; the reverse link
+only appears when the resolved id matches a template actually in the gallery, so a bad guess shows
+no reverse link rather than a wrong one.
 
 ## Screenshots
 

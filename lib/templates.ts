@@ -110,3 +110,22 @@ export function categoryFromSlug(slug: string): string | undefined {
 export function getTemplatesByCategory(category: string): Template[] {
   return getAllTemplates().filter((t) => t.category === category);
 }
+
+/** Templates built from this one, newest first. */
+export function getDerivatives(template: Template): Template[] {
+  return getAllTemplates()
+    .filter((t) => t.derivedFrom?.id === template.id)
+    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
+}
+
+/** The content languages present in the gallery, most common first. */
+export function getContentLanguages(): { code: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const t of getAllTemplates()) {
+    const code = t.contentLanguage ?? "en";
+    counts.set(code, (counts.get(code) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([code, count]) => ({ code, count }))
+    .sort((a, b) => b.count - a.count);
+}

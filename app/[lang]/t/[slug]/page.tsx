@@ -6,9 +6,15 @@ import { OpenInKodu } from "@/components/OpenInKodu";
 import { TemplateCard } from "@/components/TemplateCard";
 import { Thumbnail } from "@/components/Thumbnail";
 import { categoryName } from "@/lib/categories";
-import { getDictionary, isLocale, LOCALES } from "@/lib/i18n";
+import { format, getDictionary, isLocale, LOCALES } from "@/lib/i18n";
 import { usageExplanation } from "@/lib/licenses";
-import { categorySlug, getAllTemplates, getRelated, getTemplateBySlug } from "@/lib/templates";
+import {
+  categorySlug,
+  getAllTemplates,
+  getDerivatives,
+  getRelated,
+  getTemplateBySlug,
+} from "@/lib/templates";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) => getAllTemplates().map((t) => ({ lang, slug: t.slug })));
@@ -47,6 +53,8 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
 
   const t = getDictionary(lang);
   const related = getRelated(template);
+  const derivatives = getDerivatives(template);
+  const origin = template.derivedFrom ?? null;
   const updated = new Date(template.updatedAt).toLocaleDateString(
     lang === "mn" ? "mn-MN" : "en-GB",
     { day: "numeric", month: "short", year: "numeric" },
@@ -120,6 +128,35 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
               </a>
             ) : null}
           </section>
+
+          {origin ? (
+            <section className="mt-4 rounded-xl border border-line bg-raised p-5">
+              <h2 className="text-sm font-semibold">{t.detail.basedOnHeading}</h2>
+              <p className="mt-2 text-[13px] leading-relaxed text-muted">
+                {origin.license
+                  ? format(t.detail.basedOn, {
+                      name: origin.name,
+                      author: origin.author,
+                      license: origin.license,
+                    })
+                  : format(t.detail.basedOnNoLicense, {
+                      name: origin.name,
+                      author: origin.author,
+                    })}
+              </p>
+              {origin.note ? (
+                <p className="mt-2 text-[13px] leading-relaxed text-muted">{origin.note}</p>
+              ) : null}
+              <a
+                href={origin.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="mt-3 inline-block text-[13px] text-accent underline-offset-4 hover:underline"
+              >
+                {t.detail.viewOriginal}
+              </a>
+            </section>
+          ) : null}
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
@@ -185,6 +222,17 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
           </div>
         </aside>
       </div>
+
+      {derivatives.length > 0 ? (
+        <section className="mt-16">
+          <h2 className="mb-4 text-sm font-semibold text-muted">{t.detail.derivativesHeading}</h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {derivatives.map((item) => (
+              <TemplateCard key={item.id} template={item} lang={lang} t={t.licence} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {related.length > 0 ? (
         <section className="mt-16">

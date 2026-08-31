@@ -26,6 +26,26 @@ export interface RepoInfo {
   tarballUrl: string;
 }
 
+/**
+ * The template a derivative was built from.
+ *
+ * Permissive licences allow derivative works, but only if the original
+ * LICENSE and copyright notice travel with the code. Recording the origin
+ * here is what lets the site say where a template came from — the visible
+ * half of keeping that bargain.
+ */
+export interface Derivation {
+  /** Template id of the original, when it is also in the gallery. */
+  id: string | null;
+  name: string;
+  url: string;
+  author: string;
+  /** SPDX id of the original at the time of forking. */
+  license: string | null;
+  /** What was changed, in one line. */
+  note: string;
+}
+
 export interface Template {
   /** Stable across re-ingests: `${source}:${owner}/${name}`. */
   id: string;
@@ -57,6 +77,13 @@ export interface Template {
   ingestedAt: string;
   /** Set by curated entries to pin them to the top of the gallery. */
   featured: boolean;
+  /**
+   * Language of the template's own content — its copy, dates, currency and
+   * placeholder text. Not the language of its code or README.
+   */
+  contentLanguage?: string;
+  /** Present when this template is a derivative of another one. */
+  derivedFrom?: Derivation | null;
 }
 
 export interface TemplateIndex {
