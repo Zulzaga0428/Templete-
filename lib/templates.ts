@@ -58,6 +58,13 @@ export function getAllTemplates(): Template[] {
   // survives the next ingest run.
   const shots = readScreenshots();
   const details = readDetails();
+
+  // A gallery promising "this runs" owes the reader a word when a project has
+  // gone quiet: the install is the first thing to break. Evaluated once here,
+  // at build, not per render — the threshold is a year, so a few days of drift
+  // between deploys does not matter.
+  const staleBefore = Date.now() - 365 * 24 * 60 * 60 * 1000;
+
   for (const template of byId.values()) {
     const shot = shots[template.id];
     if (shot) {
@@ -66,6 +73,8 @@ export function getAllTemplates(): Template[] {
     }
     const detail = details[template.id];
     if (detail) template.details = detail;
+
+    template.stale = new Date(template.updatedAt).getTime() < staleBefore;
   }
 
   cache = [...byId.values()].sort((a, b) => {

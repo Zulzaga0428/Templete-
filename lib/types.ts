@@ -88,6 +88,12 @@ export interface Template {
   embeddable?: boolean;
   /** README summary, feature list and stack. See lib/details.ts. */
   details?: import("./details").TemplateDetails;
+  /**
+   * The project has not been touched in over a year. Computed when the data is
+   * loaded rather than during render — these pages are prerendered, and a
+   * clock read inside a component is neither pure nor accurate there.
+   */
+  stale?: boolean;
 }
 
 export interface TemplateIndex {

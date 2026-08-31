@@ -100,3 +100,20 @@ export const COPYABLE_LICENSE_QUALIFIERS = [
   "cc0-1.0",
   "mpl-2.0",
 ];
+
+/**
+ * How long a project can go untouched and still belong in a gallery whose
+ * promise is "this runs".
+ *
+ * A quarter of the first crawl had not been touched in two years, the oldest
+ * by nine. A nine-year-old React starter does not install on a current Node,
+ * so opening it in Kodu fails at the first command — which breaks the one
+ * thing the site claims.
+ */
+export const MAX_MONTHS_SINCE_PUSH = 18;
+
+export function pushedSinceQualifier(months = MAX_MONTHS_SINCE_PUSH): string {
+  const cutoff = new Date();
+  cutoff.setMonth(cutoff.getMonth() - months);
+  return `pushed:>${cutoff.toISOString().slice(0, 10)}`;
+}

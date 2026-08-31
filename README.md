@@ -59,6 +59,21 @@ out of the gallery automatically.
 Repos are dropped when they are archived, disabled, a fork, have no description, or look like an
 awesome-list, tutorial, or course (`REJECT_PATTERNS` in `scripts/sources.ts`).
 
+### Freshness
+
+Every query also carries `pushed:>`, cutting off at 18 months by default
+(`MAX_MONTHS_SINCE_PUSH`, or `--max-age-months=`). The first crawl showed why: a quarter of what
+it found had not been touched in two years, the oldest in nine. A nine-year-old React starter does
+not install on a current Node, so opening it in Kodu fails at the first command — which breaks the
+only thing the site promises.
+
+Anything already listed that goes quiet gets a note on its page rather than vanishing mid-week;
+the next ingest drops it, since the index is rebuilt from scratch each run.
+
+Descriptions are cleaned of the emoji authors put in front of them. Only the leading run: an emoji
+inside a sentence is usually doing some work, and stripping those would be editing someone's
+writing rather than tidying a card.
+
 ### Licence filtering
 
 Every search carries a `license:` qualifier, so **GitHub** decides the licence — we never parse a

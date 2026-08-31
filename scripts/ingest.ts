@@ -4,6 +4,7 @@
  * Run with:  npm run ingest
  *            npm run ingest -- --min-stars=500 --limit=20
  *            npm run ingest -- --org=kodu-live   (also pull Kodu's own templates)
+ *            npm run ingest -- --max-age-months=24
  *            npm run ingest -- --out=data/templates.json
  *
  * Set GITHUB_TOKEN to lift the search rate limit from 10 to 30 requests/min.
@@ -17,7 +18,12 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { COPYABLE_LICENSE_QUALIFIERS, GITHUB_QUERIES } from "./sources";
+import {
+  COPYABLE_LICENSE_QUALIFIERS,
+  GITHUB_QUERIES,
+  MAX_MONTHS_SINCE_PUSH,
+  pushedSinceQualifier,
+} from "./sources";
 import { isRejected, toTemplate, type RepoLike } from "./transform";
 import type { Derivation, Template, TemplateIndex } from "../lib/types";
 
@@ -33,6 +39,7 @@ const args = new Map(
 
 const MIN_STARS = Number(args.get("min-stars") ?? 150);
 const PER_QUERY = Number(args.get("limit") ?? 30);
+const MAX_AGE_MONTHS = Number(args.get("max-age-months") ?? MAX_MONTHS_SINCE_PUSH);
 const OUT = path.join(process.cwd(), args.get("out") ?? "data/templates.json");
 
 const token = process.env.GITHUB_TOKEN;
@@ -73,7 +80,9 @@ async function ingestGithub(): Promise<Template[]> {
   const licenseClause = COPYABLE_LICENSE_QUALIFIERS.map((l) => `license:${l}`).join(" ");
 
   for (const query of GITHUB_QUERIES) {
-    const q = `${query.q} ${licenseClause} stars:>=${MIN_STARS} archived:false is:public`;
+    const q =
+      `${query.q} ${licenseClause} stars:>=${MIN_STARS} archived:false is:public ` +
+      pushedSinceQualifier(MAX_AGE_MONTHS);
     const url =
       `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}` +
       `&sort=stars&order=desc&per_page=${PER_QUERY}`;

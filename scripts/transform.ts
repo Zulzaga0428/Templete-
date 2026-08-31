@@ -26,6 +26,23 @@ export interface RepoLike {
   license: { spdx_id?: string | null; name?: string | null; url?: string | null } | null;
 }
 
+/**
+ * Trims the decoration authors put in front of a GitHub description.
+ *
+ * Only the leading run is removed. An emoji inside a sentence is usually doing
+ * some work, and stripping those would edit people's writing rather than tidy
+ * the card.
+ */
+export function cleanDescription(description: string): string {
+  return description
+    .replace(
+      /^[\s\u{1F300}-\u{1FAFF}\u{1F900}-\u{1F9FF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]+/u,
+      "",
+    )
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export function slugify(value: string): string {
   return value
     .toLowerCase()
@@ -91,7 +108,7 @@ export function toTemplate(
     slug: slugify(`${repo.owner.login}-${repo.name}`),
     name: repo.name,
     title: titleize(repo.name),
-    description: (repo.description ?? "").trim(),
+    description: cleanDescription(repo.description ?? ""),
     source: "github",
     sourceUrl: repo.html_url,
     demoUrl: repo.homepage && /^https?:\/\//.test(repo.homepage) ? repo.homepage : null,

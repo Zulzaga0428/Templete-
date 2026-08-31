@@ -229,6 +229,12 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
               <Stat label={t.detail.category} value={categoryName(template.category, lang)} />
             </dl>
 
+            {template.stale ? (
+              <p className="mt-4 rounded-lg border border-warn/25 bg-warn/5 px-3 py-2.5 text-[12px] leading-relaxed text-muted">
+                {t.detail.stale}
+              </p>
+            ) : null}
+
             <div className="mt-5 flex flex-wrap items-center gap-1.5 border-t border-line pt-5">
               <LicenseBadge template={template} t={t.licence} />
               {template.frameworks.map((framework) => (
