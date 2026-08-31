@@ -194,6 +194,38 @@ Every page generates its own social card with `next/og`, prerendered alongside t
 `lib/og.tsx` holds the shared layout. Satori (what `next/og` renders with) supports a subset of
 CSS — flexbox only, and any element with more than one child needs an explicit `display: flex`.
 
+## The gallery as an API
+
+Kodu needs its own in-app template picker, and that picker should not carry a second copy of the
+catalogue. So the gallery is readable as JSON:
+
+```
+GET /api/templates
+GET /api/templates?category=dashboard&framework=Next.js&copyable=true
+GET /api/templates?lang=mn&limit=12
+GET /api/templates?q=admin+dashboard
+GET /api/templates/:slug
+```
+
+The index returns the templates plus the available categories, frameworks and content languages,
+so a picker can build its own filters without hardcoding anything. Each entry carries `openUrl`,
+the ready-made link into Kodu, and `copyable` — **`false` means link-only**: the licence does not
+let us copy that code, so a picker must not offer it as a starting point.
+
+`/api/templates/:slug` returns the full record plus `handoff`, the exact payload
+`/api/kodu/open` would POST to the Kodu API.
+
+Both send `Access-Control-Allow-Origin: *` (this is public data) and a one-hour
+`Cache-Control`, so a CDN absorbs the traffic.
+
+Note the routes are rendered per request, not statically. A static route handler is built once and
+serves the same body for every query string, which silently ignores every filter — the bug is
+invisible until someone wonders why `?category=` does nothing. The work itself is a filter over an
+in-memory array.
+
+There is still no database anywhere in this. The ingest writes a JSON file, this endpoint serves
+it, and the website and Kodu read the same one thing.
+
 ## Kodu handoff
 
 **Open in Kodu** posts to `/api/kodu/open`, which resolves the template server-side and redirects.

@@ -15,6 +15,8 @@ pipeline, and support for Kodu's own templates and derivative work.
 shows 21 seeded templates and no screenshots.
 
 **Waiting on Kodu.** The `/new?repo=…&ref=…` route. This is the one that matters — see below.
+A JSON API for the catalogue is live at `/api/templates`, so an in-app picker in Kodu can be built
+against it whenever it is wanted.
 
 ## The next thing to build is on Kodu's side
 
@@ -60,6 +62,30 @@ worth building once — it is also what lets a user keep what they made.
 If a self-serve publish flow is ever wanted, the gate has to survive it: a submission needs a
 licence, a README, a description, and a human approval before it appears. Skipping any of those
 turns the gallery back into a dump.
+
+## Is this Kodu's library?
+
+Yes, and it can be that without becoming part of Kodu.
+
+It stays a separate site on its own domain because that is what makes it crawlable, fast and
+findable — a template gallery inside an app behind a login earns no search traffic at all. When
+Kodu needs an in-app picker, that is a second surface over the same data, not a second catalogue:
+it reads `/api/templates` and renders whatever it likes.
+
+**Do we need a database?** Not yet, and it is worth being precise about why. GitHub is currently
+the database: repos are the storage, topics are the metadata, and the ingest is the sync. That is
+a real architecture, not a shortcut — it is free, it backs itself up, and it has no schema to
+migrate.
+
+The moment a database is genuinely needed is specific: **when something has to be stored per
+visitor.** Likes, saved templates, "opened 412 times", a submission queue with human approval.
+None of those exist yet. Until one does, adding a database buys nothing and costs a service to run.
+
+**Is there an off-the-shelf "GitHub gallery"?** Not one that does this job. GitHub's own topic
+pages list repos but do not filter by licence, rank by usefulness, or read well. Its template
+repository feature gives a "Use this template" button but is not a gallery. Awesome-lists are
+hand-edited Markdown that goes stale. None of them is a curated, licence-checked, searchable,
+bilingual catalogue — which is the reason this exists.
 
 ## Decisions worth not relitigating
 
