@@ -29,9 +29,8 @@ company page, a dashboard. Prefer a template that is maintained and whose demo s
 
 **2. Fork it into the Kodu organisation.** Keep the history; do not squash the original away.
 
-**3. Rework it.** Translate the copy, set dates and currency to `mn-MN`, swap the fonts for ones
-that render Cyrillic properly, replace the placeholder content with something plausible for the
-market. Delete what a local business will never use.
+**3. Rework it.** `docs/LOCALISE.md` holds a brief to hand the agent doing this — the font,
+text-expansion and licence points in it are what decide whether the result looks professional.
 
 **4. Deploy it somewhere.** This matters more than it looks: the gallery reads the repo's GitHub
 **homepage** field as the demo URL, and without one the template gets no screenshot and no live

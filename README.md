@@ -449,7 +449,8 @@ the data has to move out of a JSON file first.
 
 ## Publishing your own templates
 
-`docs/PUBLISHING.md` is the checklist for turning a gallery template into a Kodu one — what the
+`docs/PUBLISHING.md` is the checklist for turning a gallery template into a Kodu one, and
+`docs/LOCALISE.md` is the brief to hand the agent doing the localisation — what the
 licences allow, the GitHub topics that make a repo visible to the ingest, and the two things that
 most often stop a template appearing (no description, no homepage URL).
 
