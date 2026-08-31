@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/Footer";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Wordmark } from "@/components/Wordmark";
 import { DEFAULT_LOCALE, getDictionary, isLocale, LOCALES, type Locale } from "@/lib/i18n";
 import "../globals.css";
 
@@ -54,18 +55,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       <body className="flex min-h-full flex-col">
         <header className="sticky top-0 z-30 border-b border-line bg-bg/80 backdrop-blur-md">
           <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4 sm:px-6">
-            <Link
-              href={`/${lang}`}
-              className="flex items-center gap-2 font-semibold tracking-tight"
-            >
-              <span
-                aria-hidden
-                className="grid h-6 w-6 place-items-center rounded-md bg-accent text-[11px] font-bold text-accent-contrast"
-              >
-                T
-              </span>
-              Templete
-            </Link>
+            <Wordmark lang={lang} />
             <nav className="ml-auto flex items-center gap-1 text-sm">
               <Link
                 href={`/${lang}/templates`}

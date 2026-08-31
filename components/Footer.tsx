@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Wordmark } from "@/components/Wordmark";
 import { categoryName } from "@/lib/categories";
 import { format, type Dictionary, type Locale } from "@/lib/i18n";
 import { categorySlug, getAllTemplates, getCategories } from "@/lib/templates";
@@ -56,15 +57,7 @@ export function Footer({ lang, t }: { lang: Locale; t: Dictionary }) {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
-            <Link href={`/${lang}`} className="flex items-center gap-2 font-semibold tracking-tight">
-              <span
-                aria-hidden
-                className="grid h-6 w-6 place-items-center rounded-md bg-accent text-[11px] font-bold text-accent-contrast"
-              >
-                T
-              </span>
-              Templete
-            </Link>
+            <Wordmark lang={lang} />
 
             <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-muted">
               {t.footer.tagline}
