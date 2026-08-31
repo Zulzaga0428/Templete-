@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import type { Template, TemplateIndex } from "./types";
+import type { ScreenshotIndex, Template, TemplateIndex } from "./types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -17,6 +17,17 @@ function readIndex(file: string): Template[] {
   }
 }
 
+function readScreenshots(): Record<string, { path: string }> {
+  const full = path.join(DATA_DIR, "screenshots.json");
+  if (!fs.existsSync(full)) return {};
+  try {
+    const parsed = JSON.parse(fs.readFileSync(full, "utf8")) as ScreenshotIndex;
+    return parsed.shots ?? {};
+  } catch (error) {
+    throw new Error(`Could not parse data/screenshots.json: ${(error as Error).message}`);
+  }
+}
+
 let cache: Template[] | null = null;
 
 export function getAllTemplates(): Template[] {
@@ -30,6 +41,14 @@ export function getAllTemplates(): Template[] {
   const byId = new Map<string, Template>();
   for (const t of ingested) byId.set(t.id, t);
   for (const t of curated) byId.set(t.id, t);
+
+  // Screenshots are keyed by template id and overlaid last, so capturing one
+  // survives the next ingest run.
+  const shots = readScreenshots();
+  for (const template of byId.values()) {
+    const shot = shots[template.id];
+    if (shot) template.screenshotUrl = shot.path;
+  }
 
   cache = [...byId.values()].sort((a, b) => {
     if (a.featured !== b.featured) return a.featured ? -1 : 1;
@@ -74,4 +93,20 @@ export function getRelated(template: Template, limit = 4): Template[] {
     .sort((a, b) => b.score - a.score || b.t.stars - a.t.stars)
     .slice(0, limit)
     .map((x) => x.t);
+}
+
+/** URL-safe form of a category name: "UI kit" -> "ui-kit". */
+export function categorySlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function categoryFromSlug(slug: string): string | undefined {
+  return getCategories().find((c) => categorySlug(c.name) === slug)?.name;
+}
+
+export function getTemplatesByCategory(category: string): Template[] {
+  return getAllTemplates().filter((t) => t.category === category);
 }

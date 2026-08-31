@@ -37,8 +37,15 @@ export interface Template {
   sourceUrl: string;
   /** Live demo, when the project publishes one. */
   demoUrl: string | null;
-  /** Social preview / OG image used as the gallery thumbnail. */
+  /** Social preview / OG image — the fallback thumbnail. */
   imageUrl: string | null;
+  /**
+   * A real screenshot of the template's live demo, when one has been captured.
+   * Lives in data/screenshots.json rather than the template index, because
+   * screenshots are expensive to produce and an ingest run rewrites the index
+   * from scratch.
+   */
+  screenshotUrl?: string | null;
   repo: RepoInfo | null;
   license: LicenseInfo;
   usage: UsageMode;
@@ -56,4 +63,17 @@ export interface TemplateIndex {
   generatedAt: string;
   count: number;
   templates: Template[];
+}
+
+export interface ScreenshotRecord {
+  /** Path served from /public, e.g. "/shots/ixartz-next-js-boilerplate.jpg". */
+  path: string;
+  /** The page that was captured. */
+  sourceUrl: string;
+  capturedAt: string;
+}
+
+export interface ScreenshotIndex {
+  generatedAt: string;
+  shots: Record<string, ScreenshotRecord>;
 }

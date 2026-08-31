@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { TemplateCard } from "@/components/TemplateCard";
-import { getAllTemplates, getCategories, getFrameworks } from "@/lib/templates";
+import { categorySlug, getAllTemplates, getCategories, getFrameworks } from "@/lib/templates";
 
 export const metadata = {
   alternates: { canonical: "/" },
@@ -179,7 +179,7 @@ export default function LandingPage() {
           {categories.map((category) => (
             <Link
               key={category.name}
-              href={`/templates?category=${encodeURIComponent(category.name)}`}
+              href={`/templates/${categorySlug(category.name)}`}
               className="group flex items-center justify-between rounded-xl border border-line bg-raised px-4 py-4 transition-colors hover:border-line-strong hover:bg-hover"
             >
               <span className="text-sm font-medium">{category.name}</span>

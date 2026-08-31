@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllTemplates, getCategories } from "@/lib/templates";
+import { categorySlug, getAllTemplates, getCategories } from "@/lib/templates";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://templete.kodu.live";
 
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const categories = getCategories().map((c) => ({
-    url: `${SITE_URL}/templates?category=${encodeURIComponent(c.name)}`,
+    url: `${SITE_URL}/templates/${categorySlug(c.name)}`,
     changeFrequency: "weekly" as const,
     priority: 0.6,
   }));

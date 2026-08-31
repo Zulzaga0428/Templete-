@@ -16,7 +16,7 @@ export function TemplateCard({ template }: { template: Template }) {
     >
       <div className="relative aspect-[1200/630] overflow-hidden bg-hover">
         <Thumbnail
-          src={template.imageUrl}
+          sources={[template.screenshotUrl, template.imageUrl]}
           title={template.title}
           seed={template.id}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

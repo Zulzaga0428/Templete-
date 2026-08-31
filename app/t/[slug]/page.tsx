@@ -6,7 +6,7 @@ import { OpenInKodu } from "@/components/OpenInKodu";
 import { TemplateCard } from "@/components/TemplateCard";
 import { Thumbnail } from "@/components/Thumbnail";
 import { usageExplanation } from "@/lib/licenses";
-import { getAllTemplates, getRelated, getTemplateBySlug } from "@/lib/templates";
+import { categorySlug, getAllTemplates, getRelated, getTemplateBySlug } from "@/lib/templates";
 
 export function generateStaticParams() {
   return getAllTemplates().map((t) => ({ slug: t.slug }));
@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: PageProps<"/t/[slug]">): Prom
     title: template.title,
     description: template.description,
     alternates: { canonical: `/t/${template.slug}` },
+    // No `images` here: app/t/[slug]/opengraph-image.tsx generates the card.
     openGraph: {
       title: `${template.title} — Templete`,
       description: template.description,
-      images: template.imageUrl ? [template.imageUrl] : undefined,
     },
   };
 }
@@ -60,7 +60,7 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
           /
         </span>
         <Link
-          href={`/templates?category=${encodeURIComponent(template.category)}`}
+          href={`/templates/${categorySlug(template.category)}`}
           className="underline-offset-4 hover:text-fg hover:underline"
         >
           {template.category}
@@ -71,7 +71,7 @@ export default async function TemplatePage({ params }: PageProps<"/t/[slug]">) {
         <div>
           <div className="relative aspect-[1200/630] overflow-hidden rounded-xl border border-line bg-raised">
             <Thumbnail
-              src={template.imageUrl}
+              sources={[template.screenshotUrl, template.imageUrl]}
               title={template.title}
               seed={template.id}
               sizes="(max-width: 1024px) 100vw, 760px"

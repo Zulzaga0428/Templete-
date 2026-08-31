@@ -13,7 +13,8 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
     "ingest": "tsx scripts/ingest.ts",
-    "seed": "tsx scripts/seed.ts"
+    "seed": "tsx scripts/seed.ts",
+    "screenshots": "tsx scripts/screenshots.ts"
   },
   "dependencies": {
     "next": "16.3.3",
@@ -27,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.3",
+    "playwright": "^1.49.0",
     "tailwindcss": "^4",
     "tsx": "^4.19.2",
     "typescript": "^5"

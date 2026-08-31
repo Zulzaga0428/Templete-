@@ -58,10 +58,19 @@ export function detectFrameworks(repo: RepoLike): string[] {
 }
 
 export function detectCategory(repo: RepoLike, fallback: string): string {
-  const haystack = `${(repo.topics ?? []).join(" ")} ${repo.name} ${repo.description ?? ""}`;
+  // The author's own name and description beat the topic list. Topics are a
+  // grab-bag — a multi-vendor shop that ships an admin panel tags itself
+  // `admin-dashboard` too, and matching those first files it as a dashboard.
+  const authored = `${repo.name} ${repo.description ?? ""}`;
   for (const rule of CATEGORY_RULES) {
-    if (rule.match.test(haystack)) return rule.category;
+    if (rule.match.test(authored)) return rule.category;
   }
+
+  const topics = (repo.topics ?? []).join(" ");
+  for (const rule of CATEGORY_RULES) {
+    if (rule.match.test(topics)) return rule.category;
+  }
+
   return fallback;
 }
 

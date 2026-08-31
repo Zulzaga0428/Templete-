@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T09:50:42.543Z",
+  "generatedAt": "2026-08-31T01:41:34.309Z",
   "count": 21,
   "templates": [
     {
@@ -42,7 +42,7 @@
       ],
       "stars": 90199,
       "updatedAt": "2026-08-29T18:44:58Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -83,7 +83,7 @@
       ],
       "stars": 45563,
       "updatedAt": "2026-08-30T00:47:58Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -124,7 +124,7 @@
       ],
       "stars": 41587,
       "updatedAt": "2026-08-30T09:38:31Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -168,7 +168,7 @@
       ],
       "stars": 26915,
       "updatedAt": "2026-08-29T17:16:44Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -211,7 +211,7 @@
       ],
       "stars": 25694,
       "updatedAt": "2026-08-30T06:07:58Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -254,7 +254,7 @@
       ],
       "stars": 21503,
       "updatedAt": "2026-08-30T06:08:24Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -301,7 +301,7 @@
       ],
       "stars": 15671,
       "updatedAt": "2026-08-30T08:20:29Z",
-      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "ingestedAt": "2026-08-31T01:41:34.307Z",
       "featured": true
     },
     {
@@ -331,7 +331,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "SaaS",
+      "category": "Starter",
       "frameworks": [
         "Next.js",
         "React",
@@ -348,7 +348,7 @@
       ],
       "stars": 13057,
       "updatedAt": "2026-08-20T19:51:14Z",
-      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "ingestedAt": "2026-08-31T01:41:34.306Z",
       "featured": true
     },
     {
@@ -378,7 +378,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "Blog",
+      "category": "Marketing",
       "frameworks": [
         "Astro",
         "Tailwind"
@@ -392,7 +392,7 @@
       ],
       "stars": 5922,
       "updatedAt": "2026-08-30T07:42:50Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": true
     },
     {
@@ -422,7 +422,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "UI kit",
+      "category": "Starter",
       "frameworks": [
         "Next.js",
         "Prisma",
@@ -439,7 +439,7 @@
       ],
       "stars": 5113,
       "updatedAt": "2024-10-02T20:28:59Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": false
     },
     {
@@ -480,7 +480,7 @@
       ],
       "stars": 5049,
       "updatedAt": "2026-08-30T02:18:19Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -523,7 +523,7 @@
       ],
       "stars": 4959,
       "updatedAt": "2026-08-29T17:40:58Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -565,7 +565,7 @@
       ],
       "stars": 4223,
       "updatedAt": "2026-08-29T22:36:20Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -610,7 +610,7 @@
       ],
       "stars": 2952,
       "updatedAt": "2026-08-30T05:52:40Z",
-      "ingestedAt": "2026-08-30T09:50:42.541Z",
+      "ingestedAt": "2026-08-31T01:41:34.307Z",
       "featured": true
     },
     {
@@ -655,7 +655,7 @@
       ],
       "stars": 2537,
       "updatedAt": "2026-04-28T10:22:20Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": false
     },
     {
@@ -699,7 +699,7 @@
       ],
       "stars": 2300,
       "updatedAt": "2026-08-29T15:25:28Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -744,7 +744,7 @@
       ],
       "stars": 2138,
       "updatedAt": "2026-01-18T21:31:34Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": false
     },
     {
@@ -788,7 +788,7 @@
       ],
       "stars": 1725,
       "updatedAt": "2026-08-28T23:43:05Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": false
     },
     {
@@ -818,7 +818,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "E-commerce",
+      "category": "Portfolio",
       "frameworks": [
         "Astro",
         "Tailwind"
@@ -832,7 +832,7 @@
       ],
       "stars": 1434,
       "updatedAt": "2026-08-28T18:59:33Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": false
     },
     {
@@ -862,7 +862,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "Blog",
+      "category": "Marketing",
       "frameworks": [
         "Astro",
         "Tailwind"
@@ -876,7 +876,7 @@
       ],
       "stars": 1406,
       "updatedAt": "2026-08-30T06:45:38Z",
-      "ingestedAt": "2026-08-30T09:50:42.542Z",
+      "ingestedAt": "2026-08-31T01:41:34.308Z",
       "featured": false
     },
     {
@@ -906,7 +906,7 @@
         "permissive": true
       },
       "usage": "copy",
-      "category": "Dashboard",
+      "category": "E-commerce",
       "frameworks": [
         "Next.js",
         "React",
@@ -921,7 +921,7 @@
       ],
       "stars": 947,
       "updatedAt": "2026-08-30T09:27:43Z",
-      "ingestedAt": "2026-08-30T09:50:42.543Z",
+      "ingestedAt": "2026-08-31T01:41:34.309Z",
       "featured": true
     }
   ]

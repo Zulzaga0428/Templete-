@@ -11,6 +11,8 @@ interface Props {
   /** Seeded from ?q= and ?category= so links from the landing page land pre-filtered. */
   initialQuery?: string;
   initialCategory?: string;
+  /** Set on a category page, where the category is the page rather than a filter. */
+  hideCategoryFilter?: boolean;
 }
 
 const ALL = "All";
@@ -47,6 +49,7 @@ export function Gallery({
   frameworks,
   initialQuery = "",
   initialCategory,
+  hideCategoryFilter = false,
 }: Props) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(
@@ -73,7 +76,8 @@ export function Gallery({
     });
   }, [templates, query, category, framework, copyableOnly]);
 
-  const clearable = query !== "" || category !== ALL || framework !== ALL || copyableOnly;
+  const clearable =
+    query !== "" || (!hideCategoryFilter && category !== ALL) || framework !== ALL || copyableOnly;
 
   return (
     <>
@@ -96,17 +100,23 @@ export function Gallery({
             />
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            <Pill active={category === ALL} onClick={() => setCategory(ALL)}>
-              All
-            </Pill>
-            {categories.map((c) => (
-              <Pill key={c.name} active={category === c.name} onClick={() => setCategory(c.name)}>
-                {c.name}
-                <span className="ml-1.5 opacity-60">{c.count}</span>
+          {hideCategoryFilter ? null : (
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              <Pill active={category === ALL} onClick={() => setCategory(ALL)}>
+                All
               </Pill>
-            ))}
-          </div>
+              {categories.map((c) => (
+                <Pill
+                  key={c.name}
+                  active={category === c.name}
+                  onClick={() => setCategory(c.name)}
+                >
+                  {c.name}
+                  <span className="ml-1.5 opacity-60">{c.count}</span>
+                </Pill>
+              ))}
+            </div>
+          )}
 
           <div className="flex flex-wrap items-center gap-3 text-[13px]">
             <label className="flex items-center gap-2 text-muted">
@@ -144,7 +154,7 @@ export function Gallery({
                 type="button"
                 onClick={() => {
                   setQuery("");
-                  setCategory(ALL);
+                  if (!hideCategoryFilter) setCategory(ALL);
                   setFramework(ALL);
                   setCopyableOnly(false);
                 }}

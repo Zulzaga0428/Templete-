@@ -4,9 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 /**
- * Repo social cards occasionally 404 (renamed repos, GitHub hiccups). Falling
- * back to a deterministic gradient keeps the grid from filling with broken
- * image icons.
+ * Tries each source in turn and falls back to a deterministic gradient.
+ *
+ * A template usually has two: a real screenshot of its live demo, and GitHub's
+ * social card. Screenshots go stale when a demo moves or dies, and social
+ * cards 404 on renamed repos, so neither can be trusted on its own.
  */
 function hueFrom(seed: string): number {
   let hash = 0;
@@ -25,18 +27,20 @@ function initials(title: string): string {
 }
 
 interface Props {
-  src: string | null;
+  sources: (string | null | undefined)[];
   title: string;
   seed: string;
   sizes: string;
   priority?: boolean;
 }
 
-export function Thumbnail({ src, title, seed, sizes, priority = false }: Props) {
-  const [failed, setFailed] = useState(false);
-  const hue = hueFrom(seed);
+export function Thumbnail({ sources, title, seed, sizes, priority = false }: Props) {
+  const candidates = sources.filter((s): s is string => Boolean(s));
+  const [index, setIndex] = useState(0);
+  const src = candidates[index];
 
-  if (!src || failed) {
+  if (!src) {
+    const hue = hueFrom(seed);
     return (
       <div
         aria-hidden
@@ -54,12 +58,13 @@ export function Thumbnail({ src, title, seed, sizes, priority = false }: Props) 
 
   return (
     <Image
+      key={src}
       src={src}
       alt={`${title} preview`}
       fill
       priority={priority}
       sizes={sizes}
-      onError={() => setFailed(true)}
+      onError={() => setIndex((i) => i + 1)}
       className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
     />
   );

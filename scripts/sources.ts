@@ -53,16 +53,25 @@ export const FRAMEWORK_TOPICS: Record<string, string> = {
   trpc: "tRPC",
 };
 
-/** Category keywords checked against topics, name and description, in order. */
+/**
+ * Category rules, checked in order — first match wins, so the specific ones
+ * come before the general ones.
+ *
+ * Patterns are deliberately narrow. Broad words misfile more than they file:
+ * "store" appears in a portfolio template's feature list, "boilerplate"
+ * appears in every starter that has nothing to do with SaaS, and "components"
+ * appears in almost everything.
+ */
 export const CATEGORY_RULES: { category: string; match: RegExp }[] = [
-  { category: "SaaS", match: /\b(saas|boilerplate|starter-kit)\b/i },
-  { category: "Dashboard", match: /\b(dashboard|admin|analytics)\b/i },
-  { category: "E-commerce", match: /\b(ecommerce|e-commerce|shop|store|commerce)\b/i },
-  { category: "Portfolio", match: /\b(portfolio|resume|cv|personal-site)\b/i },
+  { category: "SaaS", match: /\bsaas\b/i },
+  { category: "E-commerce", match: /\b(e-?commerce|storefront|multi-vendor|shopping[- ]cart)\b/i },
+  { category: "Dashboard", match: /\b(dashboard|admin[- ](panel|template|ui)|back-?office)\b/i },
+  { category: "AI", match: /\b(chatbot|llm|rag|openai|ai[- ]agent)\b/i },
+  { category: "Portfolio", match: /\b(portfolio|resume|personal[- ](site|website))\b/i },
+  { category: "Marketing", match: /\b(landing[- ]page|marketing[- ]site|agency)\b/i },
   { category: "Blog", match: /\b(blog|docs|documentation|mdx)\b/i },
-  { category: "Marketing", match: /\b(landing|marketing|agency|startup-page)\b/i },
-  { category: "UI kit", match: /\b(ui-kit|components|design-system|shadcn)\b/i },
-  { category: "AI", match: /\b(ai|chatbot|llm|openai|rag)\b/i },
+  { category: "UI kit", match: /\b(ui[- ]kit|design[- ]system|component[- ]library)\b/i },
+  { category: "Starter", match: /\b(boilerplate|starter|scaffold)\b/i },
 ];
 
 /**
