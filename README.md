@@ -308,8 +308,13 @@ GET /api/templates/:slug
 
 The index returns the templates plus the available categories, frameworks and content languages,
 so a picker can build its own filters without hardcoding anything. Each entry carries `openUrl`,
-the ready-made link into Kodu, and `copyable` — **`false` means link-only**: the licence does not
-let us copy that code, so a picker must not offer it as a starting point.
+the ready-made link into Kodu, plus three flags a picker has to respect:
+
+- **`copyable: false`** means link-only — the licence does not let us copy that code, so it must
+  not be offered as a starting point.
+- **`stale: true`** means the project has not been touched in over a year. Offering one of these
+  without saying so sends someone to an install that fails.
+- **`embeddable: true`** means the demo allows framing, so a picker can preview it inline.
 
 `/api/templates/:slug` returns the full record plus `handoff`, the exact payload
 `/api/kodu/open` would POST to the Kodu API.

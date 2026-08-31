@@ -43,6 +43,13 @@ function toPublic(template: Template) {
     featured: template.featured,
     contentLanguage: template.contentLanguage ?? "en",
     license: template.license.spdx,
+    // Untouched for over a year. A picker offering one of these without saying
+    // so sends someone to an install that fails.
+    stale: template.stale ?? false,
+    // The demo allows itself to be framed, so a picker can preview it inline.
+    embeddable: template.embeddable ?? false,
+    // Names only; the full record is on /api/templates/:slug.
+    stack: template.details?.stack.map((f) => f.name) ?? [],
     // Whether Kodu may clone it. `false` means link-only: the licence does not
     // let us copy the code, so a picker must not offer it as a starting point.
     copyable: template.usage === "copy",

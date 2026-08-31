@@ -296,6 +296,9 @@ export function Gallery({
         </div>
       ) : (
         <>
+          {/* The cards are h3s under the page's h1; without this the heading
+              order jumps a level, which is a rough ride on a screen reader. */}
+          <h2 className="sr-only">{t.resultsHeading}</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {results.slice(0, visible).map((template) => (
               <TemplateCard
