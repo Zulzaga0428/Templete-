@@ -1,4 +1,830 @@
 {
-  "generatedAt": "2026-08-31T00:00:00.000Z",
-  "shots": {}
+  "generatedAt": "2026-08-31T12:08:43.420Z",
+  "shots": {
+    "github:ColorlibHQ/AdminLTE": {
+      "path": "/shots/colorlibhq-adminlte.jpg",
+      "sourceUrl": "https://adminlte.io",
+      "capturedAt": "2026-08-31T12:04:04.569Z"
+    },
+    "github:marmelab/react-admin": {
+      "path": "/shots/marmelab-react-admin.jpg",
+      "sourceUrl": "http://marmelab.com/react-admin",
+      "capturedAt": "2026-08-31T12:04:05.913Z"
+    },
+    "github:vbenjs/vue-vben-admin": {
+      "path": "/shots/vbenjs-vue-vben-admin.jpg",
+      "sourceUrl": "https://www.vben.pro",
+      "capturedAt": "2026-08-31T12:04:05.914Z"
+    },
+    "github:kriasoft/react-starter-kit": {
+      "path": "/shots/kriasoft-react-starter-kit.jpg",
+      "sourceUrl": "https://reactstarter.com",
+      "capturedAt": "2026-08-31T12:04:07.954Z"
+    },
+    "github:wasp-lang/open-saas": {
+      "path": "/shots/wasp-lang-open-saas.jpg",
+      "sourceUrl": "https://opensaas.sh",
+      "capturedAt": "2026-08-31T12:04:10.573Z"
+    },
+    "github:ixartz/Next-js-Boilerplate": {
+      "path": "/shots/ixartz-next-js-boilerplate.jpg",
+      "sourceUrl": "https://nextjs-boilerplate.com",
+      "capturedAt": "2026-08-31T12:04:10.886Z"
+    },
+    "github:mdbootstrap/TW-Elements": {
+      "path": "/shots/mdbootstrap-tw-elements.jpg",
+      "sourceUrl": "https://tw-elements.com",
+      "capturedAt": "2026-08-31T12:04:11.754Z"
+    },
+    "github:ixartz/SaaS-Boilerplate": {
+      "path": "/shots/ixartz-saas-boilerplate.jpg",
+      "sourceUrl": "https://react-saas.com/",
+      "capturedAt": "2026-08-31T12:04:14.355Z"
+    },
+    "github:antfu-collective/vitesse": {
+      "path": "/shots/antfu-collective-vitesse.jpg",
+      "sourceUrl": "https://vitesse.netlify.app/",
+      "capturedAt": "2026-08-31T12:04:14.551Z"
+    },
+    "github:thedevdojo/wave": {
+      "path": "/shots/thedevdojo-wave.jpg",
+      "sourceUrl": "https://devdojo.com/wave",
+      "capturedAt": "2026-08-31T12:04:14.837Z"
+    },
+    "github:arthelokyo/astrowind": {
+      "path": "/shots/arthelokyo-astrowind.jpg",
+      "sourceUrl": "https://astrowind.vercel.app",
+      "capturedAt": "2026-08-31T12:04:17.303Z"
+    },
+    "github:devias-io/material-kit-react": {
+      "path": "/shots/devias-io-material-kit-react.jpg",
+      "sourceUrl": "http://material-kit-react.devias.io",
+      "capturedAt": "2026-08-31T12:04:17.837Z"
+    },
+    "github:steven-tey/precedent": {
+      "path": "/shots/steven-tey-precedent.jpg",
+      "sourceUrl": "https://precedent.dev",
+      "capturedAt": "2026-08-31T12:04:18.836Z"
+    },
+    "github:saicaca/fuwari": {
+      "path": "/shots/saicaca-fuwari.jpg",
+      "sourceUrl": "https://fuwari.vercel.app",
+      "capturedAt": "2026-08-31T12:04:20.879Z"
+    },
+    "github:RyanFitzgerald/devportfolio": {
+      "path": "/shots/ryanfitzgerald-devportfolio.jpg",
+      "sourceUrl": "https://ryanfitzgerald.github.io/devportfolio",
+      "capturedAt": "2026-08-31T12:04:21.838Z"
+    },
+    "github:HugoBlox/hugo-theme-academic-cv": {
+      "path": "/shots/hugoblox-hugo-theme-academic-cv.jpg",
+      "sourceUrl": "https://hugoblox.com/templates/academic-cv",
+      "capturedAt": "2026-08-31T12:04:22.259Z"
+    },
+    "github:coreui/coreui-free-react-admin-template": {
+      "path": "/shots/coreui-coreui-free-react-admin-template.jpg",
+      "sourceUrl": "https://coreui.io/product/free-react-admin-template/",
+      "capturedAt": "2026-08-31T12:04:24.799Z"
+    },
+    "github:ashutosh1919/masterPortfolio": {
+      "path": "/shots/ashutosh1919-masterportfolio.jpg",
+      "sourceUrl": "https://ashutoshhathidara.com",
+      "capturedAt": "2026-08-31T12:04:26.454Z"
+    },
+    "github:ln-dev7/circle": {
+      "path": "/shots/ln-dev7-circle.jpg",
+      "sourceUrl": "https://circle.lndev.me",
+      "capturedAt": "2026-08-31T12:04:29.295Z"
+    },
+    "github:buqiyuan/vue3-antdv-admin": {
+      "path": "/shots/buqiyuan-vue3-antdv-admin.jpg",
+      "sourceUrl": "https://vue3-antdv-admin.pages.dev/",
+      "capturedAt": "2026-08-31T12:04:30.486Z"
+    },
+    "github:0wczar/airframe-react": {
+      "path": "/shots/0wczar-airframe-react.jpg",
+      "sourceUrl": "https://airframe.webkom.co",
+      "capturedAt": "2026-08-31T12:04:32.976Z"
+    },
+    "github:arhamkhnz/next-shadcn-admin-dashboard": {
+      "path": "/shots/arhamkhnz-next-shadcn-admin-dashboard.jpg",
+      "sourceUrl": "https://next-shadcn-admin-dashboard.vercel.app",
+      "capturedAt": "2026-08-31T12:04:33.777Z"
+    },
+    "github:spliit-app/spliit": {
+      "path": "/shots/spliit-app-spliit.jpg",
+      "sourceUrl": "https://spliit.app",
+      "capturedAt": "2026-08-31T12:04:37.115Z"
+    },
+    "github:nextify-limited/saasfly": {
+      "path": "/shots/nextify-limited-saasfly.jpg",
+      "sourceUrl": "https://show.saasfly.io",
+      "capturedAt": "2026-08-31T12:04:38.441Z"
+    },
+    "github:minimal-ui-kit/material-kit-react": {
+      "path": "/shots/minimal-ui-kit-material-kit-react.jpg",
+      "sourceUrl": "https://free.minimals.cc",
+      "capturedAt": "2026-08-31T12:04:41.403Z"
+    },
+    "github:TailAdmin/free-nextjs-admin-dashboard": {
+      "path": "/shots/tailadmin-free-nextjs-admin-dashboard.jpg",
+      "sourceUrl": "https://nextjs-demo.tailadmin.com",
+      "capturedAt": "2026-08-31T12:04:43.730Z"
+    },
+    "github:justboil/admin-one-vue-tailwind": {
+      "path": "/shots/justboil-admin-one-vue-tailwind.jpg",
+      "sourceUrl": "https://justboil.github.io/admin-one-vue-tailwind/",
+      "capturedAt": "2026-08-31T12:04:44.235Z"
+    },
+    "github:scosman/CMSaasStarter": {
+      "path": "/shots/scosman-cmsaasstarter.jpg",
+      "sourceUrl": "https://saasstarter.work",
+      "capturedAt": "2026-08-31T12:04:46.401Z"
+    },
+    "github:arifszn/gitprofile": {
+      "path": "/shots/arifszn-gitprofile.jpg",
+      "sourceUrl": "https://arifszn.github.io/gitprofile",
+      "capturedAt": "2026-08-31T12:04:47.784Z"
+    },
+    "github:morethanmin/morethan-log": {
+      "path": "/shots/morethanmin-morethan-log.jpg",
+      "sourceUrl": "https://morethan-log.vercel.app",
+      "capturedAt": "2026-08-31T12:04:51.097Z"
+    },
+    "github:TailAdmin/tailadmin-free-tailwind-dashboard-template": {
+      "path": "/shots/tailadmin-tailadmin-free-tailwind-dashboard-template.jpg",
+      "sourceUrl": "https://tailadmin.com/",
+      "capturedAt": "2026-08-31T12:04:52.089Z"
+    },
+    "github:ixartz/Next-JS-Landing-Page-Starter-Template": {
+      "path": "/shots/ixartz-next-js-landing-page-starter-template.jpg",
+      "sourceUrl": "https://creativedesignsguru.com",
+      "capturedAt": "2026-08-31T12:04:54.153Z"
+    },
+    "github:codedthemes/berry-free-react-admin-template": {
+      "path": "/shots/codedthemes-berry-free-react-admin-template.jpg",
+      "sourceUrl": "https://berrydashboard.com/free/",
+      "capturedAt": "2026-08-31T12:04:54.562Z"
+    },
+    "github:vue-zone/vue3-vant-mobile": {
+      "path": "/shots/vue-zone-vue3-vant-mobile.jpg",
+      "sourceUrl": "https://vue3-vant-mobile.netlify.app",
+      "capturedAt": "2026-08-31T12:04:55.226Z"
+    },
+    "github:CuteLeaf/Firefly": {
+      "path": "/shots/cuteleaf-firefly.jpg",
+      "sourceUrl": "https://firefly.cuteleaf.cn",
+      "capturedAt": "2026-08-31T12:04:57.595Z"
+    },
+    "github:dunky11/react-saas-template": {
+      "path": "/shots/dunky11-react-saas-template.jpg",
+      "sourceUrl": "https://reactsaastemplate.com",
+      "capturedAt": "2026-08-31T12:04:58.937Z"
+    },
+    "github:themeselection/materio-mui-nextjs-admin-template-free": {
+      "path": "/shots/themeselection-materio-mui-nextjs-admin-template-free.jpg",
+      "sourceUrl": "https://themeselection.com/item/materio-free-mui-nextjs-admin-template",
+      "capturedAt": "2026-08-31T12:04:59.286Z"
+    },
+    "github:BearStudio/start-ui-web": {
+      "path": "/shots/bearstudio-start-ui-web.jpg",
+      "sourceUrl": "https://demo.start-ui.com",
+      "capturedAt": "2026-08-31T12:05:01.296Z"
+    },
+    "github:flatlogic/react-material-admin": {
+      "path": "/shots/flatlogic-react-material-admin.jpg",
+      "sourceUrl": "https://flatlogic.com/admin-dashboards/react-material-admin/demo",
+      "capturedAt": "2026-08-31T12:05:01.915Z"
+    },
+    "github:chrismwilliams/astro-theme-cactus": {
+      "path": "/shots/chrismwilliams-astro-theme-cactus.jpg",
+      "sourceUrl": "https://astro-cactus.chriswilliams.dev/",
+      "capturedAt": "2026-08-31T12:05:02.462Z"
+    },
+    "github:mui/toolpad": {
+      "path": "/shots/mui-toolpad.jpg",
+      "sourceUrl": "https://mui.com/toolpad/",
+      "capturedAt": "2026-08-31T12:05:03.244Z"
+    },
+    "github:Blazity/next-saas-starter": {
+      "path": "/shots/blazity-next-saas-starter.jpg",
+      "sourceUrl": "https://next-saas-starter-ashy.vercel.app/",
+      "capturedAt": "2026-08-31T12:05:04.116Z"
+    },
+    "github:LANIF-UI/dva-boot-admin": {
+      "path": "/shots/lanif-ui-dva-boot-admin.jpg",
+      "sourceUrl": "https://lanif-ui.github.io/dva-boot-admin",
+      "capturedAt": "2026-08-31T12:05:06.120Z"
+    },
+    "github:NextJSTemplates/startup-nextjs": {
+      "path": "/shots/nextjstemplates-startup-nextjs.jpg",
+      "sourceUrl": "https://startup.demo.nextjstemplates.com",
+      "capturedAt": "2026-08-31T12:05:06.614Z"
+    },
+    "github:jiangxy/react-antd-admin": {
+      "path": "/shots/jiangxy-react-antd-admin.jpg",
+      "sourceUrl": "http://jiangxy.github.io/react-antd-admin",
+      "capturedAt": "2026-08-31T12:05:07.070Z"
+    },
+    "github:varadbhogayata/varadbhogayata.github.io": {
+      "path": "/shots/varadbhogayata-varadbhogayata-github-io.jpg",
+      "sourceUrl": "https://varadbhogayata.github.io/",
+      "capturedAt": "2026-08-31T12:05:10.960Z"
+    },
+    "github:Adrinlol/landy-react-template": {
+      "path": "/shots/adrinlol-landy-react-template.jpg",
+      "sourceUrl": "https://landy-web.netlify.app/",
+      "capturedAt": "2026-08-31T12:05:10.960Z"
+    },
+    "github:saas-js/saas-ui": {
+      "path": "/shots/saas-js-saas-ui.jpg",
+      "sourceUrl": "https://saas-ui.dev",
+      "capturedAt": "2026-08-31T12:05:11.574Z"
+    },
+    "github:manuelernestog/astrofy": {
+      "path": "/shots/manuelernestog-astrofy.jpg",
+      "sourceUrl": "https://astrofy-template.netlify.app/",
+      "capturedAt": "2026-08-31T12:05:14.442Z"
+    },
+    "github:creativetimofficial/notus-nextjs": {
+      "path": "/shots/creativetimofficial-notus-nextjs.jpg",
+      "sourceUrl": "https://www.creative-tim.com/product/notus-nextjs",
+      "capturedAt": "2026-08-31T12:05:14.609Z"
+    },
+    "github:mearashadowfax/ScrewFast": {
+      "path": "/shots/mearashadowfax-screwfast.jpg",
+      "sourceUrl": "https://screwfast.uk",
+      "capturedAt": "2026-08-31T12:05:14.836Z"
+    },
+    "github:moinulmoin/chadnext": {
+      "path": "/shots/moinulmoin-chadnext.jpg",
+      "sourceUrl": "https://chadnext.moinulmoin.com",
+      "capturedAt": "2026-08-31T12:05:16.767Z"
+    },
+    "github:rajaprerak/rajaprerak.github.io": {
+      "path": "/shots/rajaprerak-rajaprerak-github-io.jpg",
+      "sourceUrl": "https://rajaprerak.github.io",
+      "capturedAt": "2026-08-31T12:05:18.342Z"
+    },
+    "github:mugnavo/tanstarter": {
+      "path": "/shots/mugnavo-tanstarter.jpg",
+      "sourceUrl": "https://tanstarter.mugnavo.com",
+      "capturedAt": "2026-08-31T12:05:19.935Z"
+    },
+    "github:TailAdmin/free-react-tailwind-admin-dashboard": {
+      "path": "/shots/tailadmin-free-react-tailwind-admin-dashboard.jpg",
+      "sourceUrl": "https://tailadmin.com/react",
+      "capturedAt": "2026-08-31T12:05:20.108Z"
+    },
+    "github:zeon-studio/astroplate": {
+      "path": "/shots/zeon-studio-astroplate.jpg",
+      "sourceUrl": "https://zeon.studio/preview?project=astroplate",
+      "capturedAt": "2026-08-31T12:05:21.022Z"
+    },
+    "github:Dorota1997/react-frontend-dev-portfolio": {
+      "path": "/shots/dorota1997-react-frontend-dev-portfolio.jpg",
+      "sourceUrl": "https://dorota1997.github.io/react-frontend-dev-portfolio/",
+      "capturedAt": "2026-08-31T12:05:21.241Z"
+    },
+    "github:robbins23/daisyui-admin-dashboard-template": {
+      "path": "/shots/robbins23-daisyui-admin-dashboard-template.jpg",
+      "sourceUrl": "https://tailwind-dashboard-template-dashwind.vercel.app/",
+      "capturedAt": "2026-08-31T12:05:22.753Z"
+    },
+    "github:TailGrids/play-tailwind": {
+      "path": "/shots/tailgrids-play-tailwind.jpg",
+      "sourceUrl": "https://play-tailwind.tailgrids.com",
+      "capturedAt": "2026-08-31T12:05:22.933Z"
+    },
+    "github:gurusabarish/hugo-profile": {
+      "path": "/shots/gurusabarish-hugo-profile.jpg",
+      "sourceUrl": "https://hugo-profile.netlify.app",
+      "capturedAt": "2026-08-31T12:05:24.344Z"
+    },
+    "github:estevanmaito/windmill-dashboard-react": {
+      "path": "/shots/estevanmaito-windmill-dashboard-react.jpg",
+      "sourceUrl": "https://windmillui.com/dashboard-react",
+      "capturedAt": "2026-08-31T12:05:24.351Z"
+    },
+    "github:reflexjs/reflexjs": {
+      "path": "/shots/reflexjs-reflexjs.jpg",
+      "sourceUrl": "https://reflexjs.org",
+      "capturedAt": "2026-08-31T12:05:26.838Z"
+    },
+    "github:primefaces/sakai-react": {
+      "path": "/shots/primefaces-sakai-react.jpg",
+      "sourceUrl": "https://sakai.primereact.org",
+      "capturedAt": "2026-08-31T12:05:27.977Z"
+    },
+    "github:Skolaczk/next-starter": {
+      "path": "/shots/skolaczk-next-starter.jpg",
+      "sourceUrl": "https://next-starter-skolaczk.vercel.app/",
+      "capturedAt": "2026-08-31T12:05:28.743Z"
+    },
+    "github:uilibrary/matx-react": {
+      "path": "/shots/uilibrary-matx-react.jpg",
+      "sourceUrl": "https://ui-lib.com/downloads/matx-react-dashboard",
+      "capturedAt": "2026-08-31T12:05:30.074Z"
+    },
+    "github:devtodollars/mvp-boilerplate": {
+      "path": "/shots/devtodollars-mvp-boilerplate.jpg",
+      "sourceUrl": "https://devtodollars.com",
+      "capturedAt": "2026-08-31T12:05:31.073Z"
+    },
+    "github:codedthemes/mantis-free-react-admin-template": {
+      "path": "/shots/codedthemes-mantis-free-react-admin-template.jpg",
+      "sourceUrl": "https://mantisdashboard.com/free/",
+      "capturedAt": "2026-08-31T12:05:31.656Z"
+    },
+    "github:GreatStackDev/gocart": {
+      "path": "/shots/greatstackdev-gocart.jpg",
+      "sourceUrl": "https://gocart-gs.vercel.app",
+      "capturedAt": "2026-08-31T12:05:32.953Z"
+    },
+    "github:jktrn/astro-erudite": {
+      "path": "/shots/jktrn-astro-erudite.jpg",
+      "sourceUrl": "https://astro-erudite.vercel.app",
+      "capturedAt": "2026-08-31T12:05:34.165Z"
+    },
+    "github:awes-io/awes-io": {
+      "path": "/shots/awes-io-awes-io.jpg",
+      "sourceUrl": "https://www.awes.io",
+      "capturedAt": "2026-08-31T12:05:34.952Z"
+    },
+    "github:creativetimofficial/notus-react": {
+      "path": "/shots/creativetimofficial-notus-react.jpg",
+      "sourceUrl": "https://www.creative-tim.com/product/notus-react",
+      "capturedAt": "2026-08-31T12:05:35.649Z"
+    },
+    "github:agustinusnathaniel/nextarter-chakra": {
+      "path": "/shots/agustinusnathaniel-nextarter-chakra.jpg",
+      "sourceUrl": "https://nextarter-chakra.sznm.dev/",
+      "capturedAt": "2026-08-31T12:05:36.154Z"
+    },
+    "github:rjshkhr/cleanfolio": {
+      "path": "/shots/rjshkhr-cleanfolio.jpg",
+      "sourceUrl": "https://rjshkhr.github.io/cleanfolio/",
+      "capturedAt": "2026-08-31T12:05:36.716Z"
+    },
+    "github:KolbySisk/next-supabase-stripe-starter": {
+      "path": "/shots/kolbysisk-next-supabase-stripe-starter.jpg",
+      "sourceUrl": "https://next-supabase-stripe-starter-demo-mnqz.vercel.app",
+      "capturedAt": "2026-08-31T12:05:39.790Z"
+    },
+    "github:themesberg/flowbite-astro-admin-dashboard": {
+      "path": "/shots/themesberg-flowbite-astro-admin-dashboard.jpg",
+      "sourceUrl": "https://themesberg.github.io/flowbite-astro-admin-dashboard/",
+      "capturedAt": "2026-08-31T12:05:40.756Z"
+    },
+    "github:eyeix/meilisearch-ui": {
+      "path": "/shots/eyeix-meilisearch-ui.jpg",
+      "sourceUrl": "https://meilisearch-ui.vercel.app",
+      "capturedAt": "2026-08-31T12:05:43.020Z"
+    },
+    "github:lmsqueezy/nextjs-billing": {
+      "path": "/shots/lmsqueezy-nextjs-billing.jpg",
+      "sourceUrl": "https://lemonsqueezy.com",
+      "capturedAt": "2026-08-31T12:05:45.040Z"
+    },
+    "github:ixartz/Next-js-Blog-Boilerplate": {
+      "path": "/shots/ixartz-next-js-blog-boilerplate.jpg",
+      "sourceUrl": "https://creativedesignsguru.com",
+      "capturedAt": "2026-08-31T12:05:45.645Z"
+    },
+    "github:CommunityPro/portfolio-html": {
+      "path": "/shots/communitypro-portfolio-html.jpg",
+      "sourceUrl": "https://cpro-portfolio-html.netlify.app",
+      "capturedAt": "2026-08-31T12:05:49.074Z"
+    },
+    "github:kitloong/nextjs-dashboard": {
+      "path": "/shots/kitloong-nextjs-dashboard.jpg",
+      "sourceUrl": "https://nextjs-dashboard-olive.vercel.app",
+      "capturedAt": "2026-08-31T12:05:49.522Z"
+    },
+    "github:imbhargav5/nextbase-nextjs-supabase-starter": {
+      "path": "/shots/imbhargav5-nextbase-nextjs-supabase-starter.jpg",
+      "sourceUrl": "https://open-source-template.usenextbase.com",
+      "capturedAt": "2026-08-31T12:05:50.594Z"
+    },
+    "github:salahlalami/mern-admin": {
+      "path": "/shots/salahlalami-mern-admin.jpg",
+      "sourceUrl": "https://www.idurarapp.com",
+      "capturedAt": "2026-08-31T12:05:53.308Z"
+    },
+    "github:moeyua/astro-theme-typography": {
+      "path": "/shots/moeyua-astro-theme-typography.jpg",
+      "sourceUrl": "https://astro-theme-typography.vercel.app",
+      "capturedAt": "2026-08-31T12:05:54.158Z"
+    },
+    "github:bradymholt/aspnet-core-react-template": {
+      "path": "/shots/bradymholt-aspnet-core-react-template.jpg",
+      "sourceUrl": "https://www.geekytidbits.com/dotnet-core-react-update/",
+      "capturedAt": "2026-08-31T12:05:54.385Z"
+    },
+    "github:hsl947/react-antd-multi-tabs-admin": {
+      "path": "/shots/hsl947-react-antd-multi-tabs-admin.jpg",
+      "sourceUrl": "https://react-antd-multi-tabs-admin.4everland.website/",
+      "capturedAt": "2026-08-31T12:05:57.770Z"
+    },
+    "github:NextJSTemplates/play-nextjs": {
+      "path": "/shots/nextjstemplates-play-nextjs.jpg",
+      "sourceUrl": "https://play.nextjstemplates.com",
+      "capturedAt": "2026-08-31T12:05:58.095Z"
+    },
+    "github:velobase/velobase-harness": {
+      "path": "/shots/velobase-velobase-harness.jpg",
+      "sourceUrl": "https://velobase.cloud",
+      "capturedAt": "2026-08-31T12:05:58.426Z"
+    },
+    "github:yujisatojr/react-portfolio-template": {
+      "path": "/shots/yujisatojr-react-portfolio-template.jpg",
+      "sourceUrl": "https://yujisatojr.github.io/react-portfolio-template/",
+      "capturedAt": "2026-08-31T12:06:01.050Z"
+    },
+    "github:rammcodes/WowFolio": {
+      "path": "/shots/rammcodes-wowfolio.jpg",
+      "sourceUrl": "https://wowfolio.netlify.app",
+      "capturedAt": "2026-08-31T12:06:02.011Z"
+    },
+    "github:vietanhdev/shipfast": {
+      "path": "/shots/vietanhdev-shipfast.jpg",
+      "sourceUrl": "https://www.shipfast.dev",
+      "capturedAt": "2026-08-31T12:06:05.017Z"
+    },
+    "github:nelsonkuang/ant-admin": {
+      "path": "/shots/nelsonkuang-ant-admin.jpg",
+      "sourceUrl": "http://www.a4z.cn/pui/ant-admin.html#/vertical-bp-chart",
+      "capturedAt": "2026-08-31T12:06:06.196Z"
+    },
+    "github:level09/enferno": {
+      "path": "/shots/level09-enferno.jpg",
+      "sourceUrl": "https://enferno.io",
+      "capturedAt": "2026-08-31T12:06:08.525Z"
+    },
+    "github:creativetimofficial/purity-ui-dashboard": {
+      "path": "/shots/creativetimofficial-purity-ui-dashboard.jpg",
+      "sourceUrl": "https://www.creative-tim.com/product/purity-ui-dashboard",
+      "capturedAt": "2026-08-31T12:06:11.419Z"
+    },
+    "github:zeon-studio/nextplate": {
+      "path": "/shots/zeon-studio-nextplate.jpg",
+      "sourceUrl": "https://zeon.studio/preview?project=nextplate",
+      "capturedAt": "2026-08-31T12:06:13.218Z"
+    },
+    "github:nellavio/nellavio": {
+      "path": "/shots/nellavio-nellavio.jpg",
+      "sourceUrl": "https://demo.nellavio.com",
+      "capturedAt": "2026-08-31T12:06:13.674Z"
+    },
+    "github:RyanFitzgerald/devfolio": {
+      "path": "/shots/ryanfitzgerald-devfolio.jpg",
+      "sourceUrl": "https://monumental-chimera-b1ace3.netlify.app/",
+      "capturedAt": "2026-08-31T12:06:15.298Z"
+    },
+    "github:truethari/reactfolio": {
+      "path": "/shots/truethari-reactfolio.jpg",
+      "sourceUrl": "https://reactfolio.tharindu.dev/",
+      "capturedAt": "2026-08-31T12:06:16.311Z"
+    },
+    "github:EveSunMaple/Frosti": {
+      "path": "/shots/evesunmaple-frosti.jpg",
+      "sourceUrl": "https://frosti.saroprock.com",
+      "capturedAt": "2026-08-31T12:06:16.842Z"
+    },
+    "github:BuilderIO/nextjs-shopify": {
+      "path": "/shots/builderio-nextjs-shopify.jpg",
+      "sourceUrl": "https://headless.builders",
+      "capturedAt": "2026-08-31T12:06:19.027Z"
+    },
+    "github:iAmCorey/coreychiu-portfolio-template": {
+      "path": "/shots/iamcorey-coreychiu-portfolio-template.jpg",
+      "sourceUrl": "https://coreychiu.com",
+      "capturedAt": "2026-08-31T12:06:21.393Z"
+    },
+    "github:leomorpho/goship": {
+      "path": "/shots/leomorpho-goship.jpg",
+      "sourceUrl": "http://goship.run",
+      "capturedAt": "2026-08-31T12:06:23.978Z"
+    },
+    "github:pbteja1998/nextjs-starter": {
+      "path": "/shots/pbteja1998-nextjs-starter.jpg",
+      "sourceUrl": "https://next-starter.bhanuteja.dev",
+      "capturedAt": "2026-08-31T12:06:26.162Z"
+    },
+    "github:makerkit/nextjs-saas-starter-kit-lite": {
+      "path": "/shots/makerkit-nextjs-saas-starter-kit-lite.jpg",
+      "sourceUrl": "https://makerkit.dev",
+      "capturedAt": "2026-08-31T12:06:28.023Z"
+    },
+    "github:creativetimofficial/material-tailwind-dashboard-react": {
+      "path": "/shots/creativetimofficial-material-tailwind-dashboard-react.jpg",
+      "sourceUrl": "https://www.creative-tim.com/product/material-tailwind-dashboard-react",
+      "capturedAt": "2026-08-31T12:06:31.469Z"
+    },
+    "github:arthelokyo/tailnext": {
+      "path": "/shots/arthelokyo-tailnext.jpg",
+      "sourceUrl": "https://tailnext.vercel.app/",
+      "capturedAt": "2026-08-31T12:06:34.280Z"
+    },
+    "github:pjborowiecki/saasyland.com": {
+      "path": "/shots/pjborowiecki-saasyland-com.jpg",
+      "sourceUrl": "https://saasyland.com",
+      "capturedAt": "2026-08-31T12:06:35.154Z"
+    },
+    "github:adminmart/Modernize-Nextjs-Free": {
+      "path": "/shots/adminmart-modernize-nextjs-free.jpg",
+      "sourceUrl": "https://modernize-nextjs-free.vercel.app/?ref=5",
+      "capturedAt": "2026-08-31T12:06:37.621Z"
+    },
+    "github:ayush013/folio": {
+      "path": "/shots/ayush013-folio.jpg",
+      "sourceUrl": "https://www.ayushsingh.co.in",
+      "capturedAt": "2026-08-31T12:06:38.773Z"
+    },
+    "github:ixartz/React-Native-Boilerplate": {
+      "path": "/shots/ixartz-react-native-boilerplate.jpg",
+      "sourceUrl": "https://creativedesignsguru.com",
+      "capturedAt": "2026-08-31T12:06:41.420Z"
+    },
+    "github:zubairehman/Portfolio-Demo": {
+      "path": "/shots/zubairehman-portfolio-demo.jpg",
+      "sourceUrl": "http://zubair-portfolio.surge.sh/",
+      "capturedAt": "2026-08-31T12:06:41.838Z"
+    },
+    "github:matt765/Tailcast": {
+      "path": "/shots/matt765-tailcast.jpg",
+      "sourceUrl": "https://tailcast.vercel.app/",
+      "capturedAt": "2026-08-31T12:06:43.963Z"
+    },
+    "github:mayankagarwal09/dev-portfolio": {
+      "path": "/shots/mayankagarwal09-dev-portfolio.jpg",
+      "sourceUrl": "https://dev-portfolio-mayankagarwal09.vercel.app",
+      "capturedAt": "2026-08-31T12:06:44.624Z"
+    },
+    "github:heroui-inc/next-app-template": {
+      "path": "/shots/heroui-inc-next-app-template.jpg",
+      "sourceUrl": "https://nextui-app.vercel.app",
+      "capturedAt": "2026-08-31T12:06:46.799Z"
+    },
+    "github:themefisher/bookworm-light-astro": {
+      "path": "/shots/themefisher-bookworm-light-astro.jpg",
+      "sourceUrl": "https://themefisher.com/products/bookworm-light-astro",
+      "capturedAt": "2026-08-31T12:06:49.875Z"
+    },
+    "github:Ladvace/astro-bento-portfolio": {
+      "path": "/shots/ladvace-astro-bento-portfolio.jpg",
+      "sourceUrl": "https://gianmarcocavallo.com/",
+      "capturedAt": "2026-08-31T12:06:51.446Z"
+    },
+    "github:design-sparx/mantine-analytics-dashboard": {
+      "path": "/shots/design-sparx-mantine-analytics-dashboard.jpg",
+      "sourceUrl": "https://mantine-analytics-dashboard.netlify.app/",
+      "capturedAt": "2026-08-31T12:06:53.396Z"
+    },
+    "github:get-convex/convex-saas": {
+      "path": "/shots/get-convex-convex-saas.jpg",
+      "sourceUrl": "https://convex-saas.netlify.app/",
+      "capturedAt": "2026-08-31T12:06:53.872Z"
+    },
+    "github:FlareStarter/flarestarter": {
+      "path": "/shots/flarestarter-flarestarter.jpg",
+      "sourceUrl": "https://flarestarter.com",
+      "capturedAt": "2026-08-31T12:06:55.689Z"
+    },
+    "github:GPortfolio/GPortfolio": {
+      "path": "/shots/gportfolio-gportfolio.jpg",
+      "sourceUrl": "https://oleksiikhr.github.io/",
+      "capturedAt": "2026-08-31T12:06:56.292Z"
+    },
+    "github:karngyan/karngyan.com": {
+      "path": "/shots/karngyan-karngyan-com.jpg",
+      "sourceUrl": "https://template.karngyan.com",
+      "capturedAt": "2026-08-31T12:06:56.798Z"
+    },
+    "github:taylorbryant/next-starter-tailwind": {
+      "path": "/shots/taylorbryant-next-starter-tailwind.jpg",
+      "sourceUrl": "https://next-starter-tailwind.taylorbryant.dev",
+      "capturedAt": "2026-08-31T12:06:58.540Z"
+    },
+    "github:creativetimofficial/nextjs-material-kit": {
+      "path": "/shots/creativetimofficial-nextjs-material-kit.jpg",
+      "sourceUrl": "https://demos.creative-tim.com/nextjs-material-kit/components",
+      "capturedAt": "2026-08-31T12:07:00.862Z"
+    },
+    "github:lucky-chap/kaminari": {
+      "path": "/shots/lucky-chap-kaminari.jpg",
+      "sourceUrl": "https://kaminari.vercel.app",
+      "capturedAt": "2026-08-31T12:07:01.191Z"
+    },
+    "github:PaddleHQ/paddle-nextjs-starter-kit": {
+      "path": "/shots/paddlehq-paddle-nextjs-starter-kit.jpg",
+      "sourceUrl": "https://paddle-billing.vercel.app",
+      "capturedAt": "2026-08-31T12:07:02.484Z"
+    },
+    "github:foyzulkarim/mernboilerplate-antd": {
+      "path": "/shots/foyzulkarim-mernboilerplate-antd.jpg",
+      "sourceUrl": "https://foyzulkarim.github.io/mernboilerplate-antd/",
+      "capturedAt": "2026-08-31T12:07:04.100Z"
+    },
+    "github:thedevdavid/digital-garden": {
+      "path": "/shots/thedevdavid-digital-garden.jpg",
+      "sourceUrl": "https://thedevdavid-digital-garden.vercel.app/",
+      "capturedAt": "2026-08-31T12:07:06.535Z"
+    },
+    "github:vinodjangid07/vinodjangid07.github.io": {
+      "path": "/shots/vinodjangid07-vinodjangid07-github-io.jpg",
+      "sourceUrl": "https://v1.vinodjangid.site/",
+      "capturedAt": "2026-08-31T12:07:07.184Z"
+    },
+    "github:lxchapu/astro-gyoza": {
+      "path": "/shots/lxchapu-astro-gyoza.jpg",
+      "sourceUrl": "https://gyoza.lxchapu.com",
+      "capturedAt": "2026-08-31T12:07:11.011Z"
+    },
+    "github:justnode/better-saas": {
+      "path": "/shots/justnode-better-saas.jpg",
+      "sourceUrl": "https://better-saas-ten.vercel.app",
+      "capturedAt": "2026-08-31T12:07:11.414Z"
+    },
+    "github:pdsuwwz/nextjs-nextra-starter": {
+      "path": "/shots/pdsuwwz-nextjs-nextra-starter.jpg",
+      "sourceUrl": "https://nextra.likemashang.com/zh",
+      "capturedAt": "2026-08-31T12:07:13.801Z"
+    },
+    "github:nktnet1/rt-stack": {
+      "path": "/shots/nktnet1-rt-stack.jpg",
+      "sourceUrl": "https://rtstack.nktnet.uk",
+      "capturedAt": "2026-08-31T12:07:15.004Z"
+    },
+    "github:themefisher/kross-hugo": {
+      "path": "/shots/themefisher-kross-hugo.jpg",
+      "sourceUrl": "https://gethugothemes.com/products/kross/?utm_source=kross_github&utm_medium=referral&utm_campaign=github_theme_about",
+      "capturedAt": "2026-08-31T12:07:16.537Z"
+    },
+    "github:hexclave/multi-tenant-starter-template": {
+      "path": "/shots/hexclave-multi-tenant-starter-template.jpg",
+      "sourceUrl": "https://stack-template.vercel.app",
+      "capturedAt": "2026-08-31T12:07:17.976Z"
+    },
+    "github:zauberware/rails-devise-graphql": {
+      "path": "/shots/zauberware-rails-devise-graphql.jpg",
+      "sourceUrl": "https://www.zauberware.com",
+      "capturedAt": "2026-08-31T12:07:21.269Z"
+    },
+    "github:PaulleDemon/Django-SAAS-Boilerplate": {
+      "path": "/shots/paulledemon-django-saas-boilerplate.jpg",
+      "sourceUrl": "https://django-saas-boilerplate.vercel.app",
+      "capturedAt": "2026-08-31T12:07:23.346Z"
+    },
+    "github:WhitePaper233/yukina": {
+      "path": "/shots/whitepaper233-yukina.jpg",
+      "sourceUrl": "https://yukina-blog.vercel.app",
+      "capturedAt": "2026-08-31T12:07:26.813Z"
+    },
+    "github:jellydn/next-app-starter": {
+      "path": "/shots/jellydn-next-app-starter.jpg",
+      "sourceUrl": "https://next-app-starter.productsway.com",
+      "capturedAt": "2026-08-31T12:07:27.474Z"
+    },
+    "github:userdashboard/dashboard": {
+      "path": "/shots/userdashboard-dashboard.jpg",
+      "sourceUrl": "https://userdashboard.github.io",
+      "capturedAt": "2026-08-31T12:07:29.337Z"
+    },
+    "github:themefisher/bigspring-light-nextjs": {
+      "path": "/shots/themefisher-bigspring-light-nextjs.jpg",
+      "sourceUrl": "https://themefisher.com/products/bigspring-light-nextjs",
+      "capturedAt": "2026-08-31T12:07:31.981Z"
+    },
+    "github:ramxcodes/sleek-portfolio": {
+      "path": "/shots/ramxcodes-sleek-portfolio.jpg",
+      "sourceUrl": "https://ramx.in",
+      "capturedAt": "2026-08-31T12:07:33.971Z"
+    },
+    "github:kirklin/boot-vue": {
+      "path": "/shots/kirklin-boot-vue.jpg",
+      "sourceUrl": "https://boot-vue.vercel.app/",
+      "capturedAt": "2026-08-31T12:07:34.378Z"
+    },
+    "github:lin-stephanie/astro-antfustyle-theme": {
+      "path": "/shots/lin-stephanie-astro-antfustyle-theme.jpg",
+      "sourceUrl": "https://astro-antfustyle-theme.vercel.app",
+      "capturedAt": "2026-08-31T12:07:34.739Z"
+    },
+    "github:website-templates/portfolio_one-page-template": {
+      "path": "/shots/website-templates-portfolio-one-page-template.jpg",
+      "sourceUrl": "http://website-templates.github.io/portfolio_one-page-template/",
+      "capturedAt": "2026-08-31T12:07:37.712Z"
+    },
+    "github:NextJSTemplates/solid-nextjs": {
+      "path": "/shots/nextjstemplates-solid-nextjs.jpg",
+      "sourceUrl": "https://nextjstemplates.com/templates/solid",
+      "capturedAt": "2026-08-31T12:07:38.636Z"
+    },
+    "github:condorheroblog/react-antd-admin": {
+      "path": "/shots/condorheroblog-react-antd-admin.jpg",
+      "sourceUrl": "https://condorheroblog.github.io/react-antd-admin/",
+      "capturedAt": "2026-08-31T12:07:40.623Z"
+    },
+    "github:ttomczak3/Milky-Way": {
+      "path": "/shots/ttomczak3-milky-way.jpg",
+      "sourceUrl": "https://astro-milky-way.netlify.app",
+      "capturedAt": "2026-08-31T12:07:42.524Z"
+    },
+    "github:AjitVerma15/Interactive-Portfolio": {
+      "path": "/shots/ajitverma15-interactive-portfolio.jpg",
+      "sourceUrl": "https://ajitverma15.github.io/Interactive-Portfolio/",
+      "capturedAt": "2026-08-31T12:07:45.361Z"
+    },
+    "github:jayfk/launchr": {
+      "path": "/shots/jayfk-launchr.jpg",
+      "sourceUrl": "https://getlaunchr.com/",
+      "capturedAt": "2026-08-31T12:07:48.949Z"
+    },
+    "github:tailwindtoolbox/Ghostwind": {
+      "path": "/shots/tailwindtoolbox-ghostwind.jpg",
+      "sourceUrl": "https://tailwindtoolbox.github.io/Ghostwind/",
+      "capturedAt": "2026-08-31T12:07:56.419Z"
+    },
+    "github:xizon/fullstack-nextjs-app-template": {
+      "path": "/shots/xizon-fullstack-nextjs-app-template.jpg",
+      "sourceUrl": "https://fullstack-nextjs-app-template.vercel.app",
+      "capturedAt": "2026-08-31T12:07:59.327Z"
+    },
+    "github:tovacinni/research-website-template": {
+      "path": "/shots/tovacinni-research-website-template.jpg",
+      "sourceUrl": "https://tovacinni.github.io/research-website-template/",
+      "capturedAt": "2026-08-31T12:08:01.899Z"
+    },
+    "github:muhammad-fiaz/portfolio": {
+      "path": "/shots/muhammad-fiaz-portfolio.jpg",
+      "sourceUrl": "https://muhammadfiaz.com",
+      "capturedAt": "2026-08-31T12:08:06.531Z"
+    },
+    "github:themefisher/pinwheel-astro": {
+      "path": "/shots/themefisher-pinwheel-astro.jpg",
+      "sourceUrl": "https://themefisher.com/products/pinwheel-astro",
+      "capturedAt": "2026-08-31T12:08:08.951Z"
+    },
+    "github:themefisher/bookworm-light-nextjs": {
+      "path": "/shots/themefisher-bookworm-light-nextjs.jpg",
+      "sourceUrl": "https://themefisher.com/products/bookworm-light-nextjs",
+      "capturedAt": "2026-08-31T12:08:11.320Z"
+    },
+    "github:MarcosCamara01/ecommerce-template": {
+      "path": "/shots/marcoscamara01-ecommerce-template.jpg",
+      "sourceUrl": "https://ecommerce-template-mpc.vercel.app",
+      "capturedAt": "2026-08-31T12:08:13.303Z"
+    },
+    "github:eriktaveras/django-saas-boilerplate": {
+      "path": "/shots/eriktaveras-django-saas-boilerplate.jpg",
+      "sourceUrl": "https://djangoblaze.com",
+      "capturedAt": "2026-08-31T12:08:13.938Z"
+    },
+    "github:hadrysm/nextjs-boilerplate": {
+      "path": "/shots/hadrysm-nextjs-boilerplate.jpg",
+      "sourceUrl": "https://nextjs-boilerplate-ruddy-nu-68.vercel.app/",
+      "capturedAt": "2026-08-31T12:08:16.689Z"
+    },
+    "github:ashutosh1919/truvisory": {
+      "path": "/shots/ashutosh1919-truvisory.jpg",
+      "sourceUrl": "https://ashutosh1919.github.io/truvisory",
+      "capturedAt": "2026-08-31T12:08:19.702Z"
+    },
+    "github:techwithanirudh/shadcn-portfolio": {
+      "path": "/shots/techwithanirudh-shadcn-portfolio.jpg",
+      "sourceUrl": "https://shadcn-portfoliox.vercel.app",
+      "capturedAt": "2026-08-31T12:08:22.614Z"
+    },
+    "github:saas-kits/remix-boilerplate": {
+      "path": "/shots/saas-kits-remix-boilerplate.jpg",
+      "sourceUrl": "https://demo.saaskits.dev/",
+      "capturedAt": "2026-08-31T12:08:23.247Z"
+    },
+    "github:parksb/handmade-blog": {
+      "path": "/shots/parksb-handmade-blog.jpg",
+      "sourceUrl": "https://handmade-blog.vercel.app",
+      "capturedAt": "2026-08-31T12:08:25.832Z"
+    },
+    "github:arhamkhnz/next-shadcn-admin-dashboard-baseui": {
+      "path": "/shots/arhamkhnz-next-shadcn-admin-dashboard-baseui.jpg",
+      "sourceUrl": "https://next-shadcn-admin-dashboard.vercel.app",
+      "capturedAt": "2026-08-31T12:08:26.317Z"
+    },
+    "github:area44/astro-shadcn-ui-template": {
+      "path": "/shots/area44-astro-shadcn-ui-template.jpg",
+      "sourceUrl": "https://astro-shadcn-ui-template.vercel.app",
+      "capturedAt": "2026-08-31T12:08:28.751Z"
+    },
+    "github:kondasoft/ks-bootshop": {
+      "path": "/shots/kondasoft-ks-bootshop.jpg",
+      "sourceUrl": "https://ks-bootshop.myshopify.com/",
+      "capturedAt": "2026-08-31T12:08:29.911Z"
+    },
+    "github:namanbarkiya/minimal-next-portfolio": {
+      "path": "/shots/namanbarkiya-minimal-next-portfolio.jpg",
+      "sourceUrl": "https://nbarkiya.xyz",
+      "capturedAt": "2026-08-31T12:08:35.088Z"
+    }
+  }
 }
