@@ -61,9 +61,13 @@ export function getTemplateBySlug(slug: string): Template | undefined {
   return getAllTemplates().find((t) => t.slug === slug);
 }
 
-export function getCategories(): { name: string; count: number }[] {
+/**
+ * Counts are always taken over the list actually being shown. A facet that
+ * says 52 above a page holding 26 promises templates that are not there.
+ */
+export function getCategories(within?: Template[]): { name: string; count: number }[] {
   const counts = new Map<string, number>();
-  for (const t of getAllTemplates()) {
+  for (const t of within ?? getAllTemplates()) {
     counts.set(t.category, (counts.get(t.category) ?? 0) + 1);
   }
   return [...counts.entries()]
@@ -71,9 +75,9 @@ export function getCategories(): { name: string; count: number }[] {
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
-export function getFrameworks(): { name: string; count: number }[] {
+export function getFrameworks(within?: Template[]): { name: string; count: number }[] {
   const counts = new Map<string, number>();
-  for (const t of getAllTemplates()) {
+  for (const t of within ?? getAllTemplates()) {
     for (const f of t.frameworks) counts.set(f, (counts.get(f) ?? 0) + 1);
   }
   return [...counts.entries()]

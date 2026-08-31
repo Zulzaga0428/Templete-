@@ -26,11 +26,14 @@ export interface KoduHandoff {
   ref: string | null;
   license: string | null;
   sourceUrl: string;
+  /** What the visitor said they were building, when they told us. */
+  prompt?: string;
 }
 
-export function buildHandoff(template: Template): KoduHandoff {
+export function buildHandoff(template: Template, prompt?: string): KoduHandoff {
   const copyable = template.usage === "copy" && template.repo !== null;
   return {
+    ...(prompt ? { prompt } : {}),
     templateId: template.id,
     slug: template.slug,
     name: template.title,
@@ -46,7 +49,7 @@ export function buildHandoff(template: Template): KoduHandoff {
  * Link-only templates get sent to their source instead — we never hand Kodu a
  * repo we are not allowed to copy.
  */
-export function koduOpenUrl(template: Template): string {
+export function koduOpenUrl(template: Template, prompt?: string): string {
   if (template.usage !== "copy" || !template.repo) {
     return template.demoUrl ?? template.sourceUrl;
   }
@@ -56,6 +59,9 @@ export function koduOpenUrl(template: Template): string {
     ref: template.repo.defaultBranch,
     utm_source: "templete",
   });
+  // Kodu can open the workspace with the agent already briefed, so the
+  // visitor does not have to describe their project a second time.
+  if (prompt) params.set("prompt", prompt);
   return `${KODU_APP_URL}/new?${params.toString()}`;
 }
 

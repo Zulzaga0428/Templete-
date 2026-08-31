@@ -206,6 +206,33 @@ Every page generates its own social card with `next/og`, prerendered alongside t
 `lib/og.tsx` holds the shared layout. Satori (what `next/og` renders with) supports a subset of
 CSS — flexbox only, and any element with more than one child needs an explicit `display: flex`.
 
+## Starting from an intent, not a keyword
+
+The landing page asks what you are building, in a sentence, in either language:
+
+> *Ресторандаа ширээ захиалдаг сайт*
+
+`lib/intent.ts` scores every template against it and the gallery comes back ranked. The
+description then rides along: it is kept on the card links, shown on the template page, and
+handed to Kodu as `prompt`, so the agent opens the workspace already knowing what the visitor
+wants. Nobody should have to describe their project twice.
+
+Two things make it work in Mongolian, which is the whole point:
+
+- **A concept map.** `дэлгүүр` → ecommerce, `самбар` → dashboard, `эмнэлэг` → clinic,
+  appointment. Template metadata is in English; visitors are not.
+- **Inflection matching.** Mongolian suffixes *and* drops vowels, so `эмнэлэг` becomes
+  `эмнэлгийн` — a prefix test misses that. Instead a typed word matches a concept when most of
+  the concept survives in it, with a four-character floor so short words cannot collide.
+
+Scoring is weighted by where a word lands (title beats category beats tags beats description) with
+a small nudge for stars, so among equally good fits the better-supported project comes first. No
+match is a valid answer, and says so.
+
+There is deliberately no model call. It runs over 200 templates in under a millisecond, costs
+nothing, and cannot be down. `score()` in `lib/intent.ts` is where embeddings would go if keyword
+overlap ever stops being enough.
+
 ## The gallery as an API
 
 Kodu needs its own in-app template picker, and that picker should not carry a second copy of the
@@ -323,6 +350,7 @@ components/                       Gallery (client), TemplateCard, Thumbnail, Ope
 lib/
   types.ts              Template shape
   i18n.ts               locales, dictionaries, format()
+  intent.ts             plain-language project description -> ranked templates
   licenses.ts           which licences may be copied
   templates.ts          reads and queries the data files
   categories.ts         per-locale copy and names for the category pages

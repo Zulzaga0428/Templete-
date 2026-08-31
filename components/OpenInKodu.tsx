@@ -10,10 +10,13 @@ import type { Template } from "@/lib/types";
 export function OpenInKodu({
   template,
   t,
+  prompt,
   className = "",
 }: {
   template: Template;
   t: Dictionary["detail"];
+  /** The visitor's own description, carried through to the Kodu workspace. */
+  prompt?: string;
   className?: string;
 }) {
   if (template.usage !== "copy") {
@@ -32,6 +35,7 @@ export function OpenInKodu({
   return (
     <form action="/api/kodu/open" method="post" className={className}>
       <input type="hidden" name="slug" value={template.slug} />
+      {prompt ? <input type="hidden" name="prompt" value={prompt} /> : null}
       <button
         type="submit"
         className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-contrast transition-opacity hover:opacity-90"

@@ -16,7 +16,8 @@ shows 21 seeded templates and no screenshots.
 
 **Waiting on Kodu.** The `/new?repo=…&ref=…` route. This is the one that matters — see below.
 A JSON API for the catalogue is live at `/api/templates`, so an in-app picker in Kodu can be built
-against it whenever it is wanted.
+against it whenever it is wanted. `/new` should also read a `prompt` parameter — see The intent
+handoff below.
 
 ## The next thing to build is on Kodu's side
 
@@ -62,6 +63,25 @@ worth building once — it is also what lets a user keep what they made.
 If a self-serve publish flow is ever wanted, the gate has to survive it: a submission needs a
 licence, a README, a description, and a human approval before it appears. Skipping any of those
 turns the gallery back into a dump.
+
+## The intent handoff
+
+The landing page takes a sentence about what you are building rather than a keyword, ranks the
+gallery against it, and carries those words into Kodu as `prompt`.
+
+This is the piece that stops the site being a gallery. A template solves the blank page; the
+visitor's description solves knowing what they want. Handing Kodu only the first means they type
+their idea twice — once to find the template, again to the agent. Handing it both means their
+first screen is already their project.
+
+It also lands the Mongolian advantage as code rather than as copy. `lib/intent.ts` maps Mongolian
+concepts onto the English vocabulary the templates use, and handles the case inflection that
+breaks a naive prefix match. Someone typing "эмнэлгийн цаг захиалга" gets a doctor's appointment
+template. No competitor does this, and none is likely to.
+
+**What Kodu needs to do with it:** read `prompt` from `/new?repo=…&prompt=…` and open the
+workspace with the agent already briefed. If it ignores the parameter nothing breaks — the
+template still opens — so this can ship before Kodu is ready for it.
 
 ## Is this Kodu's library?
 

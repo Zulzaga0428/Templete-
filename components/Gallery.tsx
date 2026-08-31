@@ -18,6 +18,8 @@ interface Props {
   initialCategory?: string;
   /** Set on a category page, where the category is the page rather than a filter. */
   hideCategoryFilter?: boolean;
+  /** The visitor's description, kept on card links so it survives a click. */
+  intent?: string;
 }
 
 const ALL = "All";
@@ -78,6 +80,7 @@ export function Gallery({
   initialQuery = "",
   initialCategory,
   hideCategoryFilter = false,
+  intent,
 }: Props) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(
@@ -301,6 +304,7 @@ export function Gallery({
                 lang={lang}
                 t={licenceT}
                 mongolianLabel={t.mongolianBadge}
+                intent={intent}
               />
             ))}
           </div>

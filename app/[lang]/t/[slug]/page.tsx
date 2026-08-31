@@ -46,12 +46,17 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slug]">) {
+export default async function TemplatePage({
+  params,
+  searchParams,
+}: PageProps<"/[lang]/t/[slug]">) {
   const { lang, slug } = await params;
+  const { intent: rawIntent } = await searchParams;
   const template = getTemplateBySlug(slug);
   if (!isLocale(lang) || !template) notFound();
 
   const t = getDictionary(lang);
+  const intent = typeof rawIntent === "string" ? rawIntent.trim().slice(0, 500) : "";
   const related = getRelated(template);
   const derivatives = getDerivatives(template);
   const origin = template.derivedFrom ?? null;
@@ -161,7 +166,13 @@ export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slu
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-xl border border-line bg-raised p-5">
-            <OpenInKodu template={template} t={t.detail} />
+            <OpenInKodu template={template} t={t.detail} prompt={intent || undefined} />
+
+            {intent && template.usage === "copy" ? (
+              <p className="mt-3 rounded-lg border border-accent/25 bg-accent/5 px-3 py-2.5 text-[12px] leading-relaxed text-muted">
+                {format(t.detail.withIntent, { intent })}
+              </p>
+            ) : null}
 
             <div className="mt-3 flex gap-2">
               {template.demoUrl ? (

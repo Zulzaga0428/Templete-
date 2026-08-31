@@ -69,7 +69,7 @@ export default async function CategoryPage({ params }: PageProps<"/[lang]/templa
       <Gallery
         templates={templates}
         categories={getCategories().map((c) => ({ ...c, label: categoryName(c.name, lang) }))}
-        frameworks={getFrameworks()}
+        frameworks={getFrameworks(templates)}
         lang={lang}
         t={t.gallery}
         licenceT={t.licence}

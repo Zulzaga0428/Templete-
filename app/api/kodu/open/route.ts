@@ -16,6 +16,8 @@ export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   const form = await request.formData();
   const slug = String(form.get("slug") ?? "");
+  // Bounded: this ends up in a URL, and a visitor's description is a sentence.
+  const prompt = String(form.get("prompt") ?? "").trim().slice(0, 500) || undefined;
   const template = getTemplateBySlug(slug);
 
   if (!template) {
@@ -36,7 +38,7 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${process.env.KODU_API_TOKEN}`,
         },
-        body: JSON.stringify(buildHandoff(template)),
+        body: JSON.stringify(buildHandoff(template, prompt)),
       });
 
       if (res.ok) {
@@ -51,5 +53,5 @@ export async function POST(request: Request) {
     }
   }
 
-  return NextResponse.redirect(new URL(koduOpenUrl(template)), 303);
+  return NextResponse.redirect(new URL(koduOpenUrl(template, prompt)), 303);
 }

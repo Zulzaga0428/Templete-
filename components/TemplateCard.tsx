@@ -15,16 +15,23 @@ export function TemplateCard({
   lang,
   t,
   mongolianLabel,
+  intent,
 }: {
   template: Template;
   lang: Locale;
   t: LicenceStrings;
   /** Shown when the template's own copy is in Mongolian. */
   mongolianLabel?: string;
+  /** Carried into the link so the visitor's description survives the click. */
+  intent?: string;
 }) {
+  const href = intent
+    ? `/${lang}/t/${template.slug}?intent=${encodeURIComponent(intent)}`
+    : `/${lang}/t/${template.slug}`;
+
   return (
     <Link
-      href={`/${lang}/t/${template.slug}`}
+      href={href}
       className="group flex flex-col overflow-hidden rounded-xl border border-line bg-raised transition-colors hover:border-line-strong"
     >
       <div className="relative aspect-[1200/630] overflow-hidden bg-hover">

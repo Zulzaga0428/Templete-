@@ -102,20 +102,23 @@ export default async function LandingPage({ params }: PageProps<"/[lang]">) {
             {t.landing.lede}
           </p>
 
-          <form action={`/${lang}/templates`} method="get" className="mt-9 flex max-w-xl gap-2">
-            <input
-              type="search"
-              name="q"
-              placeholder={t.landing.searchPlaceholder}
-              aria-label={t.gallery.searchLabel}
-              className="min-w-0 flex-1 rounded-lg border border-line bg-raised px-4 py-3 text-sm text-fg placeholder:text-subtle focus:border-line-strong"
-            />
-            <button
-              type="submit"
-              className="shrink-0 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-contrast transition-opacity hover:opacity-90"
-            >
-              {t.landing.searchAction}
-            </button>
+          <form action={`/${lang}/templates`} method="get" className="mt-9 max-w-xl">
+            <div className="flex gap-2">
+              <input
+                type="text"
+                name="intent"
+                placeholder={t.landing.searchPlaceholder}
+                aria-label={t.landing.intentHint}
+                className="min-w-0 flex-1 rounded-lg border border-line bg-raised px-4 py-3 text-sm text-fg placeholder:text-subtle focus:border-line-strong"
+              />
+              <button
+                type="submit"
+                className="shrink-0 rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-contrast transition-opacity hover:opacity-90"
+              >
+                {t.landing.searchAction}
+              </button>
+            </div>
+            <p className="mt-2.5 text-[13px] text-subtle">{t.landing.intentHint}</p>
           </form>
 
           <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-subtle">
