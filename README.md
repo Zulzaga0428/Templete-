@@ -312,6 +312,13 @@ Sorting and filtering both run client-side over the whole array. That stays comf
 low thousands. Past that, the fix is to filter on the server and paginate properly, which means
 the data has to move out of a JSON file first.
 
+## Roadmap and decisions
+
+`docs/ROADMAP.md` records what is built, what is blocked on whom, and the reasoning behind the
+choices that would be expensive to redo — why the data lives in a JSON file, why licences are
+verified by GitHub rather than parsed, and why a Kodu test site does not automatically become a
+gallery entry.
+
 ## Notes for later
 
 The JSON file is deliberate: it costs nothing, prerenders every page, and handles a few thousand
