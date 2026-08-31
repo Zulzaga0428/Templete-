@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Footer } from "@/components/Footer";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { DEFAULT_LOCALE, getDictionary, isLocale, LOCALES, type Locale } from "@/lib/i18n";
 import "../globals.css";
@@ -91,17 +92,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
 
         {children}
 
-        <footer className="mt-auto border-t border-line">
-          <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-subtle sm:flex-row sm:items-center sm:px-6">
-            <p>{t.footer.note}</p>
-            <Link
-              href={`/${lang}/about`}
-              className="text-muted underline-offset-4 hover:underline sm:ml-auto"
-            >
-              {t.footer.policy}
-            </Link>
-          </div>
-        </footer>
+        <Footer lang={lang} t={t} />
       </body>
     </html>
   );

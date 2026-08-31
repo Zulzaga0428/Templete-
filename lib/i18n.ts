@@ -28,6 +28,16 @@ const en = {
   footer: {
     note: "Templates are the work of their original authors and stay under their own licences.",
     policy: "Licensing policy",
+    tagline: "Free, licence-checked templates you can open in Kodu and edit with an agent.",
+    aKoduProject: "A Kodu project",
+    colTemplates: "Templates",
+    colLearn: "Learn",
+    colMore: "More",
+    browseAll: "Browse all",
+    api: "Templates API",
+    source: "Source",
+    copyright: "© {year} Templete. Part of Kodu.",
+    builtBy: "Built by VEIO",
   },
   landing: {
     badge: (count: number) => `${count} licence-checked templates`,
@@ -173,6 +183,16 @@ const mn: Dictionary = {
   footer: {
     note: "Template бүр эх зохиогчийнхөө бүтээл бөгөөд өөрсдийн лицензийн дор хэвээр байна.",
     policy: "Лицензийн бодлого",
+    tagline: "Kodu дээр нээж, агентаар засаж болох үнэгүй, лицензээр шалгасан template-ууд.",
+    aKoduProject: "Kodu-гийн бүтээгдэхүүн",
+    colTemplates: "Template-ууд",
+    colLearn: "Мэдээлэл",
+    colMore: "Бусад",
+    browseAll: "Бүгдийг үзэх",
+    api: "Template API",
+    source: "Эх код",
+    copyright: "© {year} Templete. Kodu-гийн нэг хэсэг.",
+    builtBy: "Бүтээсэн: VEIO",
   },
   landing: {
     badge: (count: number) => `Лицензээр шалгасан ${count} template`,

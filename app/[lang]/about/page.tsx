@@ -20,9 +20,17 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/about">): 
   };
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({
+  id,
+  title,
+  children,
+}: {
+  id?: string;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
-    <section className="border-t border-line py-8">
+    <section id={id} className="scroll-mt-20 border-t border-line py-8">
       <h2 className="text-base font-semibold">{title}</h2>
       <div className="mt-3 space-y-3 text-[15px] leading-relaxed text-muted">{children}</div>
     </section>
@@ -56,7 +64,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         <p>{t.about.sources2}</p>
       </Section>
 
-      <Section title={t.about.licenceTitle}>
+      <Section id="licence" title={t.about.licenceTitle}>
         <p>{t.about.licence1(copyable, templates.length)}</p>
         <p>{t.about.licence2}</p>
         <p>{t.about.licence3}</p>
