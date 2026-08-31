@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LicenseBadge } from "@/components/LicenseBadge";
 import { OpenInKodu } from "@/components/OpenInKodu";
 import { TemplateCard } from "@/components/TemplateCard";
-import { Thumbnail } from "@/components/Thumbnail";
+import { LivePreview } from "@/components/LivePreview";
 import { categoryName } from "@/lib/categories";
 import { format, getDictionary, isLocale, LOCALES } from "@/lib/i18n";
 import { usageExplanation } from "@/lib/licenses";
@@ -46,17 +47,12 @@ function Stat({ label, value }: { label: string; value: string }) {
   );
 }
 
-export default async function TemplatePage({
-  params,
-  searchParams,
-}: PageProps<"/[lang]/t/[slug]">) {
+export default async function TemplatePage({ params }: PageProps<"/[lang]/t/[slug]">) {
   const { lang, slug } = await params;
-  const { intent: rawIntent } = await searchParams;
   const template = getTemplateBySlug(slug);
   if (!isLocale(lang) || !template) notFound();
 
   const t = getDictionary(lang);
-  const intent = typeof rawIntent === "string" ? rawIntent.trim().slice(0, 500) : "";
   const related = getRelated(template);
   const derivatives = getDerivatives(template);
   const origin = template.derivedFrom ?? null;
@@ -87,15 +83,20 @@ export default async function TemplatePage({
 
       <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
         <div>
-          <div className="relative aspect-[1200/630] overflow-hidden rounded-xl border border-line bg-raised">
-            <Thumbnail
-              sources={[template.screenshotUrl, template.imageUrl]}
-              title={template.title}
-              seed={template.id}
-              sizes="(max-width: 1024px) 100vw, 760px"
-              priority
-            />
-          </div>
+          <LivePreview
+            demoUrl={template.demoUrl}
+            screenshotUrl={template.screenshotUrl}
+            imageUrl={template.imageUrl}
+            title={template.title}
+            seed={template.id}
+            embeddable={template.embeddable}
+            labels={{
+              tryIt: t.detail.tryItLive,
+              tryItNote: t.detail.tryItNote,
+              showScreenshot: t.detail.showScreenshot,
+              liveNote: t.detail.liveNote,
+            }}
+          />
 
           <h1 className="mt-8 text-2xl font-semibold tracking-tight sm:text-3xl">
             {template.title}
@@ -166,13 +167,25 @@ export default async function TemplatePage({
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-xl border border-line bg-raised p-5">
-            <OpenInKodu template={template} t={t.detail} prompt={intent || undefined} />
-
-            {intent && template.usage === "copy" ? (
-              <p className="mt-3 rounded-lg border border-accent/25 bg-accent/5 px-3 py-2.5 text-[12px] leading-relaxed text-muted">
-                {format(t.detail.withIntent, { intent })}
-              </p>
-            ) : null}
+            {/* useSearchParams needs a boundary, or the whole page falls back
+                to rendering per request. */}
+            <Suspense
+              fallback={
+                <div
+                  aria-hidden
+                  className="h-[42px] rounded-lg bg-hover"
+                />
+              }
+            >
+              <OpenInKodu
+                template={template}
+                labels={{
+                  openInKodu: t.detail.openInKodu,
+                  viewOnGitHub: t.detail.viewOnGitHub,
+                  withIntent: t.detail.withIntent,
+                }}
+              />
+            </Suspense>
 
             <div className="mt-3 flex gap-2">
               {template.demoUrl ? (

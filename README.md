@@ -195,6 +195,23 @@ At a few hundred templates this is roughly 30–50 MB in the repository, which g
 it grows past that, move `public/shots` to object storage and change the `path` written into
 `data/screenshots.json` to a CDN URL — nothing else reads it.
 
+## Live previews
+
+A template page shows its screenshot, with a **Try it live** button that swaps in the running demo
+in an iframe. That is the trick Atoms' discover page uses — the app in the card is the real thing,
+not a picture — and it works there because they host every app themselves.
+
+Here the demos belong to other people, and most sites refuse to be framed. So the screenshot run
+records whether each one allows it, from `X-Frame-Options` and any `frame-ancestors` directive,
+and the button is only offered where the answer was yes. A site that says no is taken at its word.
+
+The flag is backfilled for demos that already have a screenshot with a plain `fetch` — headers
+only, no browser — so `npm run screenshots` fills it in without recapturing anything.
+
+It is a button rather than the default because loading a third-party site on every page view is
+slow, hands the visitor to that site before they asked, and breaks whenever the demo does. The
+iframe carries `referrerpolicy="no-referrer"` and a sandbox that stops the demo reaching this page.
+
 ## Open Graph images
 
 Every page generates its own social card with `next/og`, prerendered alongside the page:

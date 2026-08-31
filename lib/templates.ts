@@ -17,7 +17,7 @@ function readIndex(file: string): Template[] {
   }
 }
 
-function readScreenshots(): Record<string, { path: string }> {
+function readScreenshots(): Record<string, { path: string; embeddable?: boolean }> {
   const full = path.join(DATA_DIR, "screenshots.json");
   if (!fs.existsSync(full)) return {};
   try {
@@ -47,7 +47,10 @@ export function getAllTemplates(): Template[] {
   const shots = readScreenshots();
   for (const template of byId.values()) {
     const shot = shots[template.id];
-    if (shot) template.screenshotUrl = shot.path;
+    if (shot) {
+      template.screenshotUrl = shot.path;
+      template.embeddable = shot.embeddable;
+    }
   }
 
   cache = [...byId.values()].sort((a, b) => {

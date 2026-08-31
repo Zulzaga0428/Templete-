@@ -104,15 +104,55 @@ async function capture(
     const file = path.join(SHOTS_DIR, `${template.slug}.jpg`);
     await page.screenshot({ path: file, type: "jpeg", quality: 82 });
 
+    const headers = response.headers();
+    const xfo = (headers["x-frame-options"] ?? "").toLowerCase();
+    const csp = (headers["content-security-policy"] ?? "").toLowerCase();
+    const ancestors = /frame-ancestors([^;]*)/.exec(csp)?.[1] ?? "";
+    const embeddable =
+      !xfo.includes("deny") && !xfo.includes("sameorigin") && (!ancestors || ancestors.includes("*"));
+
     return {
       path: `/shots/${template.slug}.jpg`,
       sourceUrl: url,
       capturedAt: new Date().toISOString(),
+      embeddable,
     };
   } catch (error) {
     return { error: (error as Error).message.split("\n")[0] };
   } finally {
     await context.close();
+  }
+}
+
+/**
+ * Whether a page lets itself be framed.
+ *
+ * A plain fetch, not a browser: this only needs response headers, and it runs
+ * for demos that already have a screenshot, where launching Chromium again
+ * would be minutes of work for two header lookups.
+ */
+async function checkEmbeddable(url: string): Promise<boolean | undefined> {
+  try {
+    const res = await fetch(url, {
+      redirect: "follow",
+      signal: AbortSignal.timeout(15_000),
+      headers: { "User-Agent": "templete.kodu.live" },
+    });
+    if (!res.ok) return undefined;
+
+    const xfo = res.headers.get("x-frame-options")?.toLowerCase() ?? "";
+    if (xfo.includes("deny") || xfo.includes("sameorigin")) return false;
+
+    const csp = res.headers.get("content-security-policy")?.toLowerCase() ?? "";
+    const ancestors = /frame-ancestors([^;]*)/.exec(csp)?.[1] ?? "";
+    // A frame-ancestors list we are not on is a no. Only a bare wildcard is a
+    // yes — anything naming specific origins excludes us.
+    if (ancestors && !ancestors.includes("*")) return false;
+
+    return true;
+  } catch {
+    // A demo we cannot reach is one we should not try to frame.
+    return undefined;
   }
 }
 
@@ -138,9 +178,34 @@ async function main() {
     .filter((t) => FORCE || !index.shots[t.id]);
 
   if (templates.length === 0) {
-    console.log("Nothing to capture. Pass --force to recapture.");
-    return;
+    console.log("Nothing new to capture. Pass --force to recapture.");
   }
+
+  // Backfill the embeddable flag for anything captured before it existed,
+  // without recapturing the image.
+  const needsFlag = readTemplates().filter(
+    (t) => t.demoUrl && index.shots[t.id] && index.shots[t.id].embeddable === undefined,
+  );
+  if (needsFlag.length > 0) {
+    console.log(`Checking ${needsFlag.length} demos for embeddability…`);
+    let allowed = 0;
+    for (let i = 0; i < needsFlag.length; i += 8) {
+      const batch = needsFlag.slice(i, i + 8);
+      const results = await Promise.all(batch.map((t) => checkEmbeddable(t.demoUrl!)));
+      batch.forEach((t, j) => {
+        const value = results[j];
+        if (value !== undefined) {
+          index.shots[t.id].embeddable = value;
+          if (value) allowed++;
+        }
+      });
+    }
+    index.generatedAt = new Date().toISOString();
+    fs.writeFileSync(INDEX_FILE, `${JSON.stringify(index, null, 2)}\n`);
+    console.log(`  ${allowed} of ${needsFlag.length} allow framing\n`);
+  }
+
+  if (templates.length === 0) return;
 
   console.log(`Capturing ${templates.length} screenshots (${CONCURRENCY} at a time)…\n`);
   const browser = await chromium.launch({

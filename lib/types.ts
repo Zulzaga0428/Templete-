@@ -84,6 +84,8 @@ export interface Template {
   contentLanguage?: string;
   /** Present when this template is a derivative of another one. */
   derivedFrom?: Derivation | null;
+  /** True when the live demo can be shown in an iframe. See ScreenshotRecord. */
+  embeddable?: boolean;
 }
 
 export interface TemplateIndex {
@@ -98,6 +100,13 @@ export interface ScreenshotRecord {
   /** The page that was captured. */
   sourceUrl: string;
   capturedAt: string;
+  /**
+   * Whether the demo allows itself to be framed. Sites say no through
+   * X-Frame-Options or a frame-ancestors directive, and we take them at their
+   * word — a live preview is only offered where it will actually render.
+   * Undefined means it has not been checked yet.
+   */
+  embeddable?: boolean;
 }
 
 export interface ScreenshotIndex {
