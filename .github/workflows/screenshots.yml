@@ -1,0 +1,76 @@
+name: Capture screenshots
+
+# Run this from the Actions tab: pick "Capture screenshots", press
+# "Run workflow". No local setup, no terminal.
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Recapture templates that already have a screenshot"
+        type: boolean
+        default: false
+      only:
+        description: "Optional: only these slugs, comma separated (e.g. astrowind,precedent)"
+        type: string
+        default: ""
+      concurrency:
+        description: "How many demos to load at once"
+        type: string
+        default: "4"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    # A few hundred demos, each with its own load and settle time.
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture
+        run: |
+          ARGS="--concurrency=${{ inputs.concurrency }}"
+          if [ "${{ inputs.force }}" = "true" ]; then ARGS="$ARGS --force"; fi
+          if [ -n "${{ inputs.only }}" ]; then ARGS="$ARGS --only=${{ inputs.only }}"; fi
+          echo "npm run screenshots -- $ARGS"
+          npm run screenshots -- $ARGS
+
+      - name: Report what landed
+        run: |
+          echo "### Screenshots" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- captured: $(ls public/shots/*.jpg 2>/dev/null | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "- total size: $(du -sh public/shots 2>/dev/null | cut -f1)" >> $GITHUB_STEP_SUMMARY
+
+      - name: Check the site still builds with the new images
+        run: npm run build
+
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: chore/screenshots
+          title: "chore: capture template screenshots"
+          commit-message: "chore: capture template screenshots"
+          body: |
+            Automated `npm run screenshots` run.
+
+            Each image is a capture of that template's live demo. A template
+            whose demo is dead, slow, or errored is skipped and keeps falling
+            back to the GitHub social card — the run log lists which.
+          add-paths: |
+            public/shots/**
+            data/screenshots.json

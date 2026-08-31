@@ -161,11 +161,18 @@ no reverse link rather than a wrong one.
 GitHub's social card is a grey box with the repo name on it. A screenshot of the demo actually
 running is the biggest visual difference between this gallery and a list of links.
 
+**From GitHub, with no local setup.** Actions tab → *Capture screenshots* → *Run workflow*. It
+installs Chromium, captures whatever is missing, checks the site still builds, and opens a pull
+request with the images. This is the easy path.
+
+**Locally**, if you want to watch it work:
+
 ```bash
 npx playwright install chromium        # once
 npm run screenshots                    # capture anything missing
 npm run screenshots -- --force         # recapture everything
 npm run screenshots -- --only=astrowind,precedent
+npm run screenshots -- --concurrency=4 # how many demos to load at once
 ```
 
 Set `PLAYWRIGHT_CHROMIUM_PATH` if the machine already has a Chromium that Playwright did not
