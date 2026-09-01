@@ -75,7 +75,18 @@ The org pass only runs when the organisation is named. Set it under
 KODU_TEMPLATES_ORG = your-github-org
 ```
 
+An organisation or a personal account both work, and several can be listed comma-separated:
+
+```
+KODU_TEMPLATES_ORG = kodu-live,ZulzagaEDU
+```
+
 Without it the weekly run still works — it just never looks at your own repos.
+
+**It does not matter much which account a template lives under, as long as the account is on this
+list.** What does matter is that a template is not moved after it is published: the gallery
+identifies it by `owner/repo`, so moving it makes it a different template and loses its screenshot
+and its page.
 
 ## If a template does not appear
 

@@ -3,7 +3,7 @@
  *
  * Run with:  npm run ingest
  *            npm run ingest -- --min-stars=500 --limit=20
- *            npm run ingest -- --org=kodu-live   (also pull Kodu's own templates)
+ *            npm run ingest -- --org=kodu-live,ZulzagaEDU   (also pull your own)
  *            npm run ingest -- --max-age-months=24
  *            npm run ingest -- --out=data/templates.json
  *
@@ -123,14 +123,20 @@ async function ingestGithub(): Promise<Template[]> {
  * Together with the LICENSE the fork keeps, that topic is what lets the
  * gallery credit the original author.
  */
-async function ingestOrg(org: string): Promise<Template[]> {
+async function ingestOrg(owner: string): Promise<Template[]> {
   const templates: Template[] = [];
   let page = 1;
 
   for (;;) {
-    const url = `https://api.github.com/orgs/${org}/repos?per_page=100&page=${page}&type=public`;
-    process.stdout.write(`→ ${org} (page ${page}) … `);
-    const repos = await gh<RepoLike[]>(url);
+    // Try the organisation endpoint, then the user one. A personal account is
+    // not an org, and getting a 404 for that reason is a confusing way to
+    // learn it.
+    const orgUrl = `https://api.github.com/orgs/${owner}/repos?per_page=100&page=${page}&type=public`;
+    const userUrl = `https://api.github.com/users/${owner}/repos?per_page=100&page=${page}&type=owner`;
+
+    process.stdout.write(`→ ${owner} (page ${page}) … `);
+    let repos = await gh<RepoLike[]>(orgUrl).catch(() => null);
+    if (repos === null) repos = await gh<RepoLike[]>(userUrl);
     console.log(`${repos.length} repos`);
     if (repos.length === 0) break;
 
@@ -162,7 +168,7 @@ async function ingestOrg(org: string): Promise<Template[]> {
 
     if (missingTopics === repos.length && repos.length > 0) {
       console.warn(
-        `  no repo in ${org} reported topics — nothing can match kodu-template`,
+        `  no repo under ${owner} reported topics — nothing can match kodu-template`,
       );
     }
 
@@ -200,12 +206,18 @@ function derivationFromTopic(topic: string): Derivation {
 async function main() {
   const templates = await ingestGithub();
 
-  const org = args.get("org") ?? process.env.KODU_TEMPLATES_ORG;
-  if (org) {
-    const own = await ingestOrg(org);
+  // Comma-separated, because a team's own templates rarely all end up in one
+  // place: some under an organisation, some under whoever made them.
+  const owners = (args.get("org") ?? process.env.KODU_TEMPLATES_ORG ?? "")
+    .split(",")
+    .map((o) => o.trim())
+    .filter(Boolean);
+
+  for (const owner of owners) {
+    const own = await ingestOrg(owner);
     // Kodu's own templates win on id collision and sort to the front.
     templates.unshift(...own);
-    console.log(`\n  ${own.length} from ${org}`);
+    console.log(`\n  ${own.length} from ${owner}`);
   }
   // Featured (Kodu's own) first, then by stars.
   templates.sort((a, b) => {

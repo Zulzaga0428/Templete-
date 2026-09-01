@@ -136,8 +136,9 @@ template in its own right.
 templete → open in Kodu → edit → push to the Kodu org → next ingest picks it up
 ```
 
-Set `KODU_TEMPLATES_ORG` (or pass `--org=`) and the ingest also walks that organisation's public
-repos. A repo declares what it is through its own GitHub **topics**, so nothing has to be
+Set `KODU_TEMPLATES_ORG` (or pass `--org=`) and the ingest also walks those accounts' public
+repos. An organisation or a personal account both work, and several can be listed
+comma-separated — a team's own templates rarely all end up in one place. A repo declares what it is through its own GitHub **topics**, so nothing has to be
 configured in this project when a new one appears:
 
 | Topic | Meaning |
