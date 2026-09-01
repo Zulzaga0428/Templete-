@@ -76,13 +76,24 @@ the result looks professional or looks broken.
 > - `LICENSE` intact, your copyright added below the original's
 > - README rewritten, and `package.json` `name`/`description` updated
 >
-> ### Then publish it
+> ### Then publish it — do this yourself, do not leave it to a person
 >
-> Push to the Kodu organisation and set, on GitHub:
+> Push, then set the repository's metadata with one command. All three matter: without a
+> description the gallery skips the repo entirely, and without a homepage there is no screenshot
+> and no live preview.
 >
-> - **Description** — one clear sentence. Without it the gallery skips the repo entirely.
-> - **Homepage** — the deployed demo URL. Without it there is no screenshot and no live preview.
-> - **Topics** — `kodu-template`, `lang-mn`, and `derived-from-{OWNER}-{REPO}`.
+> ```bash
+> gh repo edit OWNER/NEW-REPO \
+>   --description "One clear sentence about what this template is" \
+>   --homepage "https://your-deployed-demo.example" \
+>   --add-topic kodu-template \
+>   --add-topic lang-mn \
+>   --add-topic derived-from-{OWNER}-{REPO}
+> ```
+>
+> GitHub lowercases topics, which is fine — the gallery matches the original case-insensitively.
+>
+> Then tell whoever asked for this that it is ready, and give them the repo URL.
 
 ---
 

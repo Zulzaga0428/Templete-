@@ -184,9 +184,12 @@ async function ingestOrg(owner: string): Promise<Template[]> {
  * `derived-from-arthelokyo-astrowind` -> the AstroWind repo.
  *
  * GitHub topics cannot hold a slash, so the owner and repo are joined with a
- * dash and split back on the first one. That breaks for an owner containing a
- * dash, which is why the resolved URL is checked against the ingested set
- * before it is trusted for the reverse link.
+ * dash and split back on the first one. GitHub also lowercases every topic, so
+ * the id built here is a guess at casing — `resolveDerivations` below matches
+ * it against the real templates case-insensitively and replaces it. Without
+ * that step "mearashadowfax-ScrewFast" comes back as
+ * `github:mearashadowfax/screwfast`, which matches nothing and silently loses
+ * the attribution link.
  */
 function derivationFromTopic(topic: string): Derivation {
   const rest = topic.slice("derived-from-".length);
@@ -201,6 +204,35 @@ function derivationFromTopic(topic: string): Derivation {
     license: null,
     note: "",
   };
+}
+
+/**
+ * Points each derivation at the template it actually names.
+ *
+ * Topics arrive lowercased and with owner and repo joined by a dash, so both
+ * the casing and the split point are guesses. Comparing case-insensitively
+ * against the real ids fixes both, and a derivation that matches nothing keeps
+ * its guessed URL — the attribution still reads correctly, it just gets no
+ * reverse link.
+ */
+function resolveDerivations(templates: Template[]): void {
+  const byLowerId = new Map(templates.map((t) => [t.id.toLowerCase(), t]));
+
+  for (const template of templates) {
+    const derived = template.derivedFrom;
+    if (!derived?.id) continue;
+
+    const original = byLowerId.get(derived.id.toLowerCase());
+    if (!original) {
+      derived.id = null;
+      continue;
+    }
+    derived.id = original.id;
+    derived.name = original.title;
+    derived.url = original.sourceUrl;
+    derived.author = original.repo?.owner ?? derived.author;
+    derived.license = original.license.spdx;
+  }
 }
 
 async function main() {
@@ -219,6 +251,8 @@ async function main() {
     templates.unshift(...own);
     console.log(`\n  ${own.length} from ${owner}`);
   }
+  resolveDerivations(templates);
+
   // Featured (Kodu's own) first, then by stars.
   templates.sort((a, b) => {
     if (a.featured !== b.featured) return a.featured ? -1 : 1;

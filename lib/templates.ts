@@ -144,8 +144,11 @@ export function getTemplatesByCategory(category: string): Template[] {
 
 /** Templates built from this one, newest first. */
 export function getDerivatives(template: Template): Template[] {
+  // Case-insensitive: GitHub lowercases topics, so a derivation id can arrive
+  // with different casing than the template it names.
+  const target = template.id.toLowerCase();
   return getAllTemplates()
-    .filter((t) => t.derivedFrom?.id === template.id)
+    .filter((t) => t.derivedFrom?.id?.toLowerCase() === target)
     .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));
 }
 
