@@ -1,4 +1,4260 @@
 {
-  "generatedAt": "2026-09-01T00:00:00.000Z",
-  "details": {}
+  "generatedAt": "2026-09-07T08:08:00.462Z",
+  "details": {
+    "github:ColorlibHQ/AdminLTE": {
+      "summary": "AdminLTE is the most popular open-source admin dashboard template — fully responsive, built on Bootstrap 5.3 with vanilla JavaScript (no jQuery), highly customizable, and easy to use. It fits every screen from small mobile devices to large desktops, and it's MIT-licensed. Every edition ships the full AdminLTE 4 design — Bootstrap 5.3, dark mode, RTL — with idiomatic integrations for its stack (components, routing, auth, theming). Then start from the Getting Started guide or copy one of the demo pages.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:37.376Z"
+    },
+    "github:appsmithorg/appsmith": {
+      "summary": "Organizations build custom applications like dashboards, admin panels, customer 360, IT automation, and service management tools to help their teams work more efficiently and effectively. Appsmith is an open-source low-code platform that streamlines custom application development, deployment, and maintenance. Learn more on our website. For other deployment options, see the Installation Guides documentation. Development To build and run Appsmith in your local dev environment, see Setup for local development. Need Help? - Discord - Community Portal - support@appsmith.com",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:37.380Z"
+    },
+    "github:vbenjs/vue-vben-admin": {
+      "summary": "Vue Vben Admin is a free and open source middle and back-end template. Using the latest vue3, vite, TypeScript and other mainstream technology development, the out-of-the-box middle and back-end front-end solutions can also be used for learning reference. This is the latest version, 5.0, and it is not compatible with previous versions. If you are starting a new project, it is recommended to use the latest version. If you wish to view the old version, please use the v2 branch. Open the project in Gitpod (free online dev environment for GitHub) and start coding immediately.",
+      "features": [
+        "Latest Technology Stack: Developed with cutting-edge front-end technologies like Vue 3 and Vite",
+        "TypeScript: A language for application-scale JavaScript",
+        "Themes: Multiple theme colors available with customizable options",
+        "Internationalization: Comprehensive built-in internationalization support",
+        "Permissions: Built-in solution for dynamic route-based permission generation"
+      ],
+      "stack": [
+        {
+          "name": "Vite",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Vue",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": null,
+          "role": "styling"
+        },
+        {
+          "name": "Vitest",
+          "version": null,
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 1,
+      "fetchedAt": "2026-09-07T08:07:37.302Z"
+    },
+    "github:marmelab/react-admin": {
+      "summary": "A frontend Framework for building single-page applications running in the browser on top of REST/GraphQL APIs, using TypeScript, React and Material Design. Open sourced and maintained by marmelab. 🧩 All The Building Blocks You Need: Provides hooks and components for authentication, routing, forms & validation, datagrid, search & filter, relationships, validation, roles & permissions, rich text editor, i18n, notifications, menus, theming, caching, etc. React-admin is available from npm. You can install it (and its required dependencies) using:",
+      "features": [
+        "🔌 Backend Agnostic: Connects to any API (REST or GraphQL, see the list of more than 45 adapters)",
+        "🪡 High Quality: Accessibility, responsive, secure, fast, testable",
+        "👑 Great User Experience: Optimistic rendering, filter-as-you-type, undo, preferences, saved queries",
+        "🛠 Complete Customization: Replace any component with your own",
+        "☂️ Opt-In Types: Develop either in TypeScript or JavaScript",
+        "👨‍👩‍👧‍👦 Powered by Material UI, react-hook-form, react-router, react-query, TypeScript and a few more"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Jest",
+          "version": "29",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:37.337Z"
+    },
+    "github:kriasoft/react-starter-kit": {
+      "summary": "A full-stack monorepo template for building SaaS applications with React 19, tRPC, and Cloudflare Workers. Type-safe from database to UI, deployable to the edge in minutes. Each app deploys independently to Cloudflare Workers. The web worker routes /api/ to the API worker and app routes to the app worker via service bindings. Also check wrangler.jsonc for Worker configuration and bindings. Ensure DATABASEURL is configured in your .env.local file, then set up the schema:",
+      "features": [
+        "Type-safe full stack – TypeScript, tRPC, and Drizzle ORM create a single type contract from database to UI",
+        "Edge-native – Three Cloudflare Workers (web, app, api) connected via service bindings",
+        "Auth + billing included – Better Auth with email OTP, passkey, Google OAuth, organizations, and Stripe subscriptions",
+        "Modern React – React 19, TanStack Router (file-based), TanStack Query, Jotai, Tailwind CSS v4, shadcn/ui",
+        "Database ready – Drizzle ORM with Neon PostgreSQL, migrations, and seed data",
+        "Fast DX – Bun toolchain, Vite, Vitest, ESLint, Prettier, and pre-configured VS Code settings"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:38.109Z"
+    },
+    "github:wasp-lang/open-saas": {
+      "summary": "https://github.com/user-attachments/assets/3856276b-23e9-455e-a564-b5f26f4f0e98 You've decided to build a SaaS app with the Open SaaS template. Great choice! 1. fully open-source 2. completely free to use and distribute 3. comes with a ton of features out of the box! 4. ready to work with your favorite AI coding tool or agent (Claude Code, Cursor, Codex, OpenCode, etc.) 🧑‍💻 Check it out in action here: OpenSaaS.sh 📚 Check out the Docs here: Open SaaS Docs You also get access to Wasp's diverse, helpful community if you get stuck or need help.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:37.874Z"
+    },
+    "github:mdbootstrap/TW-Elements": {
+      "summary": "TW Elements is a huge collection of free, interactive components for Tailwind CSS. If you want to help the project grow, start by simply sharing it with your peers! A collection of stunning components made with attention to the smallest details. Forms, cards, buttons, and hundreds of others – in TW Elements you will find all the essential elements necessary for every project. Responsive Landing page blocks built with Tailwind CSS. Plenty of design blocks examples such as Teams, services, projects, faq, and many more.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:37.973Z"
+    },
+    "github:ixartz/Next-js-Boilerplate": {
+      "summary": "Boilerplate and Starter for Next.js 16+, Tailwind CSS 4, and TypeScript.",
+      "features": [
+        "⚡ Next.js with App Router support",
+        "🔥 Type checking TypeScript",
+        "💎 Integrate with Tailwind CSS",
+        "🤖 AI coding agent instructions for Claude Code, Codex, Cursor, OpenCode, Copilot, and more",
+        "✅ Strict Mode for TypeScript and React 19",
+        "🔒 Authentication with Clerk: Sign up, Sign in, Sign out, Forgot password, Reset password, and more.",
+        "📦 Type-safe ORM with DrizzleORM, compatible with PostgreSQL, SQLite, and MySQL",
+        "💽 Offline and local development database with PGlite"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Clerk",
+          "version": "7",
+          "role": "auth"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 16,
+      "fetchedAt": "2026-09-07T08:07:37.972Z"
+    },
+    "github:antfu-collective/vitesse": {
+      "summary": "Note: This template is created during the early transition of Vue 3 and Vite. At this moment, if you are seeking for better Vue developer experience and more consistent maintenance, we recommend using Nuxt instead (it also works perfectly with SPA or SSG as needed). This template still serves as a reference, but expect slower updates. As this template is strongly opinionated, the following provides a curated list for community-maintained variations with different preferences and feature sets. Check them out as well. PR to add yours is also welcome!",
+      "features": [
+        "⚡️ Vue 3, Vite, pnpm, esbuild - born with fastness",
+        "🗂 File based routing",
+        "📦 Components auto importing",
+        "🍍 State Management via Pinia",
+        "📑 Layout system",
+        "📲 PWA",
+        "🎨 UnoCSS - the instant on-demand atomic CSS engine",
+        "😃 Use icons from any icon sets with classes"
+      ],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Cypress",
+          "version": null,
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": null,
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 8,
+      "fetchedAt": "2026-09-07T08:07:38.672Z"
+    },
+    "github:ixartz/SaaS-Boilerplate": {
+      "summary": "🚀 SaaS Boilerplate is a powerful and fully customizable template to kickstart your SaaS applications. Built with Next.js and Tailwind CSS, and the modular UI components of Shadcn UI. This Next.js SaaS Template helps you to quickly build and launch SaaS with minimal effort.",
+      "features": [
+        "⚡ Next.js with App Router support",
+        "🔥 Type checking TypeScript",
+        "💎 Integrate with Tailwind CSS and Shadcn UI",
+        "✅ Strict Mode for TypeScript and React 19",
+        "🔒 Authentication with Clerk: Sign up, Sign in, Sign out, Forgot password, Reset password, and more.",
+        "👥 Multi-tenancy & team support: create, switch, update organization and invite team members",
+        "📝 Role-based access control and permissions",
+        "👤 Multi-Factor Auth (MFA), Social Auth (Google, Facebook, Twitter, GitHub, Apple, and more), User Impersonation"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Clerk",
+          "version": "7",
+          "role": "auth"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 22,
+      "fetchedAt": "2026-09-07T08:07:38.678Z"
+    },
+    "github:thedevdojo/wave": {
+      "summary": "Wave is a SaaS framework, built with Laravel , that will make building your SaaS application fun and easier than ever before. View the full docs here . Wave provides you with all the essential features found in many popular SaaS platforms, allowing you to quickly transform your idea into a profitable SaaS product. Here are a handful of features that Wave provides: You can view a live demo here , which will also allow you to preview all the available themes . There are two ways to install Wave, you can install it via the automated installer or manually.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 1,
+      "fetchedAt": "2026-09-07T08:07:38.718Z"
+    },
+    "github:arthelokyo/astrowind": {
+      "summary": "🌟 Most starred & forked Astro theme in 2022, 2023, 2024 & 2025. 🌟 AstroWind is a free and open-source template to make your website using Astro v7 + Tailwind CSS v4. Ready to start a new project and designed taking into account web best practices. AstroWind tries to give you quick access to creating a website using Astro v7 + Tailwind CSS v4. It's a free theme which focuses on simplicity, good practices and high performance.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 11,
+      "fetchedAt": "2026-09-07T08:07:38.661Z"
+    },
+    "github:devias-io/material-kit-react": {
+      "summary": "Free React Admin Dashboard made with MUI's components, React and of course Next.js to boost your app development process!",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "MUI",
+          "version": "7",
+          "role": "ui"
+        },
+        {
+          "name": "Jest",
+          "version": "30",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 22,
+      "fetchedAt": "2026-09-07T08:07:39.263Z"
+    },
+    "github:HugoBlox/hugo-theme-academic-cv": {
+      "summary": "Your unfair advantage in academia. Stop sending PDFs into the void. Build a living portfolio that boosts citations, attracts collaborators, and lands offers — all from simple Markdown files you own. Built on HugoBlox — the open-source framework where AI generates your pages and you own everything as Markdown. Part of the HugoBlox ecosystem · Trusted by 150,000+ researchers at MIT, Stanford, Google & NVIDIA · Rated 4.9/5 (official survey) · Since 2016 Most academic CVs are static PDFs that get lost in the pile. This is an always-on portfolio that works 24/7 to advance your career:",
+      "features": [],
+      "stack": [
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 5,
+      "fetchedAt": "2026-09-07T08:07:39.226Z"
+    },
+    "github:saicaca/fuwari": {
+      "summary": "1. Create your blog repository: - Generate a new repository from this template or fork this repository. - Or run one of the following commands: 2. To edit your blog locally, clone your repository, run pnpm install to install dependencies. - Install pnpm npm install -g pnpm if you haven't. 3. Edit the config file src/config.ts to customize your blog. 4. Run pnpm new-post to create a new post and edit it in src/content/posts/. 5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following the guides. You need to edit the site configuration in astro.config.mjs before deployment.",
+      "features": [
+        "Built with Astro and Tailwind CSS",
+        "Smooth animations and page transitions",
+        "Light / dark mode",
+        "Customizable theme colors & banner",
+        "Responsive design",
+        "Search functionality with Pagefind",
+        "Markdown extended features",
+        "Table of contents"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 44,
+      "fetchedAt": "2026-09-07T08:07:39.306Z"
+    },
+    "github:RyanFitzgerald/devportfolio": {
+      "summary": "A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way. This was completely rebuilt from the ground up from V1. This template was built to be entirely ready to go with a quick config edit (see below) but also provides the ability to easily extend in whatever way you want. This template also comes with CLAUDE.md and .cursor/rules files for easy integration with your existing AI workflows.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 3,
+      "fetchedAt": "2026-09-07T08:07:39.228Z"
+    },
+    "github:coreui/coreui-free-react-admin-template": {
+      "summary": "[![npm package][npm-coreui-badge]][npm-coreui] [![NPM downloads][npm-coreui-download]][npm-coreui] [![npm package][npm-coreui-react-badge]][npm-coreui-react] [![NPM downloads][npm-coreui-react-download]][npm-coreui-react]",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 18,
+      "fetchedAt": "2026-09-07T08:07:39.879Z"
+    },
+    "github:boxyhq/saas-starter-kit": {
+      "summary": "The Open Source Next.js SaaS boilerplate for Enterprise SaaS app development. Please star ⭐ the repo if you want us to continue developing and improving the SaaS Starter Kit! 😀 Next.js-based SaaS starter kit saves you months of development by starting you off with all the features that are the same in every product, so you can focus on what makes your app unique. Please follow these simple steps to get a local copy up and running. To make the process of installing dependencies easier, we offer a docker-compose.yml with a Postgres container.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Prisma",
+          "version": "6",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "4",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "17",
+          "role": "payments"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Jest",
+          "version": "30",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 38,
+      "fetchedAt": "2026-09-07T08:07:39.818Z"
+    },
+    "github:async-labs/saas": {
+      "summary": "Open source web app that saves you many days of work when building your own SaaS product. The boilerplate comes with many basic SaaS features (see Features below) so that you can focus on features that differentiate your product. If you want to learn how to build this project from scratch, check out our book: https://builderbook.org/book The open source project is located in the saas folder. If you purchased our book, codebases for each of the book's chapters are located in the book folder.",
+      "features": [
+        "Server-side rendering for fast initial load and SEO.",
+        "User authentication with Google OAuth API and Passwordless, cookie, and session.",
+        "Production-ready Express server with compression, parser, and helmet.",
+        "Transactional emails (AWS SES): welcome, team invitation, and payment.",
+        "Adding email addresses to newsletter lists (Mailchimp): new users, paying users.",
+        "File upload, load, and deletion (AWS S3) with pre-signed request for: Posts, Team Profile, and User Profile.",
+        "Websockets with socket.io v3.",
+        "Team creation, Team Member invitation, and settings for Team and User."
+      ],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:39.862Z"
+    },
+    "github:ln-dev7/circle": {
+      "summary": "Project management interface inspired by Linear. Built with Next.js and shadcn/ui, this application allows tracking of issues, projects and teams with a modern, responsive UI.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 46,
+      "fetchedAt": "2026-09-07T08:07:39.823Z"
+    },
+    "github:ashutosh1919/masterPortfolio": {
+      "summary": "Software Developer Master Portfolio 🔥 A clean, beautiful, responsive, and 100% customizable portfolio template for Software Developers! If you want to discuss about something, you can ask on my Discord Server . This will clone the whole repository in your system. - To download required dependencies to your system, navigate to the directory where the cloned repository resides and execute following command: In this project, there are basically 4 things that you need to change to customize this to anyone else's portfolio: package.json, Personal Information, Github Information and Splash Logo.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "styled-components",
+          "version": "5",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 19,
+      "fetchedAt": "2026-09-07T08:07:40.499Z"
+    },
+    "github:buqiyuan/vue3-antdv-admin": {
+      "summary": "基于 vite5.x + vue3.x + antd-design-vue4.x + typescript5.x 的后台管理系统 使用了 Vue3.x 全家桶、ant-design-vue4.x 和 typescript5.x，实践 vue3.x 的新特性以及玩法，不得不说 vue3.x 的 Composition API 相比于 vue2.x 的 Options API 灵活很多，让我们可以灵活地组合组件逻辑，我们可以很轻松的使用 hooks 的形式去代替以前 mixins 等的写法。更多 hooks 可以参考vueuse",
+      "features": [],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": "3",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 26,
+      "fetchedAt": "2026-09-07T08:07:40.474Z"
+    },
+    "github:0wczar/airframe-react": {
+      "summary": "Note Version HTML/CSS is available here: https://github.com/0wczar/airframe High Quality Dashboard / Admin / Analytics template that works great on any smartphone, tablet or desktop. Available as Open Source as MIT license. Airframe Dashboard with a minimalist design and innovative Light UI will let you build an amazing and powerful application with great UI. Perfectly designed for large scale applications, with detailed step by step documentation.",
+      "features": [
+        "10+ Layout Variations - a multitude of possibilities to rearrange the layout, allows to customize the look of your application just as you imagined.",
+        "Applications - applications ready, allows you to save time and focus on project development.",
+        "UI Components - we offer you a large number of UI components; fully ready for changes that will customize them for your needs.",
+        "Responsive Design - fully adapted to your application, exactly well presented on the desktop, a tablet or smartphone.",
+        "120+ Unique Pages designed to make use of them directly in your application.",
+        "2 Starters so that you can immediately work with the components that are necessary for your application."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 46,
+      "fetchedAt": "2026-09-07T08:07:40.515Z"
+    },
+    "github:dingyi214/slash-admin": {
+      "summary": "Slash Admin is a modern admin dashboard template built with React 19, Vite, shadcn/ui, and TypeScript. It is designed to help developers quickly create powerful admin management systems.",
+      "features": [
+        "Built using React 19 hooks.",
+        "Powered by Vite for rapid development and hot module replacement.",
+        "Integrates shadcn/ui, providing a rich set of UI components and design patterns.",
+        "Written in TypeScript, offering type safety and an improved development experience.",
+        "Responsive design, adapting to various screen sizes and devices.",
+        "Flexible routing configuration, supporting nested routes.",
+        "Integrated access control based on user roles.",
+        "Supports internationalization for easy language switching."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "styled-components",
+          "version": "6",
+          "role": "styling"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Ant Design",
+          "version": "5",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 58,
+      "fetchedAt": "2026-09-07T08:07:40.468Z"
+    },
+    "github:arhamkhnz/next-shadcn-admin-dashboard": {
+      "summary": "Studio Admin - Includes multiple dashboards, authentication layouts, customizable theme presets, and more. Most admin templates I found, free or paid, felt cluttered, outdated, or too rigid. I built this as a cleaner alternative with features often missing in others, such as theme toggling and layout controls, while keeping the design modern, minimal, and flexible. [!NOTE] Looking for the Base UI version? Check out next-shadcn-admin-dashboard-baseui. Looking for the React Aria version? Check out arhamkhnz/next-shadcn-admin-dashboard-aria.",
+      "features": [
+        "Built with Next.js 16, TypeScript, Tailwind CSS v4, and Shadcn UI",
+        "Responsive and mobile-friendly",
+        "Customizable theme presets (light/dark modes with color schemes like Tangerine, Brutalist, and more)",
+        "Flexible layouts (collapsible sidebar, variable content widths)",
+        "Authentication flows and screens",
+        "Prebuilt dashboards (Default, CRM, Finance, Analytics, Productivity) plus legacy variants",
+        "Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support (planned)"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 35,
+      "fetchedAt": "2026-09-07T08:07:40.994Z"
+    },
+    "github:spliit-app/spliit": {
+      "summary": "Spliit is a free and open source alternative to Splitwise. You can either use the official instance at Spliit.app, or deploy your own instance: The project is open to contributions. Feel free to open an issue or even a pull-request! Join the discussion in the Spliit Discord server. Spliit is free, open source, and has no ads. Hosting, database and API costs are paid for by donations. If you want to help keep it that way, you can: Contributions of any size are appreciated, and so is simply telling people about the project.",
+      "features": [
+        "Create a group and share it with friends",
+        "Create expenses with description",
+        "Display group balances",
+        "Create reimbursement expenses",
+        "Progressive Web App",
+        "Select all/no participant for expenses",
+        "Split expenses unevenly (#6)",
+        "Mark a group as favorite (#29)"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "7",
+          "role": "database"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Jest",
+          "version": "30",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 57,
+      "fetchedAt": "2026-09-07T08:07:41.065Z"
+    },
+    "github:nextify-limited/saasfly": {
+      "summary": "[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link] [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link] You don't need to buy templates anymore; Saasfly provides a complete, open-source solution for building SaaS applications quickly and easily.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Clerk",
+          "version": "6",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 1,
+      "fetchedAt": "2026-09-07T08:07:41.019Z"
+    },
+    "github:minimal-ui-kit/material-kit-react": {
+      "summary": "Free React Admin Dashboard made with Material-UI components and React + Vite.js.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "MUI",
+          "version": "7",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 17,
+      "fetchedAt": "2026-09-07T08:07:41.061Z"
+    },
+    "github:TailAdmin/free-nextjs-admin-dashboard": {
+      "summary": "TailAdmin Next.js - Free Next.js Tailwind Admin Dashboard Template TailAdmin is a free and open-source admin dashboard template built on Next.js and Tailwind CSS providing developers with everything they need to create a feature-rich and data-driven: back-end, dashboard, or admin panel solution for any sort of web project.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 22,
+      "fetchedAt": "2026-09-07T08:07:41.619Z"
+    },
+    "github:justboil/admin-one-vue-tailwind": {
+      "summary": "Admin One &mdash; Free Vue 3.x Tailwind 4.x Admin Dashboard with dark mode Admin One is simple, beautiful and free Vue.js 3.x Tailwind CSS 4.x admin dashboard. Nuxt 3.x or Laravel 12.x integrations available",
+      "features": [],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": "3",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 7,
+      "fetchedAt": "2026-09-07T08:07:41.621Z"
+    },
+    "github:scosman/CMSaasStarter": {
+      "summary": "Created by the folks at Kiln AI! It's the easiest tool for fine-tuning LLM models, synthetic data generation, and collaborating on datasets. The Kiln app was built with SaaS Starter! You can explore all the features using our fully functional demo saasstarter.work. See criticalmoments.io and getkiln.ai for examples of what’s possible after this template has design, content, and functionality added. Want to learn why we picked the technologies we did, and how to keep your fork lightning fast as you add content? Check out our blog post on the process. Yes, it's hosted on a SaaS Starter fork!",
+      "features": [
+        "User Authentication: Sign up, sign out, forgot password, email verification, and oAuth. Powered by Supabase Auth. GDPR cookie warning for European users.",
+        "Marketing Page with SEO optimization and Sitemap",
+        "Blog engine with rich formatting, RSS and SEO optimization.",
+        "User Dashboard with user profile, user settings, update email/password, billing, and more",
+        "Subscriptions powered by Stripe Checkout",
+        "Pricing page",
+        "Emails: send emails to users, including template support",
+        "Search: lightning fast site search, without a backend"
+      ],
+      "stack": [
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Supabase",
+          "version": "2",
+          "role": "database"
+        },
+        {
+          "name": "Stripe",
+          "version": "13",
+          "role": "payments"
+        },
+        {
+          "name": "Vitest",
+          "version": "3",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 7,
+      "fetchedAt": "2026-09-07T08:07:41.728Z"
+    },
+    "github:arifszn/gitprofile": {
+      "summary": "Your GitHub-synced portfolio — easy to set up, updates itself! GitProfile is a powerful portfolio builder that allows you to create a stunning and personalized portfolio site in minutes, even if you have no coding experience. Simply provide your GitHub username, and GitProfile will automatically generate a portfolio. Best of all, you can easily deploy your portfolio to GitHub Pages with just a few clicks, making it accessible to the world in no time. These instructions will get you a copy of the project and deploy your portfolio online using GitHub Pages!",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 2,
+      "fetchedAt": "2026-09-07T08:07:41.660Z"
+    },
+    "github:TailAdmin/tailadmin-free-tailwind-dashboard-template": {
+      "summary": "TailAdmin is a high-quality, open-source, and free Tailwind CSS admin template that is perfect for creating data-rich backends, powerful web applications and dashboard-admin projects. TailAdmin provides essential UI components and layouts for building feature-rich, data-driven admin dashboards and control panels. It's built using: Windows Users: place the repository near the root of your drive if you face issues while cloning. TailAdmin is a pre-designed starting point for building a web-based dashboard using HTML, Alpine.js and Tailwind CSS. The template includes:",
+      "features": [],
+      "stack": [
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 14,
+      "fetchedAt": "2026-09-07T08:07:42.292Z"
+    },
+    "github:morethanmin/morethan-log": {
+      "summary": "Next.js static blog using Notion as a Content Management System (CMS). Supports both Blog format Post as well as Page format for Resume. Deployed using Vercel. 1. Star this repo. 2. Fork the repo to your Profile. 3. Duplicate this Notion template, and Share to Web. 4. Copy the Web Link and keep note of the Notion Page Id from the Link which will be in this format [username.notion.site/NOTIONPAGEID?v=VERSIONID]. 5. Clone your forked repo and then customize site.config.js based on your preference. 6. Deploy on Vercel, with the following environment variables.",
+      "features": [
+        "No need of commiting to Github for posting anything to your website.",
+        "Posts made on Notion are automaticaly updated on your site.",
+        "Useful for generating full page sites using Notion.",
+        "Can be used for Resume, Portfolios etc.",
+        "Dynamically generates OG IMAGEs (thumbnails!) for posts. (og-image-korean).",
+        "Dynamically creates sitemap for posts.",
+        "Your profile information can be updated through Config. (site.config.js)",
+        "Plugins support includes, Google Analytics, Search Console and also Commenting using Github Issues(Utterances) or Cusdis."
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "13",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 17,
+      "fetchedAt": "2026-09-07T08:07:42.229Z"
+    },
+    "github:codedthemes/berry-free-react-admin-template": {
+      "summary": "Berry is a free Material UI admin dashboard template built with React. It is meant to provide the best possible user experience with highly customizable feature-rich pages. It is a complete dashboard template that has easy and intuitive responsive design whether it is viewed on retina screens or laptops. ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine Berry offers everything you need to create dashboards. We include the following high-end features:",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:42.319Z"
+    },
+    "github:ixartz/Next-JS-Landing-Page-Starter-Template": {
+      "summary": "🚀 Landing Page theme written in Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, VSCode, Netlify, PostCSS, Tailwind CSS. Clone this project and use it to create your own Next.js project. You can check a Next js templates demo. Open http://localhost:3000 with your favorite browser to see your project. For your information, Next JS need to take some time to compile the project for your first time. You can easily configure the theme. Please change the following file:",
+      "features": [
+        "🔥 Next.js for Static Site Generator",
+        "🎨 Integrate with Tailwind CSS",
+        "💅 PostCSS for processing Tailwind CSS and integrated to styled-jsx",
+        "🎉 Type checking TypeScript",
+        "✅ Strict Mode for TypeScript and React 18",
+        "✏️ Linter with ESLint (default NextJS, NextJS Core Web Vitals and Airbnb configuration)",
+        "🛠 Code Formatter with Prettier",
+        "🦊 Husky for Git Hooks"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "14",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 6,
+      "fetchedAt": "2026-09-07T08:07:42.288Z"
+    },
+    "github:CuteLeaf/Firefly": {
+      "summary": "也支持对接 Memos 作为数据源，在 src/config/dynamicConfig.ts 中配置 memos 选项即可实时获取 Memos 动态，支持置顶同步和图片附件展示。详见动态文档。",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 67,
+      "fetchedAt": "2026-09-07T08:07:42.842Z"
+    },
+    "github:vue-zone/vue3-vant-mobile": {
+      "summary": "And you will see the generated file in dist that ready to be served. Go to Netlify and select your clone, OK along the way, and your App will be live in a minute. We recommend that issue be used for problem feedback, or Wechat group. Your sponsorship will help us continue to iterate on this exciting project! 🚀 Our contributors have made this project better. Thank you! 🙏",
+      "features": [
+        "⚡️ Vue 3, Vite 8, pnpm - born with fastness",
+        "🗂 File based routing",
+        "📦 Components auto importing",
+        "🍍 State Management via Pinia",
+        "📲 PWA",
+        "🎨 UnoCSS - the instant on-demand atomic CSS engine",
+        "🌍 I18n ready",
+        "🔥 Use the new syntax"
+      ],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": "3",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 16,
+      "fetchedAt": "2026-09-07T08:07:42.928Z"
+    },
+    "github:themeselection/materio-mui-nextjs-admin-template-free": {
+      "summary": "Most Powerful & Comprehensive Free MUI NextJS Admin Dashboard Template built for developers! If you're a developer looking for the most powerful and comprehensive Free MUI NextJS Admin Dashboard Template built for developers, rich with features, and highly customizable, look no further than Materio. We've followed the highest industry standards to bring you the very best admin template that is not only easy to use but highly scalable. Offering ultimate convenience and flexibility, you'll be able to build any application you want with very little hassle.",
+      "features": [
+        "⚡ Next.js with App Router support",
+        "💎 Integrated with MUI & Tailwind CSS",
+        "✅ TypeScript & JavaScript Support",
+        "📏 Linter with ESLint",
+        "💖 Code Formatter with Prettier",
+        "🗂 VSCode configuration: Settings, Extensions and Custom Snippets",
+        "💡 Absolute Imports with aliases",
+        "☕ Minify HTML & CSS"
+      ],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:42.888Z"
+    },
+    "github:flatlogic/react-material-admin": {
+      "summary": "🚀 React Material Admin - A Free Material-UI Dashboard Template! Originally a premium product priced at $99+, now available for free! 🎉 Looking for a perfect codebase generator for your Startup? Try Flatlogic AI Web App Generator - our new tool, sort of a template++. 🎯 Why React Material Admin? - Ex-Premium: This template was previously paid. Enjoy it for free now. 😉 - Material-UI Based: Built with Material-UI for a modern and sleek UI. - Join the Community: Flatlogic Discord is where the action happens. - Free Node.js Backend: Pair it up with this backend to go full-stack.",
+      "features": [
+        "Three Color Themes",
+        "Fully Responsive",
+        "React 19",
+        "MUI 7",
+        "Authentication System",
+        "Modular Architecture",
+        "Charts Libraries",
+        "Dashboard Pages"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "MUI",
+          "version": "7",
+          "role": "ui"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 34,
+      "fetchedAt": "2026-09-07T08:07:42.927Z"
+    },
+    "github:BearStudio/start-ui-web": {
+      "summary": "🚀 Start UI [web] is an opinionated frontend starter repository created & maintained by the BearStudio Team and other contributors. It represents our team's up-to-date stack that we use when creating web apps for our clients. ⚙️ Node.js, 🟦 TypeScript, ⚛️ React, 📦 TanStack Start, 💨 Tailwind CSS, 🧩 shadcn/ui, 📋 React Hook Form, 🔌 oRPC, 🛠 Prisma, 🔐 Better Auth, 📚 Storybook, 🧪 Vitest, 🎭 Playwright For detailed information on how to use this project, please refer to the documentation. The documentation contains all the necessary information on installation, usage, and some guides.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "6",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 58,
+      "fetchedAt": "2026-09-07T08:07:43.549Z"
+    },
+    "github:chrismwilliams/astro-theme-cactus": {
+      "summary": "Astro Cactus is a simple opinionated starter built with Astro. Use it to create an easy-to-use blog or website. 1. Key Features 2. Demo 3. Quick start 4. Preview 5. Commands 6. Configure 7. Updating 8. Adding posts, notes, and tags - Post Frontmatter - Note Frontmatter - Tag Frontmatter - Frontmatter Snippets 9. Pagefind search 10. Analytics 11. Deploy 12. Acknowledgment If you've forked the template, you can sync the fork with your own project, remembering to not click Discard Changes as you will lose your own.",
+      "features": [
+        "Astro v6 Fast 🚀",
+        "Tailwind v4",
+        "Accessible, semantic HTML markup",
+        "Responsive & SEO-friendly",
+        "Dark & Light mode",
+        "MD & MDX posts & notes",
+        "Includes Admonitions",
+        "Satori for creating open graph png images"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 21,
+      "fetchedAt": "2026-09-07T08:07:43.468Z"
+    },
+    "github:mui/toolpad": {
+      "summary": "[!WARNING] At the moment, the maintainers are primarily focused on other projects and are not actively working on Toolpad Core. We may not be able to respond promptly to issues or pull requests. You can use the CRUD dashboard template from the Material UI React templates page as an easy-to-customize, copy-pastable alternative to the main Toolpad Core components — including dashboard layout and CRUD features.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Vitest",
+          "version": "2",
+          "role": "testing"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 16,
+      "fetchedAt": "2026-09-07T08:07:43.446Z"
+    },
+    "github:Blazity/next-saas-starter": {
+      "summary": "✨ Free Next.js marketing website template for SaaS startups ✨ Everything you need to build a great landing page / marketing website for your startup. Great SEO metrics, Green WebVitals, 🚀 Performance, Clean & Pragmatic Codebase out of the box. Created with :heart: at Blazity Blazity is a group of Next.js/Jamstack/Headless experts. Contact us at contact@blazity.com if you’d like to talk about your project or just to have a chat with us Hint: To edit the blog pages go to /admin and navigate to a blog page to edit it. To exit editing mode navigate to /admin/logout",
+      "features": [
+        "⚡ Next.js - React framework for static rendering",
+        "Best SEO setup - Meta Tags, JSON-LD and Open Graph Tags",
+        "Tina CMS integration - local & (optional) production CMS",
+        "Optimized for Web Vitals",
+        "Blog with MDX",
+        "Mailchimp Integration - for newsletters",
+        "Sendgrid Integration - for sending emails",
+        "Dark mode - and customizable themes!"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "12",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "17",
+          "role": "framework"
+        },
+        {
+          "name": "styled-components",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        },
+        {
+          "name": "MDX",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 27,
+      "fetchedAt": "2026-09-07T08:07:43.485Z"
+    },
+    "github:NextJSTemplates/startup-nextjs": {
+      "summary": "Startup is a free, open-source, and premium-quality Next.js startup website template that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages. If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!",
+      "features": [
+        "Crafted for Startup and SaaS Business",
+        "Next.js and Tailwind CSS",
+        "All Essential Business Sections and Pages",
+        "High-quality and Clean Design",
+        "Dark and Light Version",
+        "TypeScript Support"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 9,
+      "fetchedAt": "2026-09-07T08:07:44.068Z"
+    },
+    "github:saas-js/saas-ui": {
+      "summary": "Saas UI helps teams build B2B applications and dashboards with Chakra UI. Chakra primitives come from @chakra-ui/react, Saas UI tokens and recipes come from @saas-ui/chakra-preset, and editable compositions such as Sidebar are installed into applications with @saas-ui/cli. This repository contains the preset, registry compiler and templates, CLI, supporting packages, examples, and documentation website. Initialization installs compatible Chakra, Emotion, and preset dependencies, creates components.json, and installs local provider setup. See the CLI README for command details.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": "3",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:44.227Z"
+    },
+    "github:Adrinlol/landy-react-template": {
+      "summary": "[Landy][Landy] is an open-source React landing page template written in TypeScript, designed for developers and startups, who want to create a quick and professional landing page for their business or project. This React template comes with multi-lingual support, smooth animations, set of ready to use sections and most importantly, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in React.js.",
+      "features": [
+        "🎁 Modern – Template created using the latest features of React (State management using Hooks, Code-Splitting to reduce the bundle size)",
+        "💻 Responsive – Highly responsive and reusable UI components, that change depending on the provided props",
+        "🏷 TypeScript support – Landy is written in TypeScript to improve the DX",
+        "🌍 Internationalization - Prebuilt standalone file that works in every environment and doesn't require reloading the page to translate the content",
+        "🛸 Routing - Each file inside the src/pages directory will generate its own route, so you don't have to manually handle the routing",
+        "⚙️ Maintenance - All of the content is stored in the JSON files, so that you can easily manage the content of the website"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "styled-components",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Ant Design",
+          "version": "4",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 17,
+      "fetchedAt": "2026-09-07T08:07:44.111Z"
+    },
+    "github:reliverse/relivator": {
+      "summary": "relivator is a robust ecommerce template built with next.js and other modern technologies. it's designed for developers who want a fast, modern, and scalable foundation without reinventing the backend.",
+      "features": [
+        "checkout flow for subscription purchases",
+        "customer portal for managing subscriptions",
+        "webhook handling for subscription events",
+        "automatic customer creation on signup",
+        "integration with better-auth for seamless authentication"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 48,
+      "fetchedAt": "2026-09-07T08:07:44.092Z"
+    },
+    "github:mearashadowfax/ScrewFast": {
+      "summary": "ScrewFast is an open-source template designed for quick and efficient web project setup, blending minimalism with functionality. Whether you're showcasing a portfolio, launching a company landing page, or running a blog, ScrewFast provides everything you need. By combining the power of the Astro, Tailwind CSS, and Preline UI, this template offers a functional and aesthetically pleasing solution for your web presence.",
+      "features": [
+        "Astro-Powered: Utilize a modern static-site generation framework.",
+        "Tailwind CSS: Enjoy rapid UI development with a utility-first CSS framework.",
+        "Preline UI: Implement prebuilt UI components for added elegance.",
+        "GSAP Integration: Impress with professional and polished animations.",
+        "Markdown Content Collections: Organize and manage your content seamlessly.",
+        "Starlight Documentation: A sleek, user-friendly, full-featured documentation theme.",
+        "Internationalization (i18n): Integrates Astro’s internationalization features.",
+        "SEO and Responsiveness: Ensure your site is discoverable and accessible on any device."
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 15,
+      "fetchedAt": "2026-09-07T08:07:44.751Z"
+    },
+    "github:moinulmoin/chadnext": {
+      "summary": "ChadNext is a quick starter template for Next.js projects, designed to streamline development by providing essential features out of the box. 🚀 Save time and effort, and build performant apps with an excellent developer experience. 1. Clone the repo. 2. Install dependencies: pnpm install 3. Copy .env.example file to .env file, then follow the instructions inside. 4. Run pnpm prisma db push to set up the database. 5. Start the dev server: pnpm dev 1. Fork the repo. 2. Create a branch. 3. Make changes and commit. 4. Push and create a pull request.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "6",
+          "role": "database"
+        },
+        {
+          "name": "Stripe",
+          "version": "18",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 59,
+      "fetchedAt": "2026-09-07T08:07:44.844Z"
+    },
+    "github:mugnavo/tanstarter": {
+      "summary": "A minimal starter template for 🏝️ TanStack Start. → Preview here [!TIP] This template is also available as a monorepo, powered by Vite+ and pnpm workspaces. See mugnavo/tanstarter-monorepo. 2. Create a .env.local file with your values, based on .env.schema, then validate them: 3. Generate the initial migration with drizzle-kit, then apply to your database: The development server should now be running at http://localhost:3000.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "1",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 20,
+      "fetchedAt": "2026-09-07T08:07:44.790Z"
+    },
+    "github:TailAdmin/free-react-tailwind-admin-dashboard": {
+      "summary": "TailAdmin is a free and open-source admin dashboard template built on React and Tailwind CSS, providing developers with everything they need to create a comprehensive, data-driven back-end, dashboard, or admin panel solution for upcoming web projects. With TailAdmin, you get access to all the necessary dashboard UI components, elements, and pages required to build a feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web application or a simple website, TailAdmin is the perfect solution to help you get up and running quickly.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 21,
+      "fetchedAt": "2026-09-07T08:07:44.763Z"
+    },
+    "github:zeon-studio/astroplate": {
+      "summary": "Astroplate is a free starter template built with Astro, TailwindCSS & TypeScript, providing everything you need to jumpstart your Astro project and save valuable time. If you find this project useful, please give it a ⭐ to show your support. This template comes pre-configured with Sitepins, a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code. Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.",
+      "features": [
+        "👥 Multi-Authors",
+        "🌐 Multilingual",
+        "🎯 Similar Posts Suggestion",
+        "🔍 Search Functionality",
+        "🌑 Dark Mode",
+        "🏷️ Tags & Categories",
+        "🔗 Netlify setting pre-configured",
+        "📞 Support contact form"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 23,
+      "fetchedAt": "2026-09-07T08:07:45.448Z"
+    },
+    "github:gurusabarish/hugo-profile": {
+      "summary": "Hugo Profile: a high-performance, mobile-first Hugo theme for personal portfolios and blogs. If Hugo is not installed, follow the official installation guide for installation. This uses a hugo.yaml configuration file instead of the default TOML format. Option A: Clone this repository inside your themes folder. This allows you to make lots of custom changes. Option B: Add as a Git submodule. This allows you to get automatic or structured updates from the original repository.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:45.342Z"
+    },
+    "github:Skolaczk/next-starter": {
+      "summary": "🎉 Features - 🚀 Next.js 16 (App router, Cache components) - ⚛️ React 19 - 📘 Typescript - 🎨 Tailwind CSS 4 - Class sorting, merging and linting - 🛠️ Shadcn/ui - Customizable UI components - 💵 Stripe - Payment handler - 🔒 Next-auth - Easy authentication library for Next.js (GitHub provider) - 🛡️ Drizzle - ORM for node.js - 🔍 Zod - Schema validation library - 🧪 Jest & React Testing Library - Configured for unit testing - 🎭 Playwright - Configured for e2e testing - 📈 Absolute Import & Path Alias - Import components using @/ prefix - 💅 Biome - Fast formatter and linter - 🐶 Husky & Lint…",
+      "features": [
+        "🚀 Next.js 16 (App router, Cache components)",
+        "⚛️ React 19",
+        "📘 Typescript",
+        "🎨 Tailwind CSS 4 - Class sorting, merging and linting",
+        "🛠️ Shadcn/ui - Customizable UI components",
+        "💵 Stripe - Payment handler",
+        "🔒 Next-auth - Easy authentication library for Next.js (GitHub provider)",
+        "🛡️ Drizzle - ORM for node.js"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "5",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "9",
+          "role": "payments"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Jest",
+          "version": "30",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 18,
+      "fetchedAt": "2026-09-07T08:07:45.438Z"
+    },
+    "github:devtodollars/mvp-boilerplate": {
+      "summary": "👉 See documentation to get started 👈 - Flutter Demo - NextJS Demo - Building a startup? Join the tech founder community",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:45.340Z"
+    },
+    "github:codedthemes/mantis-free-react-admin-template": {
+      "summary": "Mantis is a free and open source React dashboard template made using the Material UI React component library with aim of flexibility and better customizability. Mantis Logo is inspired from the insect name - 'Mantises' as they have triangular heads with flexible Necks. Also, the name is derived from two popular design systems, Material and Ant Design (M-Ant-is). Mantis has Ant Design principal on top of the Material UI React component library. ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:46.014Z"
+    },
+    "github:GreatStackDev/gocart": {
+      "summary": "An open-source multi-vendor e-commerce platform built with Next.js and Tailwind CSS. First, install the dependencies. We recommend using npm for this project. Open http://localhost:3000 with your browser to see the result. You can start editing the page by modifying app/(public)/page.js. The page auto-updates as you edit the file. This project uses next/font to automatically optimize and load Outfit, a new font family for Vercel. We welcome contributions! Please see our CONTRIBUTING.md for more details on how to get started.",
+      "features": [
+        "Multi-Vendor Architecture: Allows multiple vendors to register, manage their own products, and sell on a single platform.",
+        "Customer-Facing Storefront: A beautiful and responsive user interface for customers to browse and purchase products.",
+        "Vendor Dashboards: Dedicated dashboards for vendors to manage products, view sales analytics, and track orders.",
+        "Admin Panel: A comprehensive dashboard for platform administrators to oversee vendors, products, and commissions."
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 9,
+      "fetchedAt": "2026-09-07T08:07:46.017Z"
+    },
+    "github:zofe/rapyd-admin": {
+      "summary": "Rapyd Admin is an open-source admin panel for Laravel — a light alternative to Nova, Filament and Backpack, designed for teams building SaaS products and for development with AI agents. Consistent patterns, plain code. No DSL, no proprietary resource classes. Unlike Nova or Filament, Rapyd Admin generates plain Livewire + Blade files that live in your codebase and are yours to edit. It gives you the structure you'd write anyway — consistent module layout, a unified x-rpd:: field component API, auth and multi-tenancy included — then stays out of the way.",
+      "features": [
+        "Layout — navbar/sidebar based on SBAdmin 3, updated to Bootstrap 5.3, SCSS customizable, anonymous Blade components.",
+        "Auth — authentication via Laravel Fortify, Socialite, 2FA, and role/permission management via spatie/laravel-permission.",
+        "Companies — multi-tenant company hierarchy (1–3 tiers), with optional UUID primary keys."
+      ],
+      "stack": [
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 4,
+      "fetchedAt": "2026-09-07T08:07:46.071Z"
+    },
+    "github:jktrn/astro-erudite": {
+      "summary": "![Stargazers] ![Astro Version] ![Dependencies] [![License]](LICENSE) astro-erudite is enscribe's opinionated, unstyled static blogging template built with Astro and native CSS. astro-erudite uses no UI framework, no CSS framework, and contains minimal dependencies. [!IMPORTANT] astro-erudite has recently been updated to v2. To learn what changed and why, read the following blog post: Introducing astro-erudite v2. If you're migrating an existing v1 project, see breaking changes.",
+      "features": [
+        "A design system built entirely on native CSS, using autonomous custom elements and Utopia fluid type and space scales.",
+        "The ridiculously fast Sätteri Markdown processor (written in Rust)",
+        "Expressive Code for code blocks and inline code, with code{:lang} annotations and TextMate scope highlighting.",
+        "$\\LaTeX$ math rendered to browser-native and lightweight MathML via Temml.",
+        "Subposts for organizing series, rendered as one continuous scrollable document.",
+        "A fully responsive table of contents with active scrollspy highlighting.",
+        "Clickable heading anchors for permalinking to any section.",
+        "GitHub-style callouts/alerts via ::: directives."
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 12,
+      "fetchedAt": "2026-09-07T08:07:45.995Z"
+    },
+    "github:agustinusnathaniel/nextarter-chakra": {
+      "summary": "This is a Next.js project bootstrapped with create-next-app , added with Chakra UI and TypeScript setup. Start developing right away! This is a Next.js + Chakra UI + TypeScript starter template packed with modern tooling setup. This project uses a Split-Layer architecture to separate Next.js routing concerns from React UI logic.",
+      "features": [
+        "Framework: Next.js 16 (App Router)",
+        "UI Library: Chakra UI v3",
+        "Styling Engine: Emotion (via Chakra UI) + next-themes",
+        "Language: TypeScript 5",
+        "Linting & Formatting: Biome",
+        "E2E Testing: Playwright",
+        "Build System: Turborepo",
+        "Icons: React Icons"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Chakra UI",
+          "version": "3",
+          "role": "ui"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 9,
+      "fetchedAt": "2026-09-07T08:07:46.657Z"
+    },
+    "github:rjshkhr/cleanfolio": {
+      "summary": "Cleanfolio is a portfolio template built with React. However, if you prefer a template built with HTML, CSS, and JavaScript, you can check out Cleanfolio Minimal. 2. Web image - If your image is already hosted online, just paste the URL:",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "17",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 12,
+      "fetchedAt": "2026-09-07T08:07:46.583Z"
+    },
+    "github:imbhargav5/nextbase-nextjs-supabase-starter": {
+      "summary": "NextBase Starter — Open Source Next.js + Supabase Boilerplate A production-grade Next.js 16 + Supabase foundation. Free, MIT-licensed, and ready to clone. NextBase Starter is the open-source baseline of the NextBase family — an opinionated, tested starting point for SaaS teams building on Next.js 16 and Supabase. It bundles the auth, RLS, monorepo, and caching patterns that you would otherwise spend weeks deriving from scratch.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:46.596Z"
+    },
+    "github:KolbySisk/next-supabase-stripe-starter": {
+      "summary": "Bootstrap your SaaS with a modern tech stack built to move quick. Follow the guide to get started. 1. Go to supabase.com and create a project 1. Go to Project Settings → Database → Database password and click reset database password then click generate a new password. (I know you already made one, but this fixes a bug with their CLI where it doesn't like special characters in the password) 1. Save this password somewhere, you can't see it after closing the box 1. Go to stripe.com and create a project 1. Go to Customer Portal Settings and click the Active test link button",
+      "features": [
+        "Next.js 15",
+        "Supabase - Postgres database & user authentication",
+        "Stripe - Checkout, subscriptions, and customer portal",
+        "React Email - Easily build emails and send them with Resend",
+        "Tailwindcss - CSS framework",
+        "shadcn/ui - Prebuilt accessible components",
+        "Webhooks to automatically synchronize Stripe with Supabase",
+        "Stripe fixture to bootstrap product data"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Supabase",
+          "version": "2",
+          "role": "database"
+        },
+        {
+          "name": "Stripe",
+          "version": "2",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 28,
+      "fetchedAt": "2026-09-07T08:07:46.607Z"
+    },
+    "github:daltonmenezes/electron-app": {
+      "summary": "💅 An Electron app boilerplate with React v19, TypeScript v5, Tailwind v4, shadcn/ui, Electron Vite, Biome, GitHub Action releases and more. :warning: If Windows 7 and 8 support is important for your project, you should know that Electron in a version greater than 22x no longer supports it. You can read more about it here. Therefore, you must downgrade Electron to 22x version if it's important for you! Now, look at the package.json file in the root directory, you should update some of that settings with your project branding.",
+      "features": [
+        "Stands out",
+        "🔥 Fast and Ready-to-go with a well-thought-out structure",
+        "🚀 Auto reload for main and Fast Refresh for renderer process",
+        "🎉 Window/Screen routing included",
+        "😎 Preload (context bridge) already configured",
+        "🔮 GitHub Action releases with Windows, Mac and Linux binaries",
+        "🔒 Source Code Protection support",
+        "🍪 Absolute paths support"
+      ],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:47.214Z"
+    },
+    "github:LubomirGeorgiev/cloudflare-workers-nextjs-saas-template": {
+      "summary": "This is a SaaS template for Cloudflare Workers. It uses Vinext on Vite to run a Next.js App Router application directly on Cloudflare Workers. Vinext is Cloudflare's experimental implementation of the public Next.js API surface on top of Vite. The goal is to let a Next.js app keep familiar App Router patterns, React Server Components, route handlers, and next/ imports while using Vite as the build and dev toolchain instead of the standard Next.js compiler pipeline.",
+      "features": [
+        "🔐 Authentication with Lucia Auth",
+        "📧 Email/Password Sign In",
+        "📝 Email/Password Sign Up",
+        "🔑 WebAuthn/Passkey Authentication",
+        "🌐 Google OAuth/SSO Integration",
+        "🔄 Forgot Password Flow",
+        "🔒 Change Password",
+        "✉️ Email Verification"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "1",
+          "role": "database"
+        },
+        {
+          "name": "Stripe",
+          "version": "9",
+          "role": "payments"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 77,
+      "fetchedAt": "2026-09-07T08:07:47.990Z"
+    },
+    "github:eyeix/meilisearch-ui": {
+      "summary": "[!IMPORTANT] The main branch may be unstable or unavailable during development. Please use release instead of main branch to obtain a stable version app [!WARNING] This app have not achieved responsive design totally, so mind that only use this app on desktop to gain better experience. ✅ Remember update CORS settings in your instance server for this ui domain before using. Because this app use meilisearch official JS client to call your meilisearch instance, you need to manually configure CORS settings in your web server to make sure ui panel can access your instance server with api calls.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Mantine",
+          "version": "7",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 51,
+      "fetchedAt": "2026-09-07T08:07:47.291Z"
+    },
+    "github:lmsqueezy/nextjs-billing": {
+      "summary": "This Next.js demo app can be used as a base for building subscription-based SaaS apps. Just clone this repo and build your app alongside the ready-made auth and billing. This template uses the Next.js App Router. This includes support for enhanced layouts, colocation of components, tests, and styles, component-level data fetching, and more. Compatbile with Vercel Edge Functions and serverless deployments. Keep in mind that Lemon Squeezy comes with inbuilt Customer Portal that covers all the features from this app and more.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "14",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "5",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 15,
+      "fetchedAt": "2026-09-07T08:07:47.246Z"
+    },
+    "github:ixartz/Next-js-Blog-Boilerplate": {
+      "summary": "🚀 Next.js Blog Boilerplate is starter code for your blog based on Next.js 12+ framework with Tailwind CSS 3.0. ⚡️ Made with Next.js, TypeScript, ESLint, Prettier, PostCSS, Tailwind CSS. Clone this project and use it to create your own Next.js blog. You can check a Next js blog templates demo. Open http://localhost:3000 with your favorite browser to see your project. You can easily configure Next js Boilerplate. Please change the following file: The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from Tailwind CSS.",
+      "features": [
+        "🎈 Syntax Highlighting with Prism.js",
+        "🤖 SEO metadata and Open Graph tags",
+        "⚙️ JSON-LD for richer indexing",
+        "📖 Pagination",
+        "🌈 Include a FREE minimalist blog theme",
+        "⬇️ Markdown",
+        "💯 Maximize lighthouse score",
+        "🔥 Next.js for Static Site Generator"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "12",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "17",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 13,
+      "fetchedAt": "2026-09-07T08:07:48.660Z"
+    },
+    "github:kitloong/nextjs-dashboard": {
+      "summary": "This is a Next.js project bootstrapped with create-next-app --typescript. A Next.JS boilerplate with the famous Open Source Boostrap Admin Template, CoreUI. This dashboard is built with Typescript and React Bootstrap, using the App Router. Open http://localhost:3000 with your browser to see the result. You can start editing the page by modifying app/(dashboard)/page.tsx. The page auto-updates as you edit the file. To learn more about Next.js, take a look at the following resources: You can check out the Next.js GitHub repository - your feedback and contributions are welcome!",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "14",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "NextAuth",
+          "version": "4",
+          "role": "auth"
+        },
+        {
+          "name": "Cypress",
+          "version": "13",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 27,
+      "fetchedAt": "2026-09-07T08:07:48.520Z"
+    },
+    "github:CommunityPro/portfolio-html": {
+      "summary": "Build your portfolio using this super easy template. Free to use if you are a member of the community or a contributor to this project. If not, read our requirements if you plan on using this template for your portfolio. This project is made from the tireless efforts of the community, so feel free to support our work by contributing, staring ✨ the project or sponsoring us. 🙏🏽 Design credit: - Communitypro - Dribble Inspiration - Franklin U.O. Ohaegbulam - Open Peeps Illustration by Pablo Stanley",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:48.592Z"
+    },
+    "github:salahlalami/mern-admin": {
+      "summary": "App Built on top of this Starter project IDURAR ERP/CRM IDURAR is Open Source ERP/CRM (Invoice / Inventory / Accounting / HR) Based on Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux GitHub Repository : https://github.com/idurar/idurar-erp-crm ⭐️ Demo Open Source Version : https://opensource.idurarapp.com Starter Antd Admin (Crud & auth) Mern App (Express.js / React / Redux / MongoDB) Starter Crm App based on mern stack (Express.js / MongoDb / React / Redux / AntD) with generic crud and auth , admin management .",
+      "features": [],
+      "stack": [
+        {
+          "name": "Mongoose",
+          "version": "5",
+          "role": "database"
+        }
+      ],
+      "dependencyCount": 11,
+      "fetchedAt": "2026-09-07T08:07:48.721Z"
+    },
+    "github:moeyua/astro-theme-typography": {
+      "summary": "Typography is a minimal, responsive and SEO-friendly Astro blog theme. This guide will help you get started with a new project. You can fork the repository to your account by clicking the Fork button in the upper right corner, click the button below, select the repository you just forked, click the Import button, and you will be taken to the project configuration page. Or you can refer to the Astro documentation to deploy to your favorite platform. You can add content by creating a new markdown file in src/content/posts. The file need metadata in the frontmatter, like this:",
+      "features": [
+        "Build with Astro, TypeScript and UnoCSS",
+        "Fast. 100% Pagespeed Score.",
+        "Typography Derived from prevalent Chinese typographic norms and aims to provide an enhanced reading experience for website visitors.",
+        "Responsive. Responsive and works well on all screen sizes.",
+        "Accessible. A well thought out semantic and accessible content.",
+        "SEO friendly.Open Graph and Twitter Cards support for a better social sharing experience.",
+        "Sitemap and RSS feed for search engines.",
+        "i18n support."
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "5",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 12,
+      "fetchedAt": "2026-09-07T08:07:49.348Z"
+    },
+    "github:hsl947/react-antd-multi-tabs-admin": {
+      "summary": "你仍然可以使用 redux @Reduxjs/Toolkit是 Redux的封装.使用如下 Reduxjs/Toolkit 用于减少redux模板代码, 按照就近原则, 分割代码. 一个状态管理容器切片示例如下. 开源不易，请我们喝一杯咖啡，我们会更有动力 :smiley: Open source is not easy, invite us to drink a cup of coffee, we will be more motivated.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "17",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Ant Design",
+          "version": "4",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 26,
+      "fetchedAt": "2026-09-07T08:07:49.354Z"
+    },
+    "github:alifarooq9/launchmvpfast": {
+      "summary": "launchmvpfast Elevate your development game with launchmvpfast! Launch your apps faster with our SaaS starterkits, components, building blocks. Customizable. Open Source. Soon to be launched. In development. Documentation will be available soon as well. Want to explore it yourself?",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:49.260Z"
+    },
+    "github:NextJSTemplates/play-nextjs": {
+      "summary": "Play Next.js is a free and Open-source SaaS starter kit and boilerplate, designed and built for SaaS startups, apps, businesses, and more. With its premium design and essential UI components and pages, it provides everything you need to kickstart a feature-rich SaaS website.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Prisma",
+          "version": "7",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "4",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "14",
+          "role": "payments"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 23,
+      "fetchedAt": "2026-09-07T08:07:49.277Z"
+    },
+    "github:velobase/velobase-harness": {
+      "summary": "Open-source AI SaaS boilerplate with billing, credits, payments, workers, and anti-abuse built in. Turn an AI prototype into a paid product without rebuilding monetization, usage metering, growth attribution, lifecycle operations, and deployment infrastructure from scratch. If Harness helps you ship, star the repo and join the community . AI coding tools make prototypes fast. Turning one into a reliable paid product still means rebuilding accounts, usage billing, credits, payments, fraud controls, attribution, lifecycle email, workers, admin tools, and deployment.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "6",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "5",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "8",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 125,
+      "fetchedAt": "2026-09-07T08:07:49.976Z"
+    },
+    "github:rammcodes/WowFolio": {
+      "summary": "This is very helpful for you as you can test the template with different colours and see which colour fits your needs so you can use that colour for your own website. Important Note: Once you found the perfect colour for your site then just note the RGB value of the colour and then go inside this file called style.css on line number 9, and replace the value of the --themeColor variable with your RGB value as shown in the below code example so you can see the colour change in your website.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:49.935Z"
+    },
+    "github:level09/enferno": {
+      "summary": "Live Demo · Tutorials · Docs · Stop configuring. Start shipping. ~~Webpack~~ ~~Vite~~ ~~nodemodules~~ ~~npm install~~ — Just Python. https://github.com/user-attachments/assets/a87bfad2-45dc-4d94-bdf1-0448dfea8084",
+      "features": [
+        "Collapsible sidebar - Nested navigation groups with smooth expand/collapse animations",
+        "Dark mode - Theme toggle with localStorage persistence, auto-detects system preference",
+        "Tabler Icons - 5000+ icons via CDN, no build step",
+        "Ember color palette - Fire-inspired theme matching the Enferno brand",
+        "Polish included - Card hover effects, smooth scrollbars, styled data tables"
+      ],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:49.932Z"
+    },
+    "github:DLand-Team/moderate-react-admin": {
+      "summary": "现代化企业级中后台前端解决方案，支持多框架（Antd/Next.js/Shadcn UI/Tailwind CSS）、多业务插件，极致开发体验。 支持 React 19 / 18，Next.js 15+，Shadcn UI，Ant Design 5+，Tailwind CSS 4.x，多端适配，拥抱最新生态。",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:49.985Z"
+    },
+    "github:zeon-studio/nextplate": {
+      "summary": "Nextplate is a free starter template built with Nextjs, TailwindCSS & TypeScript, providing everything you need to jumpstart your Next project and save valuable time. Made with ♥ by Zeon Studio If you find this project useful, please give it a ⭐ to show your support. include overrides exclude — use exclude to remove broad sections, then include to add back specific pages. This template comes pre-configured with Sitepins, a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code.",
+      "features": [
+        "👥 Multi-Authors",
+        "🎯 Similar Posts Suggestion",
+        "🔍 Search Functionality",
+        "🌑 Dark Mode",
+        "🏷️ Tags & Categories",
+        "🔗 Netlify setting pre-configured",
+        "📞 Support contact form",
+        "📱 Fully responsive"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        },
+        {
+          "name": "MDX",
+          "version": "6",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 18,
+      "fetchedAt": "2026-09-07T08:07:50.726Z"
+    },
+    "github:nellavio/nellavio": {
+      "summary": "Open source dashboard starter built with Next.js 16, TypeScript and Tailwind 4 Nellavio is a free, open-source dashboard starter designed for building modern SaaS products, internal tools and data-rich admin panels. It provides the UI components, pages and patterns you need to create a complete dashboard application - available out of the box.",
+      "features": [
+        "90+ reusable components - Built on top of Shadcn UI and Radix primitives",
+        "60+ chart variations - Powered by Recharts library",
+        "Authentication - Full Better-Auth integration with login, register and forgot password pages + Yup validation",
+        "RBAC - Role-based access control with admin, editor and viewer roles",
+        "i18n - Multi-language support via next-intl",
+        "Themes - Dark/light mode via next-themes library and CSS variables",
+        "Advanced tables - Filtering, sorting, search and pagination, via TanStack Table v8",
+        "Calendar - Move, add and delete events with FullCalendar.io"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 52,
+      "fetchedAt": "2026-09-07T08:07:50.547Z"
+    },
+    "github:EveSunMaple/Frosti": {
+      "summary": "A clean, elegant, and fast static blog template! 🚀 Built with Astro Frosti uses frosti.config.yaml as its configuration file, where you can configure the website's basic information, navigation bar, footer, and more. You can configure sub-menu items by adding subItems with the same format as main menu items. Frosti uses Iconify as its icon library. You can search for icons you like on their website, then copy the icon code to the svg field in the configuration file. 2. Managing all interface text translations in the src/i18n/translations.yaml file:",
+      "features": [
+        "✅ Light / Dark mode available",
+        "✅ Super fast performance with excellent SEO",
+        "✅ View transition animations (using ClientRouter)",
+        "✅ Search functionality for your articles (using Pagefind)",
+        "✅ Responsive design built with Tailwind CSS and daisyUI",
+        "✅ RSS feed support",
+        "🛠️ Easy to use blog",
+        "Customize your blog content in frosti.config.yaml"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 25,
+      "fetchedAt": "2026-09-07T08:07:50.570Z"
+    },
+    "github:iAmCorey/coreychiu-portfolio-template": {
+      "summary": "Features - Beautifully designed UI using TailwindCSS, MagicUI, and Shadcn/UI - Responsive layout - Light/Dark Mode - Github Calendar/Github Contribution Snake - Tech Icon Cloud - Tweet Grid - Visitor Counter - Blog Section - MDX and Markdown support - RSS Feed - Web Analytics(Google Analytics, OpenPanel Analytics, Plausible Analytics, etc.) - SEO Friendly",
+      "features": [
+        "Beautifully designed UI using TailwindCSS, MagicUI, and Shadcn/UI",
+        "Responsive layout",
+        "Light/Dark Mode",
+        "Github Calendar/Github Contribution Snake",
+        "Tech Icon Cloud",
+        "Tweet Grid",
+        "Visitor Counter",
+        "Blog Section"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "MDX",
+          "version": "16",
+          "role": "content"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 43,
+      "fetchedAt": "2026-09-07T08:07:50.581Z"
+    },
+    "github:leomorpho/goship": {
+      "summary": "A Go + HTMX boilerplate with all the essentials for your SaaS, AI tools, or web apps. Start earning online quickly without the hassle. 🎯 The goal of this project is to build the most comprehensive Go-centric OSS starter boilerplate to ship projects fast. Check out the video above for a rapid walkthrough of the project! 🏂 This started as a fork of pagoda, for which I am super grateful! Big shoutout to Mike Stefanello and team! Make sure you have make and Golang installed on your machine.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Svelte",
+          "version": "4",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 15,
+      "fetchedAt": "2026-09-07T08:07:51.316Z"
+    },
+    "github:makerkit/nextjs-saas-starter-kit-lite": {
+      "summary": "![Makerkit - Next.js Supabase SaaS Starter Kit \\[Lite version\\]](apps/web/public/images/makerkit.webp) Start building your SaaS faster with our Next.js 16.3 + Supabase starter kit. 👉 Looking for a full-featured SaaS Starter Kit? Check out the complete version ⭐️ Why Developers Trust Makerkit: - Production-grade architecture decisions - Comprehensive TypeScript setup - Modern stack: Next.js 15, Supabase, TailwindCSS v4 - Quality Code tooling: ESLint v9, Prettier, strict TypeScript, etc. - Regular updates and active maintenance",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:51.243Z"
+    },
+    "github:saasyland/saasyland.com": {
+      "summary": "Starter templates for Next.js 14 full-stack projects. Built with TypeScript, Tailwind CSS, ShadCn/ui, authentication, and database. Several branches contain several different configurations, including serverless databases like PostgreSQL with Neon, or MySQL with PlanetScale, Drizzle ORM, Prisma ORM v.5 (serverless-compatible), but also MongoDB Atlas, Supabase, and even Nest.js, Express (MERN stack), or Django. All users are stored in a database, regardless of whether they signed up with email and password, magic link, or via an OAuth provider, such a Google or GitHub.",
+      "features": [
+        "Authentication with NextAuth",
+        "Database and ORM set up",
+        "Magic link authentication",
+        "OAuth authentication",
+        "Email and password authentication",
+        "Email verification",
+        "Password reset",
+        "Email templates with React Email"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "14",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "5",
+          "role": "database"
+        },
+        {
+          "name": "Auth.js",
+          "version": "0",
+          "role": "auth"
+        },
+        {
+          "name": "NextAuth",
+          "version": "5",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 63,
+      "fetchedAt": "2026-09-07T08:07:51.265Z"
+    },
+    "github:adminmart/Modernize-Nextjs-Free": {
+      "summary": "A free, developer-friendly admin dashboard template built using Next.js (v15), Material UI (MUI v7), React, and TypeScript. It provides a clean project structure, responsive design, and ready-made pages such as Dashboard, Login/Register, Typography, and Sample pages. Distributed under the MIT license, it’s free for both personal and commercial use. This project is licensed under the MIT License – you can use it for personal and commercial projects.",
+      "features": [
+        "⚡ Built with Next.js 15, React, TypeScript, and MUI 7",
+        "📱 Fully responsive design",
+        "🗂️ Organized folder structure",
+        "🔑 Authentication pages (Login, Signup)",
+        "📊 Dashboard, Typography, Sample layout pages",
+        "🆓 Free under MIT license",
+        "🚀 Lightweight and production-ready"
+      ],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:51.233Z"
+    },
+    "github:maomao1996/vitepress-nav-template": {
+      "summary": "1. 下载并安装 Node.js 推荐 20 版本及更高版本 2. 开启 corepack enable 3. 安装依赖 pnpm install 4. 启动本地服务 pnpm dev 5. 访问 http://localhost:8732 查看效果 当 Github Pages 使用自定义域名时，需要修改 .github/workflows/deploy.yml 脚本中的 APPBASEPATH 为 /",
+      "features": [],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": "3",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:51.952Z"
+    },
+    "github:ixartz/React-Native-Boilerplate": {
+      "summary": "🚀 Boilerplate and Starter for React Native, Expo, NativeWind and TypeScript ⚡️ Made with developer experience first: React Native, Expo, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Detox, VSCode, NativeWind. This will open the app in the iOS simulator or Android emulator. Testing is an important part of the development process and often the neglected one. This starter code comes up with Jest and React Testing Library for unit testing and Detox for E2E testing.",
+      "features": [
+        "⚡ Expo for mobile development",
+        "⚛️ React Native for building native apps using React",
+        "🔥 Type checking TypeScript",
+        "💎 Integrate with NativeWind, Tailwind CSS for React Native",
+        "📁 File-based routing with Expo Router",
+        "📏 Linter with ESLint",
+        "💖 Code Formatter with Prettier",
+        "🦊 Husky for Git Hooks"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Jest",
+          "version": "29",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 13,
+      "fetchedAt": "2026-09-07T08:07:51.957Z"
+    },
+    "github:matt765/Tailcast": {
+      "summary": "Dark-themed website template built with Astro 6 & Tailwind CSS, designed for a fictional startup. Responsive, fast, and ready to customize. This project is open source and available under the MIT License. See LICENSE for details.",
+      "features": [
+        "8 pages - Home, About, Services, Blog, Article, Careers, Contact, 404",
+        "SEO optimization - Sitemap, Open Graph, canonical URLs, meta descriptions",
+        "Accessible - Semantic HTML, ARIA attributes, keyboard navigation",
+        "View Transitions - Smooth page navigation with Astro Client Router, no full-page reloads",
+        "Responsive - Mobile-first design that adapts to any screen size",
+        "Code quality - ESLint, Prettier and CI pipeline pre-configured with Astro and Tailwind plugins"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 4,
+      "fetchedAt": "2026-09-07T08:07:51.936Z"
+    },
+    "github:mayankagarwal09/dev-portfolio": {
+      "summary": "These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. You'll need Git and Node.js 18+ (which comes with NPM) installed on your computer. After that, you can install the dependencies either using NPM or Yarn. Once your server has started, go to this url http://localhost:3000/ to see the portfolio locally. The page will reload if you make edits.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "styled-components",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 12,
+      "fetchedAt": "2026-09-07T08:07:51.941Z"
+    },
+    "github:heroui-inc/next-app-template": {
+      "summary": "This is a template for creating applications using Next.js 16 (app directory) and HeroUI (v3).",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 8,
+      "fetchedAt": "2026-09-07T08:07:52.609Z"
+    },
+    "github:design-sparx/mantine-analytics-dashboard": {
+      "summary": "🔉 Announcements - MAJOR: Upgraded to Next.js 16! The previous Next.js 14 version is available on the next-14 branch for backwards compatibility. - NEW: Enhanced mock data system with Next.js API routes for a more realistic development experience - NEW: Comprehensive theme customization system with live preview and persistence - NEW: Multiple app modules added - Email, Notifications, Customer Management, Projects, Invoices, Chat, and more - Working on integrating our mock data with actual APIs for a more real-world experience - Admin Hub APIs roadmap",
+      "features": [
+        "Mock API System: Complete Next.js API routes with mock data for realistic development experience",
+        "Theme Customization: Live theme customizer with support for colors, layouts, and dark mode with localStorage persistence",
+        "Multiple App Modules: Pre-built modules including Email, Notifications, Projects, Invoices, Chat, Kanban, Calendar, and more",
+        "Type-Safe: Built with TypeScript for enhanced developer experience and fewer runtime errors",
+        "Authentication: NextAuth integration with mock credentials for demo purposes",
+        "Customizable: Clean, readable, and well-documented code that's easy to modify and extend",
+        "Fully Responsive: Mobile, tablet, and desktop support with consistent experience across all devices",
+        "Cross-Browser: Optimized for Chrome, Firefox, Opera, Edge, and other modern browsers"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Mantine",
+          "version": "7",
+          "role": "ui"
+        },
+        {
+          "name": "Clerk",
+          "version": "6",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 56,
+      "fetchedAt": "2026-09-07T08:07:52.578Z"
+    },
+    "github:themefisher/bookworm-light-astro": {
+      "summary": "Bookworm Light Astro Bookworm Light is a feature-rich, minimal, highly customizable, easy-to-use free Astro blog theme. 👀Demo | Page Speed (100%)🚀 Bookworm Light is a minimal multi-author free Astro blog theme which is perfect for any kind of blog website. Whether you're interested in food, beauty, travel, photography, lifestyle, fitness, health, or other topics, this theme is a great fit. The theme is super fast and SEO friendly which makes it easier for your content to be discovered by search engines.",
+      "features": [
+        "🎨 Highly Customizable (Color, Font, Menu, Social Links, SEO Meta Tags, etc.)",
+        "👥 Multi-Author Support",
+        "📚 Authors Page",
+        "👤 Author Single Page",
+        "🔍 Search Functionality with FuseJS",
+        "🏷️ Tags and Categories Support",
+        "📲 Post Social Share Option",
+        "🔗 Similar Post Suggestions"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 17,
+      "fetchedAt": "2026-09-07T08:07:52.644Z"
+    },
+    "github:FlareStarter/flarestarter": {
+      "summary": "FlareStarter A full-stack, edge-native SaaS starter built on TanStack Start + Cloudflare Workers . Auth, billing, email, i18n, SEO, an admin console — wired, tested, fork-ready. FlareStarter ships only what actually works: every feature in this repo is a real implementation — no mocks, no stubs, no placeholder TODOs padding the count. It all runs on the Cloudflare free-to-cheap stack (Workers + D1 + KV). Dark-first design with a terminal aesthetic. Every shot below is a real running screen — the admin console runs on real data, no fabricated metrics. Try it live on the demo.",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "22",
+          "role": "payments"
+        },
+        {
+          "name": "Playwright",
+          "version": "1",
+          "role": "testing"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 32,
+      "fetchedAt": "2026-09-07T08:07:52.544Z"
+    },
+    "github:Ladvace/astro-bento-portfolio": {
+      "summary": "This walks you through your name, links, email, location/timezone and more, updating src/site-config.ts and writing SITEURL to .env. Restart the dev server afterwards. The guestbook uses Drizzle ORM over a remote libSQL database (e.g. Turso). Provide your database credentials as environment variables: The client and schema live in src/lib/db.ts. createdAt is stored as an ISO 8601 string. These variables must be set in your deploy environment. If you don't need the guestbook, delete src/lib/db.ts, src/pages/guestbook.astro and the src/pages/api/guestbook.ts / reactions.ts routes.",
+      "features": [
+        "🧩 Bento-grid layout — sleek, minimal, single-page-first design",
+        "🎨 Switchable UI themes — glass, sharp, neon and paper styles, with color variants",
+        "📱 Fully responsive",
+        "✍️ Blog with Markdown content, reading-time estimates and RSS (/rss.xml)",
+        "💬 Guestbook — visitors can leave messages and reactions (backed by libSQL)",
+        "🌍 Interactive 3D globe and a travel map of visited countries",
+        "🧪 Playground — a collection of animation/interaction experiments (GSAP morphs, Rive, WebGL-ish effects, scroll animations, and more)",
+        "🔊 Subtle UI sound effects (toggleable)"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        }
+      ],
+      "dependencyCount": 26,
+      "fetchedAt": "2026-09-07T08:07:53.309Z"
+    },
+    "github:alysonhower/tauri2-svelte5-shadcn": {
+      "summary": "Simple boilerplate for Tauri 2 with Svelte 5 (and shadcn-svelte). In order to run this boilerplate, you need to install Node (via nvm) and Rust. If you are on Windows I also recommend installing MSVC before the other dependencies (make sure to check the \"Desktop development with C++\" workload). 1. Click the \"Use this template\" button on GitHub. 2. Clone your newly created repository: This template uses npm as its package manager. Keep package-lock.json committed and use npm ci for reproducible installs in automation.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 6,
+      "fetchedAt": "2026-09-07T08:07:53.229Z"
+    },
+    "github:michaeltroya/supa-next-starter": {
+      "summary": "1. You'll first need a Supabase project which can be made via the Supabase dashboard 2. Create a Next.js app using the Supabase Starter template npx command 4. Rename .env.local.example to .env.local and update the following: Check out the docs for Local Development to also run Supabase locally. TypeScript is pre-configured with custom path mappings. To import components or files, use the @ prefix.",
+      "features": [
+        "⚡️ Next.js 16 (App Router)",
+        "💚 Supabase w/ supabase-ssr - Works across the entire Next.js stack (App Router, Pages Router, Client, Server, Middleware, It just works!)",
+        "⚛️ React 19",
+        "⛑ TypeScript",
+        "📦 pnpm - Fast, disk space efficient package manager",
+        "🎨 Tailwind",
+        "🔌 shadcn/ui - Beautifully designed components that you can copy and paste into your apps.",
+        "🧪 Vitest + React Testing Library - Unit tests for all of your code."
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Supabase",
+          "version": "2",
+          "role": "database"
+        },
+        {
+          "name": "Vitest",
+          "version": "2",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 20,
+      "fetchedAt": "2026-09-07T08:07:53.217Z"
+    },
+    "github:get-convex/convex-saas": {
+      "summary": "A production-ready Convex Stack for your next SaaS application with Stripe integration, TanStack, Resend, Tailwindcss, and shadcn. [!NOTE] Convex SaaS is an Open Source Template that is a direct port of the amazing work of Daniel Kanem in Remix SaaS. As that template does, this one shares common bits of code with: Indie Stack, Epic Stack, Supa Stripe Stack, and some other amazing Open Source resources. Check them out, please! Check out the Getting Started Documentation to get up and running.",
+      "features": [
+        "🧩 Convex: A complete, reactive, typesafe backend with authentication and file storage.",
+        "⚡ Vite: Next-Gen Frontend Tooling.",
+        "🛍️ Stripe: Subscription Plans, Customer Portal, and more.",
+        "🔑 Authentication: Email Code and Social Logins.",
+        "🎨 TailwindCSS: Utility-First CSS Framework.",
+        "📐 ShadCN: Composable React components.",
+        "🌙 Easy Theming: Switch between Light and Dark modes with ease.",
+        "🗺️ TanStack Router: Simple Route Definitions."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Convex",
+          "version": "1",
+          "role": "database"
+        },
+        {
+          "name": "Auth.js",
+          "version": "0",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "16",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 32,
+      "fetchedAt": "2026-09-07T08:07:53.233Z"
+    },
+    "github:karngyan/karngyan.com": {
+      "summary": "A personal site + blog template for developers who'd rather write posts than build infrastructure. TanStack Start · React 19 · Tailwind CSS v4 · shadcn/ui · MDX · RSS · Cloudflare Workers Demo: template.karngyan.com · Author's site built on the same stack: karngyan.com 1. Click Use this template on GitHub (or pnpm dlx degit karngyan/karngyan.com my-site) 2. Install the toolchain and dependencies:",
+      "features": [
+        "⚡ TanStack Start — file-based routing, SSR, typed loaders, server routes",
+        "🎨 Tailwind CSS v4 + shadcn/ui — CSS-first tokens (oklch), dark/light/system theme with no flash (press d to toggle)",
+        "✍️ MDX articles — folders in src/content/articles/, Shiki syntax highlighting, GFM tables, inline React components",
+        "📡 RSS, sitemap, robots.txt, llms.txt — server routes generated from your content and config",
+        "🖼️ Open Graph images — generated at build time with satori (default + per-article)",
+        "☁️ Cloudflare Workers — default deploy target, one command or auto-deploy via GitHub Actions",
+        "📌 mise.toml — exact node/pnpm pins, zero \"works on my machine\"",
+        "🤖 Claude-friendly — CLAUDE.md teaches coding agents the repo's architecture and recipes"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 26,
+      "fetchedAt": "2026-09-07T08:07:53.894Z"
+    },
+    "github:PaddleHQ/paddle-nextjs-starter-kit": {
+      "summary": "Paddle Billing is the developer-first merchant of record, designed for modern SaaS, AI, mobile app, and digital product businesses. We take care of payments, tax, subscriptions, and metrics with one unified API that does it all. This is a complete starter kit that you can use to build and deploy a Next.js SaaS app powered by Paddle Billing. Important: This starter kit works with Paddle Billing. It does not support Paddle Classic. To work with Paddle Classic, see: Paddle Classic dev docs",
+      "features": [
+        "Three-tier pricing page that's fully localized for 200+ markets using Paddle.js.",
+        "An integrated checkout experience built with Paddle Checkout, with secure optimized payments by card, Apple Pay, Google Pay, PayPal, and others.",
+        "User management and auth handled by Supabase.",
+        "Ready-made screens to let customers manage their payments and subscriptions.",
+        "Automatic syncing of customer and subscription data between Paddle and your app using webhooks."
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Supabase",
+          "version": "2",
+          "role": "database"
+        },
+        {
+          "name": "Paddle",
+          "version": "1",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 24,
+      "fetchedAt": "2026-09-07T08:07:53.874Z"
+    },
+    "github:lucky-chap/kaminari": {
+      "summary": "No bullshit Next.js starter by Huncho (Version 4 coming soon 🔥) The best way to start with this template is using create-next-app. I want this project to go far. Please show your support by starring it. Thank you! 1. Fork this repository; 2. Create your branch: git checkout -b my-new-feature; 3. Commit your changes: git commit -m 'Add some feature'; 4. Push to the branch: git push origin my-new-feature. After your pull request is merged, you can safely delete your branch. This project is licensed under the MIT License - see the LICENSE file for more information.",
+      "features": [
+        "Next.js 15.x.x - Why not?",
+        "Tailwind CSS 4 - A utility-first CSS framework",
+        "shadcn-ui - An awesome component library",
+        "TypeScript - JavaScript superset",
+        "ESLint — Pluggable JavaScript linter",
+        "Prettier - Opinionated",
+        "Jest - The delightful JavaScript Testing Framework (coming soon)",
+        "Absolute import - Import folders and files using the @ prefix"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Jest",
+          "version": "30",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 21,
+      "fetchedAt": "2026-09-07T08:07:53.925Z"
+    },
+    "github:Ujjalzaman/Doctor-Appointment": {
+      "summary": "A full-stack web app where patients book visits, doctors manage schedules and prescriptions, and admins oversee the system — all in one place. You do not need to be a developer to use the live site. The instructions below are for people who want to run or customize the project on their computer. 1. Node.js (LTS version is best) — includes npm. 2. A Supabase account (free tier is fine) or any other PostgreSQL database. 3. Optional but recommended for full features: Google account (app password for mail), Cloudinary account (images).",
+      "features": [
+        "Email-related flows (e.g. resets, notifications) when you configure Gmail app password.",
+        "Cloudinary for profile and content images.",
+        "Modern UI (React + Ant Design) and a structured API (Node + Express + TypeScript + Prisma)."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Ant Design",
+          "version": "5",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 34,
+      "fetchedAt": "2026-09-07T08:07:54.140Z"
+    },
+    "github:thedevdavid/digital-garden": {
+      "summary": "An open source blogging (digital gardening) template for developers using Next.js app router, MDX, Contentlayer, Tailwind CSS, @shadcn/ui , Lucide Icons, and more. If you love this template and/or use it, please give it a star on GitHub. This will help more people discover it, thus help improving the template. Note: This project is always evolving and it's far from being perfect or even done. I'm always open to suggestions and contributions. Feel free to open an issue or a PR if you have any ideas or suggestions. You can also see the roadmap for planned features if you want to contribute.",
+      "features": [
+        "Basic functionality of reading pages and posts",
+        "Basic design dark/light mode",
+        "MDX code highlighting",
+        "Readme.md",
+        "robots.txt & sitemap.xml",
+        "RSS Feed",
+        "Reading time estimate",
+        "LICENSE"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "14",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 39,
+      "fetchedAt": "2026-09-07T08:07:54.735Z"
+    },
+    "github:vinodjangid07/vinodjangid07.github.io": {
+      "summary": "My Portfolio This website displays my Projects, Web presence, Story, Work experience, and contact information. Installation & Deployment 📦 - Clone the repository and modify the content of index.html according to your requirement. - ⚠️ Remove my Bitmoji from the navbar/footer and use yours instead.⚠️ - Add or remove images from https://www.vinodjangid.me/src/ directory as per your requirement. - ⚠️ NOTE: Make sure to remove analyticsId & google search console Id from tag, and set yours, if you want to use your own Google Analytics & search console account.⚠️",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:54.733Z"
+    },
+    "github:pdsuwwz/nextjs-nextra-starter": {
+      "summary": "🔥 面向独立开发者与小团队的 Next.js 16 启动模板：集成 Tailwind CSS 4、React 19、Nextra 4、TypeScript、Shadcn UI、Radix UI、Aceternity UI、Sass、ESLint 9、Iconify 与 i18n 多语言。覆盖 Blog、Docs、AI SaaS Landing Page 等核心场景，支持响应式布局、暗黑模式、登录页与前端鉴权示例，兼顾快速起步与长期可维护性，支持 Vercel / Netlify 部署。 本仓库在 .agents/skills/ 下提供了项目蒸馏 Skill，用于帮助后续二次开发者或其他项目快速理解本模板的架构、功能地图、实现模式、扩展点与迁移注意事项： 如果你希望参考本项目开发类似产品，建议先阅读 中文版 SKILL.md，再按任务读取 architecture.md、feature-map.md、implementation-patterns.md、extension-guide.md 或 migration-notes.md。",
+      "features": [
+        "⚡️ Next.js 16 + React 19 + TypeScript：现代前端核心栈，类型安全与开发效率兼顾",
+        "🎨 Tailwind CSS v4 + Sass：支持原子化样式与工程化样式组织，快速构建响应式 UI",
+        "📚 Nextra v4（内容驱动）：适合文档站、知识库、博客等内容型项目",
+        "🧩 Shadcn UI + Radix UI + Aceternity UI：可组合、可扩展的组件体系，便于快速搭建产品页面",
+        "🌍 i18n 多语言国际化：中英文内容组织与路由支持，适配多语言产品站点",
+        "🌙 暗黑模式 + 响应式设计：覆盖桌面端与移动端体验，支持主题切换",
+        "🔐 登录页与前端鉴权示例：提供基础鉴权流程参考，便于业务快速接入",
+        "🖼️ Iconify 图标集支持：统一图标方案，降低图标接入成本"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 28,
+      "fetchedAt": "2026-09-07T08:07:54.765Z"
+    },
+    "github:lxchapu/astro-gyoza": {
+      "summary": null,
+      "features": [
+        "✅ 有着规范的 URL 和 OpenGraph 信息，对 SEO 友好",
+        "✅ 支持站点地图",
+        "✅ 支持 RSS 订阅",
+        "✅ 支持夜间模式",
+        "✅ 特殊日期变灰",
+        "✅ 简单干净的配色和主题",
+        "✅ 支持评论系统",
+        "✅ 支持代码高亮"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "4",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "18",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 36,
+      "fetchedAt": "2026-09-07T08:07:54.757Z"
+    },
+    "github:dan5py/react-vite-shadcn-ui": {
+      "summary": "[!NOTE] This template uses Tailwind v3, if you want to use Tailwind v4, check the tw4 branch. This project is licensed under the MIT License. See the LICENSE file for details.",
+      "features": [
+        "React - A JavaScript library for building user interfaces.",
+        "Vite - A fast, opinionated frontend build tool.",
+        "TypeScript - A typed superset of JavaScript that compiles to plain JavaScript.",
+        "Tailwind CSS - A utility-first CSS framework. (v4)",
+        "Tailwind Prettier Plugin - A Prettier plugin for formatting Tailwind CSS classes.",
+        "ESLint - A pluggable linting utility for JavaScript and TypeScript.",
+        "PostCSS - A tool for transforming CSS with JavaScript.",
+        "Autoprefixer - A PostCSS plugin to parse CSS and add vendor prefixes."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 7,
+      "fetchedAt": "2026-09-07T08:07:55.289Z"
+    },
+    "github:justnode/better-saas": {
+      "summary": "A modern, full-stack SaaS application built with Next.js 15, featuring authentication, payments, file management, and internationalization with comprehensive testing suite. 💡 Tip: The online documentation is continuously updated. We recommend bookmarking it for the latest information. Customize credits allocation and pricing in: - /src/config/credits.config.ts - API costs and quotas - /src/config/payment.config.ts - Subscription plan credits 1. Fork the repository 2. Create a feature branch 3. Make your changes 4. Write tests for new features 5. Run tests and quality checks:",
+      "features": [
+        "🔐 Authentication: Email/password and social login (GitHub, Google) with Better Auth",
+        "💳 Payments: Stripe integration with subscription management and billing dashboard",
+        "🪙 Credits System: Flexible quota management for API usage and storage with automated billing",
+        "📁 File Management: Upload, preview, and manage files with AWS S3/R2 storage",
+        "🌍 Internationalization: Multi-language support (English/Chinese) with next-intl",
+        "📱 Responsive Design: Modern UI with Radix UI and Tailwind CSS v4",
+        "📖 Documentation: Built-in documentation system with Fumadocs",
+        "🔒 Protected Routes: Role-based access control and route protection"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "18",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 62,
+      "fetchedAt": "2026-09-07T08:07:55.346Z"
+    },
+    "github:themefisher/kross-hugo": {
+      "summary": "Kross Hugo Kross is a user-friendly, clean and modern personal website theme with an elegant appearance. 👀Demo | Page Speed (91%)🚀 This template comes pre-configured with Sitepins, a Git-based Headless CMS designed for seamless content management. You can update your website’s text, images, and configuration without touching a single line of code. Click the Edit with Sitepins button below and follow the on-screen instructions to start editing your content visually.",
+      "features": [
+        "📄 8+ Pre-designed pages",
+        "〽️Google analytics support",
+        "📂CSS and JS bundle with hugo pipe",
+        "🔧Netlify settings predefine",
+        "📝Contact form Support",
+        "👉GDPR consent enable",
+        "🌏Google map support",
+        "⚡Google page speed optimized ( 91% )"
+      ],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:55.462Z"
+    },
+    "github:nktnet1/rt-stack": {
+      "summary": "A modern & lightweight turborepo template for fullstack projects with modular components, shared configs, containerised deployments and 100% type-safety. Many aspects of the RT Stack were derived from the t3-oss/create-t3-turbo. However, there is a preference for: 1. node (version 24+) 1. pnpm (version 10+) 1. postgres database, which you can easily run using tools like: - docker and docker-compose - podman and podman-compose - supabase's free tier cloud database The OpenAPI reference uses Scalar to display all available endpoints.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:55.395Z"
+    },
+    "github:hexclave/multi-tenant-starter-template": {
+      "summary": "A minimalistic multi-tenant Next.js starter template with minimal setup and a modular design. Bring your own backend and database. 3. Register an account on Stack Auth, copy the keys from the dashboard, and paste them into the .env.local file. Then, enable \"client team creation\" on the team settings tab. If you want to learn more about Stack Auth or self-host it, check out the Docs and GitHub. 4. Start the development server and go to http://localhost:3000",
+      "features": [
+        "Next.js 14 app router",
+        "TypeScript",
+        "Tailwind & Shadcn UI",
+        "Stack Auth",
+        "Multi-tenancy (teams/orgs)",
+        "Dark mode"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 17,
+      "fetchedAt": "2026-09-07T08:07:56.044Z"
+    },
+    "github:oxygenna-themes/foxi-astro-theme": {
+      "summary": "Open-source Astro website template with fully responsive, customizable TailwindCSS components. Foxi is a free, highly customizable, and production-ready template for Astro, utilizing Tailwind CSS components. Designed with developers in mind, Foxi offers a solid foundation for building modern, high-performance websites quickly and efficiently. After downloading the template, you'll need to install some dependencies. Once that's done, you can run it on your local server. Check out the package.json file to see what scripts are available.",
+      "features": [
+        "Astro v6: Built with the latest version of Astro for optimal performance and features.",
+        "Built with Tailwind CSS: Powered by Tailwind CSS for rapid UI development and responsive design.",
+        "Perfect Scores in PageSpeed Insights: Achieve perfect 100s for both desktop and mobile performance.",
+        "Light & Dark Mode Support: Seamlessly switch between light and dark themes to suit user preferences.",
+        "Fully Responsive & Customizable: Ensure your site looks great on any device, with easy customization to match your brand’s identity.",
+        "SEO-friendly: Optimized for search engines to improve visibility and organic traffic.",
+        "Pre-designed Pages: Includes a variety of pages such as Home, Pricing, Features, Contact, and more, to get you started quickly.",
+        "Blog with MDX Support & Tags: Create dynamic blog content with Markdown and JSX, complete with tagging for better organization."
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 12,
+      "fetchedAt": "2026-09-07T08:07:56.057Z"
+    },
+    "github:WhitePaper233/yukina": {
+      "summary": "Go to the Node.js official website to download and install the latest version of Node.js.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Svelte",
+          "version": "5",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 14,
+      "fetchedAt": "2026-09-07T08:07:56.014Z"
+    },
+    "github:jellydn/next-app-starter": {
+      "summary": "This project uses pre-commit to enforce code quality and consistency. To install pre-commit hooks, run: This project is licensed under the MIT License - see the MIT License file for details. This project follows the all-contributors specification. Contributions of any kind welcome!",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Prisma",
+          "version": "6",
+          "role": "database"
+        },
+        {
+          "name": "NextAuth",
+          "version": "4",
+          "role": "auth"
+        },
+        {
+          "name": "Vitest",
+          "version": "3",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 31,
+      "fetchedAt": "2026-09-07T08:07:56.028Z"
+    },
+    "github:ramxcodes/sleek-portfolio": {
+      "summary": "A modern, responsive portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Shadcn UI. Features a blog system, project showcase, work experience timeline, and contact form with Telegram integration. Create a .env file in the root directory with the following variables: 1. Create a new bot with @BotFather on Telegram 2. Copy the bot token and add it to your .env file as TELEGRAMBOTTOKEN 3. Start a chat with your bot and send any message (e.g., \"hello\") 4. Get your chat ID: 1. Visit Umami: - Self-host Umami or use Umami Cloud - Follow Umami's installation guide",
+      "features": [
+        "Next.js 15 with App Router",
+        "Tailwind CSS for styling",
+        "Shadcn UI components",
+        "Dark/Light mode",
+        "Responsive design",
+        "MDX for blog posts and project details",
+        "Contact Form with Telegram integration",
+        "SEO optimized"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "15",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "MDX",
+          "version": "15",
+          "role": "content"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 66,
+      "fetchedAt": "2026-09-07T08:07:56.627Z"
+    },
+    "github:themefisher/bigspring-light-nextjs": {
+      "summary": "Bigspring Light Nextjs Bigspring is a web development business template built in Nextjs. Perfect for Creative Agency, Marketing Agency, Design Studios, Digital Marketing Agencies, and other business service websites. 👀Demo | Page Speed (100%)🚀 After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included. After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live-reload the browser when changes are saved.",
+      "features": [
+        "📄 9+ Pre-Designed Pages",
+        "✨ Simple and Minimal",
+        "📱 Fully Responsive",
+        "🚀 Google Page Speed score 100! (Desktop)",
+        "📊 Google Analytics support",
+        "🗂️ Caching enabled",
+        "✉️ Supports Contact Form",
+        "🌍 SEO Friendly"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        },
+        {
+          "name": "MDX",
+          "version": "6",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 16,
+      "fetchedAt": "2026-09-07T08:07:56.678Z"
+    },
+    "github:jaxx2104/gatsby-starter-bootstrap": {
+      "summary": "A Bootstrap 5 starter for Gatsby — fast, accessible, and ready to fork. Edit gatsby-config.ts. The siteMetadata block is the single source of truth for the navbar title, the per-page SEO , and the PWA manifest: Theme tokens are at src/scss/colors.scss and src/scss/fonts.scss. Override Bootstrap 5 Sass variables there before the bootstrap import in src/scss/gatstrap.scss.",
+      "features": [
+        "Gatsby 5.16+ with React 19 and TypeScript (strict).",
+        "Bootstrap 5.3 via Sass — no jQuery, no popper.",
+        "Markdown blog with Prism syntax highlighting.",
+        "gatsby-plugin-image for responsive images.",
+        "Gatsby API for per-page SEO.",
+        "Lighthouse mobile 95+ on Performance, Accessibility, Best Practices, SEO."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 20,
+      "fetchedAt": "2026-09-07T08:07:56.719Z"
+    },
+    "github:kirklin/boot-vue": {
+      "summary": "And you will see the generated file in dist that ready to be served. Go to Netlify and select your clone, OK along the way, and your App will be live in a minute. First, build the boot-vue image by opening the terminal in the project's root directory.",
+      "features": [
+        "⚡ Lightning fast: Built with Vue 3, Vite, and pnpm 🔥",
+        "💪 Strongly typed: Uses TypeScript 💻",
+        "🔥 Latest syntax: Uses the new syntax 🆕",
+        "📦 Components auto importing: Automatically imports components 🚚",
+        "📥 APIs auto importing: Uses unplugin-auto-import to directly import Composition API and others 📨",
+        "🎨 UnoCSS - The instant on-demand atomic CSS engine, providing a lightweight and fast way to style your app.",
+        "🌼 Daisy - The free and open-source Tailwind CSS component library",
+        "💡 Official router: Uses Vue Router v4 🛣️"
+      ],
+      "stack": [
+        {
+          "name": "Vue",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": null,
+          "role": "framework"
+        },
+        {
+          "name": "Vitest",
+          "version": null,
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 10,
+      "fetchedAt": "2026-09-07T08:07:56.684Z"
+    },
+    "github:lin-stephanie/astro-antfustyle-theme": {
+      "summary": "[![ci][ci-badge]][ci-link] [![version][version-badge]][version-link] [![live demo][demo-badge]][demo-link] [![chat][chat-badge]][chat-link] AntfuStyle is a flexible and feature-rich Astro 7 theme for developers and creators, inspired by the minimalist style of antfu.me. I like this design and have recreated and expanded its functionality. The [live demo][demo-link] serves as self-documentation, detailing how to configure and use the theme, along with other relevant knowledge expansion. Explore posts on the demo site or view Markdown files in the repository. Quick Navigation:",
+      "features": [
+        "Zero UI Framework",
+        "SEO-Friendly",
+        "Auto-Generated RSS Feed",
+        "Dynamic OG Image Generation",
+        "Subpath Deployment Support",
+        "Unified Font Management",
+        "Optimized and Responsive Images",
+        "VS Code Snippets for Fast Coding"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:57.364Z"
+    },
+    "github:yunsii/ant-design-pro-plus": {
+      "summary": "已发包 use-switch-tabs，同时通过 use-switch-tabs 进行了重构。 —— 2021.06.19 Pro V5 在架构上有了较大的重构，通过 Umi 的插件机制屏蔽了更多的实现细节。不过得益于此前已将标签页核心功能发包 use-switch-tabs，故需要做得工作并不多。但是值得注意的一点是需要 @umijs/plugin-layout 的版本不能低于 0.18.0，详见此讨论，因此 @umijs/preset-react 版本不能低于 1.8.28，详见此更新。 相关讨论和分析参考 umijs/umi4425，最终分析得出了导致暂时无法升级的根本原因，PR umijs/umi6101 修复了该问题，但需要使用 umi@&8203;3.3.8 以上版本。",
+      "features": [],
+      "stack": [
+        {
+          "name": "React",
+          "version": "17",
+          "role": "framework"
+        },
+        {
+          "name": "Ant Design",
+          "version": "4",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 19,
+      "fetchedAt": "2026-09-07T08:07:57.360Z"
+    },
+    "github:NextJSTemplates/solid-nextjs": {
+      "summary": "Solid is a free Next.js template specifically crafted for startups, SaaS, and software websites. It provides an extensive array of necessary sections, elements, and pages required to build a fully-equipped website for any SaaS, software, or startup site. Comes with all cutting edge React and Next.js features - Built with Next.js 16, React 19 and TypeScript.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 7,
+      "fetchedAt": "2026-09-07T08:07:57.309Z"
+    },
+    "github:condorheroblog/react-antd-admin": {
+      "summary": "react-antd-admin is a middle and back-office solution based on React Hooks, Vite, and TypeScript. It aims to help you quickly build enterprise-level middle and back-office projects, with no additional configuration required, ready to use out of the box. Open your browser and enter http://localhost:3333 to see the page. If this project was helpful to you, you can buy the author a takeaway meal.",
+      "features": [
+        "Cutting-edge technology stack: React Hooks、TypeScript、Vite、ant design、React Router、Tailwind CSS",
+        "Intuitive state management library: Zustand",
+        "Internationalization: I18n",
+        "Fetch requests: Ky、@tanstack/react-query",
+        "Code formatting: ESLint Flat Config",
+        "Route-level component caching: keepalive-for-react",
+        "API Mocking: vite-plugin-fake-server",
+        "Permission Routing: Supports both frontend static routing and backend dynamic routing"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Ant Design",
+          "version": "6",
+          "role": "ui"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 29,
+      "fetchedAt": "2026-09-07T08:07:57.354Z"
+    },
+    "github:Gothsec/dark-minimal": {
+      "summary": "Dark minimal Highly customizable and performant portfolio template built with Astro, React, and Tailwind CSS. Features - Blazing fast performance powered by Astro - Beautifully styled with Tailwind CSS - Spotify integration for showcasing your favorite album - Working contact form powered by Formspree - Interactive UI including the component from ReactBits.dev Show your favorite Spotify album (or your own) 1. Choose your Spotify album 2. Access the share options 3. Select 'copy embed code'",
+      "features": [
+        "Blazing fast performance powered by Astro",
+        "Beautifully styled with Tailwind CSS",
+        "Spotify integration for showcasing your favorite album",
+        "Working contact form powered by Formspree",
+        "Interactive UI including the component from ReactBits.dev"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 13,
+      "fetchedAt": "2026-09-07T08:07:57.976Z"
+    },
+    "github:ttomczak3/Milky-Way": {
+      "summary": "🌌 Milky-Way Milky Way brings forth a minimalist design ethos, allowing your work to shine like stars in the night sky. With clean lines and intuitive navigation, visitors are guided effortlessly through your portfolio, focusing solely on your creations. Embrace the whimsical charm of Milky Way as it showcases your talents in a manner that's both elegant and endearing. Whether you're a designer, developer, artist, or creative professional of any kind, Milky Way provides the perfect canvas to showcase your endeavors.",
+      "features": [
+        "Simple and clean design, perfect for showcasing your work.",
+        "Responsive layout for seamless viewing across different devices.",
+        "Fast and efficient, thanks to the Astro static site generator.",
+        "Easy to customize with CSS and straightforward HTML structure."
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "5",
+          "role": "framework"
+        }
+      ],
+      "dependencyCount": 1,
+      "fetchedAt": "2026-09-07T08:07:57.863Z"
+    },
+    "github:XCO-Agency/Laravel-SAAS-Starter": {
+      "summary": "A production-ready Laravel SaaS starter kit with authentication, billing, teams, and everything you need to launch faster. 1. Visit http://localhost:8000 to see the landing page 2. Register a new account 3. Create your first workspace 4. Invite team members 5. Set up billing with Stripe Configure Stripe in your .env file. The application supports: 1. Creating translation files in resources/js/locales/ 2. Adding the locale to your configuration 3. Updating the language selector component 1. Install act and Docker. 2. Create .actrc for Apple Silicon compatibility:",
+      "features": [
+        "🔐 Authentication & Security - Complete system with standard login, 2FA, password resets, profile management, and verified domains.",
+        "🏢 Multi-tenant Workspaces - Seamless workspace management allowing users to operate within parallel organizational structures.",
+        "👥 Team Management - Robust invitation system with granular workspace-level roles (Owner, Admin, Member).",
+        "💳 Stripe Billing - Integrated Laravel Cashier handles subscription provisioning, secure customer portals, and dynamic pricing tiers per workspace.",
+        "👑 Advanced Admin Panel - Global super-admin dashboard for user impersonation, cross-workspace monitoring, and central operations.",
+        "🎉 Announcements System - Global notification broadcasts with colored typings, dynamic scheduling, and dismissible states.",
+        "🚩 Feature Flags (Pennant) - Database-driven feature flagging with targeted, workspace-specific rollout mechanisms.",
+        "📜 System Audit Logs - Complete change history and system-wide visibility via Spatie Activitylog tracking."
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 48,
+      "fetchedAt": "2026-09-07T08:07:57.967Z"
+    },
+    "github:dev-family/admiral": {
+      "summary": "A React framework for building admin panels and back-office applications. Provides CRUD generation, authentication, theming, routing, and 30+ UI components out of the box. React 19 &bull; React Router 7 &bull; Vite 6 &bull; TypeScript 5.7 &bull; @dnd-kit &bull; @floating-ui &bull; rc-\\ components &bull; date-fns 4 Then cd into the project, npm install, npm run dev &mdash; and you have a working admin panel. Requires Node.js = 20 and a bundler (the examples below use Vite). 2. Create the app entry. Import the styles once, wrap everything in :",
+      "features": [
+        "CRUD generation &mdash; define a resource config, get index/create/update pages with tables, forms, filters, and pagination",
+        "30+ UI components &mdash; Table, Form inputs, Select, DatePicker, Drawer, Tabs, Upload, Notification, and more",
+        "Conditional & dependent fields &mdash; visibleWhen / disabledWhen / requiredWhen rules on any input, Form.When groups, cascading selects",
+        "Validation-aware form tabs &mdash; Form.Tabs shows per-tab error badges and switches to the first invalid tab on submit",
+        "File-based routing &mdash; pages directory maps to routes automatically (like Next.js)",
+        "Authentication &mdash; login, logout, OAuth (Google, GitHub, Jira), session checks",
+        "Theming &mdash; light/dark modes, fully customizable CSS presets",
+        "Localization &mdash; built-in i18n with swappable locale packs"
+      ],
+      "stack": [
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "6",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        },
+        {
+          "name": "Vitest",
+          "version": "3",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 26,
+      "fetchedAt": "2026-09-07T08:07:57.932Z"
+    },
+    "github:eriktaveras/django-saas-boilerplate": {
+      "summary": "The open-source Django starter kit for building SaaS applications. Auth, payments, dashboard, and deployment — all wired up. A small, finished SaaS starter. Sign up, log in, land on a dashboard, pay with a card, and there is a public site in front of it. That is the whole scope, and it is deliberate: it is what you need on a Saturday morning to stop configuring and start building the thing you actually wanted to build. MIT licensed. Fork it, rename it, ship it, sell it — no attribution required.",
+      "features": [],
+      "stack": [],
+      "dependencyCount": null,
+      "fetchedAt": "2026-09-07T08:07:58.564Z"
+    },
+    "github:xizon/fullstack-nextjs-app-template": {
+      "summary": "This repository is a full-stack sample web application based on Next.js that creates a simple whole-website architecture, and provides the foundational services, components, and plumbing needed to get a basic web application up and running.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 15,
+      "fetchedAt": "2026-09-07T08:07:58.555Z"
+    },
+    "github:muhammad-fiaz/portfolio": {
+      "summary": "Production-ready portfolio built with Next.js 16, React 19, TypeScript, Panda CSS, and a retro-modern UI system. Please read CONTRIBUTING.md and CODEOFCONDUCT.md before opening issues or pull requests.",
+      "features": [
+        "GitHub stats section includes the live contribution snake SVG from the profile output branch.",
+        "Hack Club coding insights are powered by Hackatime data and heatmap visuals."
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        }
+      ],
+      "dependencyCount": 77,
+      "fetchedAt": "2026-09-07T08:07:58.572Z"
+    },
+    "github:themefisher/pinwheel-astro": {
+      "summary": "Pinwheel Astro Pinwheel is a free multipurpose SaaS theme built with Astro, TailwindCSS, and TypeScript with 17+ pre-designed pages. 👀 Demo | Page Speed (95+) 🚀 After downloading the template, you need to install some prerequisites. Then you can run it on your localhost. You can view the package.json file to see which scripts are included. After that, it will open up a preview of the template in your default browser, watch for changes to source files, and live-reload the browser when changes are saved.",
+      "features": [
+        "📄 17+ Pre-designed pages",
+        "🎨 Highly customizable (Color, Font, Menu, Social Links, SEO Meta Tags, etc.)",
+        "🗃️ Taxonomy support",
+        "⚡ Fast by default (95+ Google PageSpeed Score)",
+        "🔧 Netlify setting pre-configured",
+        "📝 Contact form support",
+        "🖼️ Support OG image",
+        "📝 Write and update content in Markdown / MDX"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Vite",
+          "version": "8",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 22,
+      "fetchedAt": "2026-09-07T08:07:58.543Z"
+    },
+    "github:themefisher/bookworm-light-nextjs": {
+      "summary": "Bookworm Light NextJs Bookworm Light is a minimal multi-author free nextjs blog template. This highly customizable theme is ideal for creating any type of blog website, including food, recipes, beauty, lifestyle, photography, travel, health, fitness, and more. 👀Demo | Page Speed (100%)🚀 After downloading the template, you have some prerequisites to install. Then you can run it on your localhost. You can view the package.json file to see which scripts are included.",
+      "features": [
+        "📄 13+ Pre-Designed Pages",
+        "✍️ Multi-Author support",
+        "🚀 Google Page Speed score 100! (Desktop)",
+        "✉️ Supports Contact Form",
+        "🔍 Search Functionality",
+        "🌐 Semantic HTML Document Structure",
+        "🖼️ Custom Logo Support",
+        "🎨 Includes All SCSS Files"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        },
+        {
+          "name": "MDX",
+          "version": "6",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 13,
+      "fetchedAt": "2026-09-07T08:07:59.207Z"
+    },
+    "github:MarcosCamara01/ecommerce-template": {
+      "summary": "Modern ecommerce starter built with Next.js 16, React 19, App Router, Drizzle ORM, Supabase, Better Auth, Stripe, TanStack Query, Tailwind CSS, and Zod.",
+      "features": [
+        "Product catalog with categories and variants",
+        "Shopping cart and wishlist",
+        "Stripe checkout",
+        "Order history",
+        "Admin product management",
+        "Email notifications",
+        "Type-safe validation and data access"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Supabase",
+          "version": "2",
+          "role": "database"
+        },
+        {
+          "name": "Drizzle ORM",
+          "version": "0",
+          "role": "database"
+        },
+        {
+          "name": "Better Auth",
+          "version": "1",
+          "role": "auth"
+        },
+        {
+          "name": "Stripe",
+          "version": "19",
+          "role": "payments"
+        }
+      ],
+      "dependencyCount": 45,
+      "fetchedAt": "2026-09-07T08:07:59.139Z"
+    },
+    "github:davidvkimball/astro-modular": {
+      "summary": "This downloads the latest template, removes dev-only files, and installs dependencies automatically. Also works with npm create astro-modular my-blog. 1. Click the \"Use this template\" button on the repository page 2. Select \"Create a new repository\" 3. Choose your repository name and settings 4. Click \"Create repository from template\" 5. Clone your new repository:",
+      "features": [
+        "Custom Themes",
+        "Feature Toggle Control",
+        "Dark/Light Mode",
+        "Search & Command Palette",
+        "Wikilinks & Linked Mentions",
+        "Obsidian-Style Callouts",
+        "Obsidian Embeds Files",
+        "Folder-Based Posts"
+      ],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 33,
+      "fetchedAt": "2026-09-07T08:07:59.115Z"
+    },
+    "github:kondasoft/ks-bootshop": {
+      "summary": "KS BootShop - Free Shopify Theme Free Shopify theme powered by the Bootstrap framework (v5), developed respecting Shopify theme requirements , accessibility best practices, and of course our own experience developing high-quality themes for more than 15 years. We aim to make this project the most complete, robust, and awesome Shopify Theme for the Bootstrap framework.",
+      "features": [
+        "Advanced styling for each section (New)",
+        "Powered by Bootstrap framework (v5)",
+        "Developed respecting Shopify themes requirements",
+        "All elements are fully accessible with aria attributes",
+        "No JavaScript framework dependencies (e.g., jQuery)",
+        "Support for native image lazy-loading",
+        "PageSeed score 96/100 check results",
+        "All Shopify required homepage sections (~20)"
+      ],
+      "stack": [
+        {
+          "name": "Bootstrap",
+          "version": "5",
+          "role": "styling"
+        },
+        {
+          "name": "Sass",
+          "version": "1",
+          "role": "styling"
+        }
+      ],
+      "dependencyCount": 2,
+      "fetchedAt": "2026-09-07T08:07:59.226Z"
+    },
+    "github:hadrysm/nextjs-boilerplate": {
+      "summary": "Boilerplate and Starter for Next.js 16, Tailwind CSS 4 and TypeScript 🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js (app routing), TypeScript, Biome, Husky, Lint-Staged, Vitest, React Testing Library, PostCSS, Tailwind CSS, Storybook, GH actions. Tests live in the tests/ directory with a mirrored structure matching src/. Shared test utilities are in tests/test-utils.tsx. Run tests with pnpm test (Vitest).",
+      "features": [
+        "Next.js for Static Site Generator",
+        "Type checking TypeScript",
+        "Integrate with Tailwind CSS 4 (CSS-first configuration)",
+        "Storybook for components documentation",
+        "Strict Mode for TypeScript and React 19",
+        "Linter and Code Formatter with Biome",
+        "Husky for Git Hooks",
+        "Lint-staged for running linters on Git staged files"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Vitest",
+          "version": "4",
+          "role": "testing"
+        }
+      ],
+      "dependencyCount": 11,
+      "fetchedAt": "2026-09-07T08:07:59.850Z"
+    },
+    "github:arhamkhnz/next-shadcn-admin-dashboard-baseui": {
+      "summary": "Studio Admin - Includes multiple dashboards, authentication layouts, customizable theme presets, and more. Most admin templates I found, free or paid, felt cluttered, outdated, or too rigid. I built this as a cleaner alternative with features often missing in others, such as theme toggling and layout controls, while keeping the design modern, minimal, and flexible. [!NOTE] Looking for the Radix UI version? Check out next-shadcn-admin-dashboard. Looking for the React Aria version? Check out arhamkhnz/next-shadcn-admin-dashboard-aria.",
+      "features": [
+        "Built with Next.js 16, TypeScript, Tailwind CSS v4, and Shadcn UI",
+        "Responsive and mobile-friendly",
+        "Customizable theme presets (light/dark modes with color schemes like Tangerine, Brutalist, and more)",
+        "Flexible layouts (collapsible sidebar, variable content widths)",
+        "Authentication flows and screens",
+        "Prebuilt dashboards (Default, CRM, Finance, Analytics, Productivity) plus legacy variants",
+        "Role-Based Access Control (RBAC) with config-driven UI and multi-tenant support (planned)"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 30,
+      "fetchedAt": "2026-09-07T08:07:59.743Z"
+    },
+    "github:techwithanirudh/shadcn-portfolio": {
+      "summary": "⚡ This version is re-structured using TurboRepo. To use the old version, check out the tailwind-v4 branch . 1. 🤖 Introduction 2. 🚀 Tech Stack 3. ✨ Features 4. 📚 Getting Started 5. ❤️ Credits This is a portfolio template built using Next.JS, Framer Motion and Shadcn/UI. Please refer to the getting started guide for information on how to configure and run the portfolio template.",
+      "features": [
+        "⚡️ Next.js 15 with App Router",
+        "📝 Blog",
+        "🎨 Tailwind CSS - for styling",
+        "🌈 Shadcn UI - accessible UI components",
+        "📱 Responsive design",
+        "🌗 Light / Dark mode",
+        "📈 SEO optimized with meta tags",
+        "📊 Sentry (setup required)"
+      ],
+      "stack": [],
+      "dependencyCount": 0,
+      "fetchedAt": "2026-09-07T08:07:59.898Z"
+    },
+    "github:area44/astro-shadcn-ui-template": {
+      "summary": "A modern starter template using Astro, Tailwind CSS, and shadcn/ui - perfect for building fast, accessible, and themeable web apps. Before you begin, ensure that you have Node.js and pnpm installed. Open your browser and go to http://localhost:4321 to see the app running. shadcn/ui provides pre-built, accessible UI components. To add one: 1. Follow the official Astro installation guide. 2. Pick a component (e.g., Accordion, Dialog) and follow the usage instructions. If you're new to using React (or other frameworks) inside Astro, start with the Framework Components guide.",
+      "features": [],
+      "stack": [
+        {
+          "name": "Astro",
+          "version": "7",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "4",
+          "role": "styling"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "1",
+          "role": "ui"
+        }
+      ],
+      "dependencyCount": 14,
+      "fetchedAt": "2026-09-07T08:07:59.809Z"
+    },
+    "github:namanbarkiya/minimal-next-portfolio": {
+      "summary": "A modern, responsive, and SEO-optimized Next.js 16 portfolio template designed for developers, designers, and professionals. This open-source project helps you showcase your skills, experience, and projects with an elegant interface that stands out. Built with server-side rendering, TypeScript, and the latest web standards for optimal performance. https://github.com/namanbarkiya/minimal-next-portfolio/assets/82203888/f93bf5ca-c2bd-4fe5-a413-1050ebf6cf78 https://github.com/user-attachments/assets/fc071310-9d1c-4832-877f-23f9569893d7",
+      "features": [
+        "Professional Experience Timeline: Showcase your career journey with a visually appealing timeline",
+        "Project Showcase: Display your technical projects with detailed information and live demos",
+        "Multiple Themes: Dark, Light, Retro, Cyberpunk, Aurora, Synthwave, and Paper themes",
+        "Responsive Design: Optimized for all devices (mobile, tablet, desktop)",
+        "100% Performance Score: Fully optimized for speed and Core Web Vitals",
+        "SEO-Ready: Structured data, meta tags, and optimized content",
+        "Modern Tech Stack: Next.js 16, React 19, TypeScript, Tailwind CSS, and shadcn/ui",
+        "Easy Customization: Well-organized code structure with minimal effort required"
+      ],
+      "stack": [
+        {
+          "name": "Next.js",
+          "version": "16",
+          "role": "framework"
+        },
+        {
+          "name": "React",
+          "version": "19",
+          "role": "framework"
+        },
+        {
+          "name": "Tailwind CSS",
+          "version": "3",
+          "role": "styling"
+        },
+        {
+          "name": "Radix UI",
+          "version": "1",
+          "role": "ui"
+        },
+        {
+          "name": "Lucide icons",
+          "version": "0",
+          "role": "ui"
+        },
+        {
+          "name": "Markdown front matter",
+          "version": "4",
+          "role": "content"
+        }
+      ],
+      "dependencyCount": 36,
+      "fetchedAt": "2026-09-07T08:08:00.461Z"
+    }
+  }
 }
